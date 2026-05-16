@@ -1,0 +1,22 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const papers = (await getCollection('papers')).sort((a,b)=> (b.data.year ?? 0) - (a.data.year ?? 0));
+---
+
+<Base title="Papers">
+  <div class="prose">
+    <h1>Papers</h1>
+    <p class="kicker">A curated reading list with short takeaways.</p>
+
+    <ul>
+      {papers.map(p => (
+        <li>
+          <a href={`/papers/${p.id}`}>{p.data.title}</a>
+          <span class="meta"> — {p.data.authors ? `${p.data.authors}, ` : ''}{p.data.year ?? ''}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+</Base>

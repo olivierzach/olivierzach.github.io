@@ -1,0 +1,25 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('writing'))
+  .filter(p => !p.data.draft)
+  .sort((a,b)=> b.data.date.valueOf()-a.data.date.valueOf());
+---
+
+<Base title="Writing">
+  <div class="prose">
+    <h1>Writing</h1>
+    <p class="kicker">Notes, experiments, and longer writeups.</p>
+
+    <ul>
+      {posts.map(p => (
+        <li>
+          <a href={`/writing/${p.id}`}>{p.data.title}</a>
+          <span class="meta"> — {p.data.date.toISOString().slice(0,10)}</span>
+          {p.data.summary ? <div class="meta">{p.data.summary}</div> : null}
+        </li>
+      ))}
+    </ul>
+  </div>
+</Base>

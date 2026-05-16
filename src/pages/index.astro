@@ -1,0 +1,44 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const projects = (await getCollection('projects')).slice(0, 3);
+const writing = (await getCollection('writing')).filter(p => !p.data.draft).sort((a,b)=> b.data.date.valueOf()-a.data.date.valueOf()).slice(0, 3);
+---
+
+<Base title="Zach" description="Applied ML / research engineer — projects, writing, and notes.">
+  <div class="prose">
+    <h1>Zach</h1>
+    <p class="kicker">Applied ML / research engineering. I like building systems, running careful experiments, and writing up what I learn.</p>
+
+    <p>
+      <a href="/contact">Email</a> ·
+      <a href="https://github.com/" rel="me">GitHub</a> ·
+      <a href="/about">About</a>
+    </p>
+
+    <hr />
+
+    <h2>Featured projects</h2>
+    <div class="grid">
+      {projects.map(p => (
+        <div class="card">
+          <div><a href={`/projects/${p.id}`}>{p.data.title}</a></div>
+          <div class="meta">{p.data.summary}</div>
+        </div>
+      ))}
+    </div>
+    <p class="meta"><a href="/projects">All projects →</a></p>
+
+    <h2>Recent writing</h2>
+    <ul>
+      {writing.map(w => (
+        <li>
+          <a href={`/writing/${w.id}`}>{w.data.title}</a>
+          <span class="meta"> — {w.data.date.toISOString().slice(0,10)}</span>
+        </li>
+      ))}
+    </ul>
+    <p class="meta"><a href="/writing">All writing →</a></p>
+  </div>
+</Base>

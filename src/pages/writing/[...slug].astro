@@ -1,0 +1,22 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('writing');
+  return posts.map(p => ({ params: { slug: p.id }, props: { entry: p } }));
+}
+
+const { entry } = Astro.props;
+if (entry.data.draft) throw new Error(`Draft post cannot be rendered: ${entry.id}`);
+const { Content } = await render(entry);
+---
+
+<Base title={entry.data.title} description={entry.data.summary ?? entry.data.title}>
+  <div class="prose">
+    <h1>{entry.data.title}</h1>
+    <p class="meta">{entry.data.date.toISOString().slice(0,10)}{entry.data.tags.length ? <> · {entry.data.tags.join(', ')}</> : null}</p>
+    <hr />
+    <Content />
+  </div>
+</Base>
