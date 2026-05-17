@@ -1,0 +1,26 @@
+---
+import Base from '../layouts/Base.astro';
+const items = [
+  { name: 'loss-landscape', file: '/art/loss-landscape.svg', desc: 'Contour-ish loss landscape + hillclimb trajectory' },
+  { name: 'embedding-scatter', file: '/art/embedding-scatter.svg', desc: 'Embedding manifold scatter clusters' },
+  { name: 'telemetry-traces', file: '/art/telemetry-traces.svg', desc: 'Telemetry traces / anomalies' },
+  { name: 'manifold-box', file: '/art/manifold-box.svg', desc: '3D “probability manifold” box sketch' },
+];
+---
+
+<Base title="Art" description="Generated art templates.">
+  <div class="prose">
+    <h1>Art templates</h1>
+    <p class="kicker">Generated SVGs you can use as hero banners, OG images, or section dividers.</p>
+
+    {items.map(i => (
+      <div style="margin: 1.5rem 0;">
+        <div class="meta">{i.name} — {i.desc}</div>
+        <div class="card" style="padding:0; overflow:hidden;">
+          <img src={i.file} alt={i.name} style="width:100%; height:auto; display:block;" />
+        </div>
+        <div class="meta"><a href={i.file}>Open SVG</a></div>
+      </div>
+    ))}
+  </div>
+</Base>
