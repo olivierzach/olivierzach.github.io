@@ -1,0 +1,50 @@
+---
+import Base from '../layouts/Base.astro';
+
+const variants = [
+  { name: 'Loss landscape', art: '/art/loss-landscape.svg' },
+  { name: 'Trainability map', art: '/art/trainability-map.svg' },
+  { name: 'Julia-ish texture', art: '/art/julia-ish.svg' },
+  { name: 'Embedding scatter', art: '/art/embedding-scatter.svg' },
+  { name: 'Telemetry traces', art: '/art/telemetry-traces.svg' },
+  { name: 'Manifold box', art: '/art/manifold-box.svg' },
+];
+---
+
+<Base title="Design" description="Design sandbox for hero/banner variants.">
+  <div class="prose">
+    <h1>Design sandbox</h1>
+    <p class="kicker">Quickly compare hero/banner variants before committing to a site-wide look.</p>
+
+    {variants.map(v => (
+      <section style="margin: 2rem 0;">
+        <div class="meta">{v.name}</div>
+        <div class="hero">
+          <img class="hero-bg" src={v.art} alt={v.name} />
+          <div class="hero-fg">
+            <div class="hero-title">Zach Olivier</div>
+            <div class="hero-sub">Applied ML / research engineer — ML systems, evals, post-training, and reliability-style telemetry.</div>
+            <div class="hero-links">
+              <a href="/projects">Projects</a>
+              <a href="/writing">Writing</a>
+              <a href="/papers">Papers</a>
+              <a href="/contact">Email</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    ))}
+  </div>
+
+  <style>
+    .hero{position:relative; border:1px solid var(--border); border-radius:18px; overflow:hidden; background:rgba(255,255,255,0.02)}
+    .hero-bg{width:100%; height:280px; object-fit:cover; display:block; filter:saturate(1.05) contrast(1.02)}
+    .hero-fg{position:absolute; inset:0; display:flex; flex-direction:column; justify-content:flex-end; padding:1.25rem; background:linear-gradient(180deg, rgba(7,10,18,0.0) 0%, rgba(7,10,18,0.55) 45%, rgba(7,10,18,0.92) 100%)}
+    .hero-title{font-family:var(--serif); font-size:1.8rem; letter-spacing:-0.02em; font-weight:700}
+    .hero-sub{color:var(--muted); max-width:70ch; margin-top:0.35rem}
+    .hero-links{margin-top:0.75rem; display:flex; gap:1rem; flex-wrap:wrap}
+    .hero-links a{font-family:var(--mono); font-size:0.9rem; text-decoration:none; color:var(--link)}
+    .hero-links a:hover{text-decoration:underline}
+    @media(min-width:900px){.hero-bg{height:320px}.hero-title{font-size:2.0rem}}
+  </style>
+</Base>

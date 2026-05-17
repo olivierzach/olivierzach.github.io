@@ -138,6 +138,72 @@ function manifoldBox(){
   return svgWrap(w,h,inner);
 }
 
+function trainabilityMap(){
+  const w=1600,h=480;
+  const r=rng(23);
+  const cell=10;
+  const cols=Math.floor(w/cell);
+  const rows=Math.floor(h/cell);
+  let inner='<g opacity="0.95">';
+  for(let j=0;j<rows;j++){
+    for(let i=0;i<cols;i++){
+      // synthetic boundary: combine two sinusoids + noise; threshold -> stable vs diverge
+      const x=i/cols*6.5;
+      const y=j/rows*6.5;
+      const v = Math.sin(2.1*x + 0.7*Math.sin(1.3*y)) + Math.cos(2.2*y + 0.4*Math.sin(1.1*x)) + (r()-0.5)*0.35;
+      // palette: diverge = warm, converge = cool; near-boundary = bright
+      const stable = v < 0.15;
+      const dist = Math.min(1, Math.abs(v)/1.6);
+      let fill;
+      if(stable){
+        const a = 0.08 + (1-dist)*0.55;
+        fill = `rgba(34,211,238,${a.toFixed(3)})`; // cyan-ish
+      } else {
+        const a = 0.07 + (1-dist)*0.55;
+        fill = `rgba(251,113,133,${a.toFixed(3)})`; // warm pink/red
+      }
+      inner += `<rect x="${i*cell}" y="${j*cell}" width="${cell}" height="${cell}" fill="${fill}"/>`;
+    }
+  }
+  inner += '</g>';
+  // subtle vignette
+  inner += `<rect width="100%" height="100%" fill="rgba(0,0,0,0.10)"/>`;
+  return svgWrap(w,h,inner);
+}
+
+function juliaIsh(){
+  const w=1600,h=480;
+  const r=rng(5);
+  // not a true Julia set; a fast aesthetic: repeated complex-ish warp + color bands
+  const cell=8;
+  const cols=Math.floor(w/cell);
+  const rows=Math.floor(h/cell);
+  let inner='<g opacity="0.95">';
+  for(let j=0;j<rows;j++){
+    for(let i=0;i<cols;i++){
+      let x = (i/cols-0.5)*3.2;
+      let y = (j/rows-0.5)*1.6;
+      const cx=-0.11, cy=0.68;
+      let it=0;
+      for(;it<18;it++){
+        const xx=x*x - y*y + cx;
+        const yy=2*x*y + cy;
+        x=xx; y=yy;
+        if(x*x+y*y>6.0) break;
+      }
+      const t = it/18;
+      const a = 0.08 + 0.65*Math.pow(1-t,1.2);
+      const cool = `rgba(34,211,238,${a.toFixed(3)})`;
+      const warm = `rgba(251,191,36,${(a*0.6).toFixed(3)})`;
+      const fill = (t<0.55) ? cool : warm;
+      inner += `<rect x="${i*cell}" y="${j*cell}" width="${cell}" height="${cell}" fill="${fill}"/>`;
+    }
+  }
+  inner += '</g>';
+  inner += `<rect width="100%" height="100%" fill="rgba(0,0,0,0.12)"/>`;
+  return svgWrap(w,h,inner);
+}
+
 async function main(){
   await fs.mkdir(OUT, { recursive: true });
   const items = [
@@ -145,6 +211,8 @@ async function main(){
     ['embedding-scatter.svg', embeddingScatter()],
     ['telemetry-traces.svg', telemetryTraces()],
     ['manifold-box.svg', manifoldBox()],
+    ['trainability-map.svg', trainabilityMap()],
+    ['julia-ish.svg', juliaIsh()],
   ];
   for (const [name, content] of items){
     await fs.writeFile(path.join(OUT, name), content, 'utf8');
