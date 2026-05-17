@@ -2,8 +2,20 @@
 import Base from '../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 
-const projects = (await getCollection('projects')).slice(0, 3);
-const writing = (await getCollection('writing')).filter(p => !p.data.draft).sort((a,b)=> b.data.date.valueOf()-a.data.date.valueOf()).slice(0, 3);
+const allProjects = await getCollection('projects');
+const featuredProjectSlugs = [
+  'llm-posttraining-harness',
+  'telemetry-retention-ml',
+  'computational-life-alife',
+];
+const projects = featuredProjectSlugs
+  .map((id) => allProjects.find((p) => p.id === id))
+  .filter(Boolean);
+
+const writing = (await getCollection('writing'))
+  .filter((p) => !p.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3);
 ---
 
 <Base title="Zach" description="Applied ML / research engineer — projects, writing, and notes.">

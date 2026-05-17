@@ -10,16 +10,19 @@
   --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
 }
 
-@media (prefers-color-scheme: dark) {
-  :root{
-    --bg:#0b0f19;
-    --fg:#e5e7eb;
-    --muted:#a3aab8;
-    --link:#5eead4;
-    --border:#1f2937;
-    --card:#0f1524;
-  }
+:root{
+  /* Dark-first palette */
+  --bg:#0b0f19;
+  --fg:#e5e7eb;
+  --muted:#a3aab8;
+  --link:#5eead4;
+  --border:#1f2937;
+  --card:#0f1524;
 }
+
+/* Optional: if you ever want light mode back, we can add a toggle.
+@media (prefers-color-scheme: light) { ... }
+*/
 
 *{box-sizing:border-box}
 html{background:var(--bg); color:var(--fg); font-family:var(--sans); line-height:1.55;}
