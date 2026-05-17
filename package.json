@@ -9,9 +9,12 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "covers:books": "node scripts/fetch_book_covers.mjs --all",
+    "fetch:papers": "node scripts/fetch_papers.mjs --all"
   },
   "dependencies": {
-    "astro": "^6.3.3"
+    "astro": "^6.3.3",
+    "gray-matter": "^4.0.3"
   }
 }

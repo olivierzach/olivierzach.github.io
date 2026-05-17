@@ -1,10 +1,14 @@
 ---
-title: "Information Theory, Inference, and Learning Algorithms"
-authors: "David J.C. MacKay"
+title: 'Information Theory, Inference, and Learning Algorithms'
+authors: David J.C. MacKay
 year: 2003
-cover: "/covers/placeholder.svg"
-link: "https://www.inference.org.uk/itila/book.html"
-tags: ["information theory", "Bayesian", "MDL", "foundations"]
+cover: /covers/mackay-itila.jpg
+link: 'https://www.inference.org.uk/itila/book.html'
+tags:
+  - information theory
+  - Bayesian
+  - MDL
+  - foundations
 rating: 5
 ---
 

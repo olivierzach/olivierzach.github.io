@@ -1,10 +1,13 @@
 ---
-title: "Reinforcement Learning: An Introduction"
-authors: "Richard S. Sutton, Andrew G. Barto"
+title: 'Reinforcement Learning: An Introduction'
+authors: 'Richard S. Sutton, Andrew G. Barto'
 year: 2018
-cover: "/covers/placeholder.svg"
-link: "http://incompleteideas.net/book/the-book-2nd.html"
-tags: ["reinforcement learning", "foundations", "control"]
+cover: /covers/sutton-barto-rl.jpg
+link: 'http://incompleteideas.net/book/the-book-2nd.html'
+tags:
+  - reinforcement learning
+  - foundations
+  - control
 rating: 5
 ---
 

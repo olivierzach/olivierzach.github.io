@@ -32,6 +32,8 @@ const papers = defineCollection({
     authors: z.string().optional(),
     year: z.number().int().optional(),
     link: z.string().url(),
+    pdf_url: z.string().url().optional(),
+    pdf: z.string().optional(),
     tags: z.array(z.string()).default([]),
     date: z.coerce.date().optional(),
   }),
