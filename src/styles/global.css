@@ -54,10 +54,12 @@ hr{border:none; border-top:1px solid var(--border); margin:2.25rem 0;}
 /* Influences: bookshelf grid (show everything by default) */
 .shelf{
   width:100%;
+  max-width:100%;
   display:grid;
   gap:1rem;
   padding:0.25rem 0.1rem 0.75rem;
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  overflow-x: visible;
 }
 
 .tile{
