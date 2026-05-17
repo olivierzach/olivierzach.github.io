@@ -52,13 +52,16 @@ function lossLandscape(){
     const a = 0.10 + i*0.012;
     paths += `<path d="${d}" fill="none" stroke="rgba(231,231,234,${a.toFixed(3)})" stroke-width="1"/>\n`;
   }
-  // Hillclimb trajectory
+  // Gradient descent trajectory (ends at the visually lowest point).
   let traj='';
-  let x=180,y=360;
+  let x=180, y=140; // start higher
   traj += `M ${x} ${y}`;
   for(let k=0;k<22;k++){
     x += 55 + (r()-0.5)*18;
-    y += -12 + (r()-0.5)*22;
+    // mostly move downward; keep some noise but bias positive
+    y += 12 + (r()-0.5)*18;
+    // clamp so we stay in-frame
+    y = Math.min(h-40, Math.max(40, y));
     traj += ` L ${x.toFixed(2)} ${y.toFixed(2)}`;
   }
   const inner =
