@@ -14,15 +14,15 @@ const topPapers = papers.slice(0, 18);
     <p class="kicker">A short list of books and papers that shaped how I think about ML, systems, and research.</p>
 
     <h2>Books</h2>
-    <div class="grid influences">
+    <div class="shelf" role="list">
       {books.map((b) => (
-        <div class="card influence">
-          <div class="cover">
+        <a class="tile" role="listitem" href={`/influences/books/${b.id}`} aria-label={b.data.title}>
+          <div class="poster">
             {b.data.cover ? (
               <img
                 src={b.data.cover}
                 srcset={b.data.cover.endsWith('.jpg') ? `${b.data.cover.replace('/covers/','/covers/_optimized/').replace('.jpg','-w240.webp')} 240w, ${b.data.cover.replace('/covers/','/covers/_optimized/').replace('.jpg','-w360.webp')} 360w` : undefined}
-                sizes="84px"
+                sizes="160px"
                 alt={`Cover: ${b.data.title}`}
                 loading="lazy"
               />
@@ -30,16 +30,11 @@ const topPapers = papers.slice(0, 18);
               <div class="cover-fallback">No cover</div>
             )}
           </div>
-          <div class="body">
-            <div class="title-row">
-              <a href={`/influences/books/${b.id}`}>{b.data.title}</a>
-            </div>
-            <div class="meta">
-              {b.data.authors ? b.data.authors : ''}{b.data.year ? ` · ${b.data.year}` : ''}
-            </div>
-            {b.data.tags.length ? <div class="meta">{b.data.tags.join(' · ')}</div> : null}
+          <div class="tile-meta">
+            <div class="tile-title">{b.data.title}</div>
+            <div class="meta">{b.data.authors ? b.data.authors : ''}{b.data.year ? ` · ${b.data.year}` : ''}</div>
           </div>
-        </div>
+        </a>
       ))}
     </div>
 
