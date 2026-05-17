@@ -18,8 +18,6 @@ const books = (await getCollection('books')).sort((a, b) => (b.data.year ?? 0) -
             {b.data.cover ? (
               <img
                 src={b.data.cover}
-                srcset={b.data.cover.endsWith('.jpg') ? `${b.data.cover.replace('/covers/','/covers/_optimized/').replace('.jpg','-w240.webp')} 240w, ${b.data.cover.replace('/covers/','/covers/_optimized/').replace('.jpg','-w360.webp')} 360w` : undefined}
-                sizes="160px"
                 alt={`Cover: ${b.data.title}`}
                 loading="lazy"
               />
