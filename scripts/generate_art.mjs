@@ -40,32 +40,50 @@ function svgWrap(w,h,inner){
 function lossLandscape(){
   const w=1600,h=480;
   const r=rng(7);
+
+  // A soft "terrain" shading layer (fake depth): a few blurred hills/valleys.
+  const hills = [
+    {cx: 520, cy: 240, c: 'rgba(125,211,252,0.10)', rx: 520, ry: 260},
+    {cx: 980, cy: 260, c: 'rgba(94,234,212,0.06)', rx: 520, ry: 300},
+    {cx: 860, cy: 170, c: 'rgba(167,139,250,0.05)', rx: 460, ry: 240},
+  ].map(hh => `<ellipse cx="${hh.cx}" cy="${hh.cy}" rx="${hh.rx}" ry="${hh.ry}" fill="${hh.c}" filter="url(#soft)"/>`).join('');
+
   // Contour-like noisy waves
   let paths='';
-  for(let i=0;i<18;i++){
-    const y = 60 + i*20;
+  for(let i=0;i<19;i++){
+    const y = 70 + i*18;
     let d=`M 0 ${y}`;
-    for(let x=0;x<=w;x+=40){
-      const yy = y + 18*Math.sin((x/140)+i*0.55) + 10*Math.sin((x/55)+i*0.18) + (r()-0.5)*6;
+    for(let x=0;x<=w;x+=38){
+      const yy = y + 16*Math.sin((x/150)+i*0.58) + 9*Math.sin((x/60)+i*0.19) + (r()-0.5)*5;
       d += ` L ${x} ${yy.toFixed(2)}`;
     }
-    const a = 0.10 + i*0.012;
+    const a = 0.06 + i*0.010;
     paths += `<path d="${d}" fill="none" stroke="rgba(231,231,234,${a.toFixed(3)})" stroke-width="1"/>\n`;
   }
-  // Hillclimb trajectory
+
+  // Gradient descent trajectory: start "high" (top-left-ish) and descend toward a basin (center-right).
+  // Note: in SVG, smaller y is visually "up"; we just want a visually descending path into a "valley".
   let traj='';
-  let x=180,y=360;
+  let x=260, y=160; // start higher
   traj += `M ${x} ${y}`;
-  for(let k=0;k<22;k++){
-    x += 55 + (r()-0.5)*18;
-    y += -12 + (r()-0.5)*22;
+  for(let k=0;k<18;k++){
+    x += 60 + (r()-0.5)*14;
+    y += 9 + (r()-0.5)*16;  // generally downward
     traj += ` L ${x.toFixed(2)} ${y.toFixed(2)}`;
   }
+
   const inner =
+    `<g>${hills}</g>`+
     `<g opacity="0.95">${paths}</g>`+
-    `<path d="${traj}" fill="none" stroke="rgba(125,211,252,0.85)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>`+
-    `<path d="${traj}" fill="none" stroke="rgba(125,211,252,0.25)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" filter="url(#soft)"/>`+
-    `<circle cx="${x.toFixed(2)}" cy="${y.toFixed(2)}" r="6" fill="rgba(125,211,252,0.95)"/>`;
+    // main stroke
+    `<path d="${traj}" fill="none" stroke="rgba(125,211,252,0.90)" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>`+
+    // glow
+    `<path d="${traj}" fill="none" stroke="rgba(125,211,252,0.22)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" filter="url(#soft)"/>`+
+    // endpoint marker
+    `<circle cx="${x.toFixed(2)}" cy="${y.toFixed(2)}" r="6" fill="rgba(125,211,252,0.95)"/>`+
+    // a few arrow-like ticks along the path
+    `<path d="M ${x-20} ${y-6} l 14 6 l -14 6" fill="none" stroke="rgba(125,211,252,0.65)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`;
+
   return svgWrap(w,h,inner);
 }
 
