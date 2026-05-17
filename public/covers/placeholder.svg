@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="480" viewBox="0 0 320 480">
+  <rect width="100%" height="100%" fill="#0f1524"/>
+  <rect x="22" y="22" width="276" height="436" rx="16" fill="#0b0f19" stroke="#1f2937"/>
+  <text x="40" y="90" fill="#e5e7eb" font-family="ui-sans-serif, system-ui" font-size="18">Cover</text>
+  <text x="40" y="120" fill="#a3aab8" font-family="ui-sans-serif, system-ui" font-size="14">Drop an image into</text>
+  <text x="40" y="142" fill="#a3aab8" font-family="ui-monospace, SFMono-Regular" font-size="12">public/covers/</text>
+</svg>

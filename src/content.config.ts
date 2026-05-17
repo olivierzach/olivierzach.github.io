@@ -37,4 +37,17 @@ const papers = defineCollection({
   }),
 });
 
-export const collections = { projects, writing, papers };
+const books = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/books' }),
+  schema: z.object({
+    title: z.string(),
+    authors: z.string().optional(),
+    year: z.number().int().optional(),
+    cover: z.string().optional(), // e.g. "/covers/mackay-itila.jpg"
+    link: z.string().url().optional(),
+    tags: z.array(z.string()).default([]),
+    rating: z.number().min(1).max(5).optional(),
+  }),
+});
+
+export const collections = { projects, writing, papers, books };

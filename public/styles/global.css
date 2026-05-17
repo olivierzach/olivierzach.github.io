@@ -46,3 +46,14 @@ hr{border:none; border-top:1px solid var(--border); margin:2rem 0;}
 @media(min-width:720px){.grid{grid-template-columns:1fr 1fr;}}
 .meta{color:var(--muted); font-size:0.95rem}
 .code{font-family:var(--mono); font-size:0.95rem}
+
+/* Influences cards */
+.grid.influences{grid-template-columns:1fr;}
+@media(min-width:720px){.grid.influences{grid-template-columns:1fr 1fr;}}
+.card.influence{display:flex; gap:0.9rem; align-items:flex-start;}
+.card.influence .cover{width:84px; flex:0 0 84px;}
+.card.influence img{width:84px; height:126px; object-fit:cover; border-radius:10px; border:1px solid var(--border); display:block;}
+.cover-fallback{width:84px; height:126px; border-radius:10px; border:1px solid var(--border); color:var(--muted); display:flex; align-items:center; justify-content:center; font-size:0.8rem;}
+.card.influence .body{min-width:0;}
+.card.influence .title-row a{color:var(--fg); text-decoration:none; font-weight:600;}
+.card.influence .title-row a:hover{text-decoration:underline;}

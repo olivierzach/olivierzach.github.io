@@ -1,0 +1,51 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const books = (await getCollection('books')).sort((a, b) => (b.data.year ?? 0) - (a.data.year ?? 0));
+const papers = (await getCollection('papers')).sort((a, b) => (b.data.year ?? 0) - (a.data.year ?? 0));
+
+const topPapers = papers.slice(0, 18);
+---
+
+<Base title="Influences" description="Books and papers that shaped how I think.">
+  <div class="prose">
+    <h1>Influences</h1>
+    <p class="kicker">A short list of books and papers that shaped how I think about ML, systems, and research.</p>
+
+    <h2>Books</h2>
+    <div class="grid influences">
+      {books.map((b) => (
+        <div class="card influence">
+          <div class="cover">
+            {b.data.cover ? (
+              <img src={b.data.cover} alt={`Cover: ${b.data.title}`} loading="lazy" />
+            ) : (
+              <div class="cover-fallback">No cover</div>
+            )}
+          </div>
+          <div class="body">
+            <div class="title-row">
+              <a href={`/influences/books/${b.id}`}>{b.data.title}</a>
+            </div>
+            <div class="meta">
+              {b.data.authors ? b.data.authors : ''}{b.data.year ? ` · ${b.data.year}` : ''}
+            </div>
+            {b.data.tags.length ? <div class="meta">{b.data.tags.join(' · ')}</div> : null}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <h2>Papers (high signal)</h2>
+    <p class="meta">This is intentionally curated; the full reading list lives under <a href="/papers">Papers</a>.</p>
+    <ul>
+      {topPapers.map((p) => (
+        <li>
+          <a href={`/papers/${p.id}`}>{p.data.title}</a>
+          <span class="meta"> — {p.data.authors ? `${p.data.authors}, ` : ''}{p.data.year ?? ''}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+</Base>
