@@ -8,7 +8,16 @@ const projects = (await getCollection('projects')).sort((a,b)=> (b.data.date?.va
 <Base title="Projects">
   <div class="prose">
     <h1>Projects</h1>
-    <p class="kicker">Curated work. Each project page includes context, results, and links.</p>
+    <p class="kicker">Curated work. Each project page includes context, experiments, and links.</p>
+
+    <h2>Selected public repos (GitHub)</h2>
+    <ul>
+      <li><a href="https://github.com/olivierzach/tricentis-lead-scoring">tricentis-lead-scoring</a> — end-to-end ML lead scoring system.</li>
+      <li><a href="https://github.com/olivierzach/random-neighbors">random-neighbors</a> — Random Forest-style clustering for high-dimensional data.</li>
+      <li><a href="https://github.com/olivierzach/bayesian-marketing-attribution">bayesian-marketing-attribution</a> — attribution with Bayesian credible sets + regression.</li>
+    </ul>
+
+    <hr />
 
     <div class="grid">
       {projects.map(p => (
