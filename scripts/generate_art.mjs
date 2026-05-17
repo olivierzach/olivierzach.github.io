@@ -41,48 +41,132 @@ function lossLandscape(){
   const w=1600,h=480;
   const r=rng(7);
 
-  // A soft "terrain" shading layer (fake depth): a few blurred hills/valleys.
-  const hills = [
-    {cx: 520, cy: 240, c: 'rgba(125,211,252,0.10)', rx: 520, ry: 260},
-    {cx: 980, cy: 260, c: 'rgba(94,234,212,0.06)', rx: 520, ry: 300},
-    {cx: 860, cy: 170, c: 'rgba(167,139,250,0.05)', rx: 460, ry: 240},
-  ].map(hh => `<ellipse cx="${hh.cx}" cy="${hh.cy}" rx="${hh.rx}" ry="${hh.ry}" fill="${hh.c}" filter="url(#soft)"/>`).join('');
+  // Define a smooth scalar field z(x,y) (a "loss landscape") and render it with
+  // blue-shaded relief + faint contours, then trace a gradient-descent path.
+  // We work in a normalized coordinate system u,v in [-1,1].
+  function field(u,v){
+    // A few rotated quadratic bowls + ripples.
+    const z1 = 0.9*(u*u + 0.55*v*v);
+    const z2 = 0.35*((u+0.35)*(u+0.35) + 0.9*(v-0.15)*(v-0.15));
+    const ripple = 0.10*Math.sin(6*u + 2.2*v) + 0.08*Math.cos(4.2*v - 1.8*u);
+    const bump = 0.25*Math.exp(-3.2*((u-0.55)**2 + (v+0.15)**2));
+    return z1 + z2 + 0.35 - bump + ripple;
+  }
 
-  // Contour-like noisy waves
-  let paths='';
-  for(let i=0;i<19;i++){
-    const y = 70 + i*18;
-    let d=`M 0 ${y}`;
-    for(let x=0;x<=w;x+=38){
-      const yy = y + 16*Math.sin((x/150)+i*0.58) + 9*Math.sin((x/60)+i*0.19) + (r()-0.5)*5;
-      d += ` L ${x} ${yy.toFixed(2)}`;
+  // Sample grid
+  const cell=8;
+  const cols=Math.floor(w/cell);
+  const rows=Math.floor(h/cell);
+  const Z = Array.from({length: rows}, () => new Float64Array(cols));
+  let zmin=1e9, zmax=-1e9;
+
+  for(let j=0;j<rows;j++){
+    for(let i=0;i<cols;i++){
+      const u = (i/(cols-1))*2 - 1;
+      const v = (j/(rows-1))*2 - 1;
+      const z = field(u,v);
+      Z[j][i]=z;
+      if(z<zmin) zmin=z;
+      if(z>zmax) zmax=z;
     }
-    const a = 0.06 + i*0.010;
-    paths += `<path d="${d}" fill="none" stroke="rgba(231,231,234,${a.toFixed(3)})" stroke-width="1"/>\n`;
   }
 
-  // Gradient descent trajectory: start "high" (top-left-ish) and descend toward a basin (center-right).
-  // Note: in SVG, smaller y is visually "up"; we just want a visually descending path into a "valley".
-  let traj='';
-  let x=260, y=160; // start higher
-  traj += `M ${x} ${y}`;
-  for(let k=0;k<18;k++){
-    x += 60 + (r()-0.5)*14;
-    y += 9 + (r()-0.5)*16;  // generally downward
-    traj += ` L ${x.toFixed(2)} ${y.toFixed(2)}`;
+  function clamp01(x){ return Math.max(0, Math.min(1, x)); }
+
+  // Hillshade: directional light applied to the gradient of z
+  const light = {x: -0.7, y: -0.3, z: 0.65};
+  const Lnorm = Math.hypot(light.x, light.y, light.z);
+  light.x/=Lnorm; light.y/=Lnorm; light.z/=Lnorm;
+
+  let rects='';
+  for(let j=0;j<rows;j++){
+    for(let i=0;i<cols;i++){
+      const z = Z[j][i];
+      const t = (z - zmin) / (zmax - zmin + 1e-12); // 0=low (good), 1=high
+
+      // finite-diff gradient
+      const zl = Z[j][Math.max(0,i-1)], zr = Z[j][Math.min(cols-1,i+1)];
+      const zu = Z[Math.max(0,j-1)][i], zd = Z[Math.min(rows-1,j+1)][i];
+      const dx = (zr - zl);
+      const dy = (zd - zu);
+      // normal ~ [-dx,-dy,1]
+      let nx = -dx, ny = -dy, nz = 1.0;
+      const nn = Math.hypot(nx,ny,nz);
+      nx/=nn; ny/=nn; nz/=nn;
+      const shade = clamp01(nx*light.x + ny*light.y + nz*light.z);
+
+      // Blue palette: low loss = brighter ice, high loss = deep ink.
+      const base = 0.18 + 0.72*(1-t);
+      const lit = clamp01(0.55*base + 0.45*shade);
+
+      // Map to RGB around the site's ice/cyan accent.
+      const R = Math.round(20 + 90*lit);
+      const G = Math.round(40 + 155*lit);
+      const B = Math.round(60 + 190*lit);
+      const A = 0.22;
+      rects += `<rect x="${i*cell}" y="${j*cell}" width="${cell}" height="${cell}" fill="rgba(${R},${G},${B},${A})"/>`;
+    }
   }
+
+  // Faint contours (iso-lines approximated by bands)
+  let contours='';
+  const bands=10;
+  for(let b=1;b<bands;b++){
+    const level = zmin + (b/bands)*(zmax-zmin);
+    // draw a few horizontal marching-band strokes by sampling rows
+    let d='';
+    for(let i=0;i<cols;i++){
+      // find y where Z crosses level in this column by scanning rows coarsely
+      let best=null;
+      for(let j=0;j<rows-1;j+=2){
+        const a=Z[j][i], c=Z[j+1][i];
+        if((a-level)*(c-level) <= 0){ best=j; break; }
+      }
+      if(best!==null){
+        const x=i*cell;
+        const y=best*cell;
+        d += (d?` L ${x} ${y}`:`M ${x} ${y}`);
+      }
+    }
+    if(d){
+      contours += `<path d="${d}" fill="none" stroke="rgba(231,231,234,0.08)" stroke-width="1"/>`;
+    }
+  }
+
+  // Gradient descent path: follow -grad z in continuous coords.
+  function grad(u,v){
+    const eps=1e-3;
+    const z0=field(u,v);
+    const zx=field(u+eps,v);
+    const zy=field(u,v+eps);
+    return {gx:(zx-z0)/eps, gy:(zy-z0)/eps};
+  }
+
+  let u=-0.85, v=-0.55; // start "high" region
+  let traj=`M ${((u+1)/2*w).toFixed(2)} ${((v+1)/2*h).toFixed(2)}`;
+  for(let k=0;k<28;k++){
+    const {gx,gy} = grad(u,v);
+    // step size decreases slightly
+    const eta = 0.06*(0.92**k);
+    u -= eta*gx;
+    v -= eta*gy;
+    // small noise like SGD
+    u += (r()-0.5)*0.01;
+    v += (r()-0.5)*0.01;
+    // clamp
+    u=Math.max(-1,Math.min(1,u));
+    v=Math.max(-1,Math.min(1,v));
+    traj += ` L ${((u+1)/2*w).toFixed(2)} ${((v+1)/2*h).toFixed(2)}`;
+  }
+
+  const endX=((u+1)/2*w), endY=((v+1)/2*h);
 
   const inner =
-    `<g>${hills}</g>`+
-    `<g opacity="0.95">${paths}</g>`+
-    // main stroke
-    `<path d="${traj}" fill="none" stroke="rgba(125,211,252,0.90)" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>`+
-    // glow
-    `<path d="${traj}" fill="none" stroke="rgba(125,211,252,0.22)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" filter="url(#soft)"/>`+
-    // endpoint marker
-    `<circle cx="${x.toFixed(2)}" cy="${y.toFixed(2)}" r="6" fill="rgba(125,211,252,0.95)"/>`+
-    // a few arrow-like ticks along the path
-    `<path d="M ${x-20} ${y-6} l 14 6 l -14 6" fill="none" stroke="rgba(125,211,252,0.65)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`;
+    `<g>${rects}</g>`+
+    `<g>${contours}</g>`+
+    `<path d="${traj}" fill="none" stroke="rgba(125,211,252,0.92)" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>`+
+    `<path d="${traj}" fill="none" stroke="rgba(125,211,252,0.22)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" filter="url(#soft)"/>`+
+    `<circle cx="${endX.toFixed(2)}" cy="${endY.toFixed(2)}" r="6" fill="rgba(125,211,252,0.95)"/>`;
 
   return svgWrap(w,h,inner);
 }
