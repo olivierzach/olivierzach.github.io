@@ -8,6 +8,7 @@ tags:
   - optimization
   - training
 pdf: /papers/orthogonalization-muon.pdf
+thumbnail: /papers/_thumbs/orthogonalization-muon-w360.webp
 ---
 
 ## Takeaways

@@ -12,7 +12,8 @@
     "astro": "astro",
     "covers:books": "node scripts/fetch_book_covers.mjs --all",
     "covers:opt": "node scripts/optimize_covers.mjs",
-    "fetch:papers": "node scripts/fetch_papers.mjs --all"
+    "fetch:papers": "node scripts/fetch_papers.mjs --all",
+    "thumbs:papers": "node scripts/thumb_papers_poppler.mjs --all"
   },
   "dependencies": {
     "astro": "^6.3.3",

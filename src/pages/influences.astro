@@ -3,9 +3,6 @@ import Base from '../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 
 const books = (await getCollection('books')).sort((a, b) => (b.data.year ?? 0) - (a.data.year ?? 0));
-const papers = (await getCollection('papers')).sort((a, b) => (b.data.year ?? 0) - (a.data.year ?? 0));
-
-const topPapers = papers.slice(0, 18);
 ---
 
 <Base title="Influences" description="Books and papers that shaped how I think.">
@@ -38,15 +35,7 @@ const topPapers = papers.slice(0, 18);
       ))}
     </div>
 
-    <h2>Papers (high signal)</h2>
-    <p class="meta">This is intentionally curated; the full reading list lives under <a href="/papers">Papers</a>.</p>
-    <ul>
-      {topPapers.map((p) => (
-        <li>
-          <a href={`/papers/${p.id}`}>{p.data.title}</a>
-          <span class="meta"> — {p.data.authors ? `${p.data.authors}, ` : ''}{p.data.year ?? ''}</span>
-        </li>
-      ))}
-    </ul>
+    <hr />
+    <p class="meta">Papers live on the <a href="/papers">Papers</a> page (same shelf vibe, with PDFs + notes).</p>
   </div>
 </Base>

@@ -2,21 +2,34 @@
 import Base from '../../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 
-const papers = (await getCollection('papers')).sort((a,b)=> (b.data.year ?? 0) - (a.data.year ?? 0));
+const papers = (await getCollection('papers'))
+  .sort((a, b) => (b.data.year ?? 0) - (a.data.year ?? 0));
 ---
 
-<Base title="Papers">
+<Base title="Papers" description="Papers I’ve read, with takeaways and PDFs where available.">
   <div class="prose">
     <h1>Papers</h1>
-    <p class="kicker">A curated reading list with short takeaways.</p>
+    <p class="kicker">A living reading list. Each entry has short takeaways; some include local PDFs + thumbnails.</p>
 
-    <ul>
-      {papers.map(p => (
-        <li>
-          <a href={`/papers/${p.id}`}>{p.data.title}</a>
-          <span class="meta"> — {p.data.authors ? `${p.data.authors}, ` : ''}{p.data.year ?? ''}</span>
-        </li>
+    <div class="shelf" role="list" aria-label="Paper shelf">
+      {papers.map((p) => (
+        <a class="tile" role="listitem" href={`/papers/${p.id}`} aria-label={p.data.title}>
+          <div class="poster">
+            {p.data.thumbnail ? (
+              <img src={p.data.thumbnail} alt={`Thumbnail: ${p.data.title}`} loading="lazy" />
+            ) : (
+              <div class="paper-fallback">
+                <div class="paper-fallback-title">{p.data.title}</div>
+                <div class="meta">{p.data.year ?? ''}</div>
+              </div>
+            )}
+          </div>
+          <div class="tile-meta">
+            <div class="tile-title">{p.data.title}</div>
+            <div class="meta">{p.data.authors ? p.data.authors : ''}{p.data.year ? ` · ${p.data.year}` : ''}</div>
+          </div>
+        </a>
       ))}
-    </ul>
+    </div>
   </div>
 </Base>
