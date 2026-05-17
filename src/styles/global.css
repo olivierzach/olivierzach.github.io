@@ -55,16 +55,17 @@ hr{border:none; border-top:1px solid var(--border); margin:2.25rem 0;}
 .shelf{
   width:100%;
   max-width:100%;
-  display:grid;
+  display:flex;
+  flex-wrap:wrap;
   gap:1rem;
   padding:0.25rem 0.1rem 0.75rem;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  overflow-x: visible;
+  overflow-x:hidden;
 }
 
 .tile{
   display:block;
-  width:100%;
+  width:160px;
+  max-width:160px;
   text-decoration:none;
   color:inherit;
 }
@@ -99,5 +100,5 @@ hr{border:none; border-top:1px solid var(--border); margin:2.25rem 0;}
 .paper-fallback-title{font-weight:650; font-size:0.9rem; line-height:1.2; display:-webkit-box; -webkit-line-clamp:6; -webkit-box-orient:vertical; overflow:hidden;}
 
 @media(min-width:900px){
-  .shelf{grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));}
+  .tile{max-width:180px;}
 }
