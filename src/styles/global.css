@@ -30,6 +30,7 @@ html{
     linear-gradient(180deg, var(--bg), var(--bg2));
 }
 body{margin:0;}
+html, body{overflow-x:hidden;}
 main{max-width:var(--max); margin:0 auto; padding:3.25rem 1.25rem 4.25rem;}
 header.site{border-bottom:1px solid var(--border); backdrop-filter: blur(10px); background: rgba(7,10,18,0.55); position:sticky; top:0; z-index:10;}
 nav{max-width:var(--max); margin:0 auto; padding:0.9rem 1.25rem; display:flex; align-items:baseline; gap:1rem;}
@@ -52,6 +53,7 @@ hr{border:none; border-top:1px solid var(--border); margin:2.25rem 0;}
 
 /* Influences: bookshelf grid (show everything by default) */
 .shelf{
+  width:100%;
   display:grid;
   gap:1rem;
   padding:0.25rem 0.1rem 0.75rem;
