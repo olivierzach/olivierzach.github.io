@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-label="llm-posttraining-harness">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#07101b"/>
+    <stop offset="0.55" stop-color="#0b1020"/>
+    <stop offset="1" stop-color="#121827"/>
+  </linearGradient>
+  <radialGradient id="glow" cx="28%" cy="16%" r="78%">
+    <stop offset="0" stop-color="#f472b6" stop-opacity="0.28"/>
+    <stop offset="0.58" stop-color="#f472b6" stop-opacity="0.055"/>
+    <stop offset="1" stop-color="#f472b6" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="12"/></filter>
+</defs>
+<rect width="1200" height="760" fill="url(#bg)"/>
+<rect width="1200" height="760" fill="url(#glow)"/>
+<rect x="58" y="58" width="1084" height="644" rx="28" fill="rgba(255,255,255,0.025)" stroke="rgba(255,255,255,0.095)"/>
+<path d="M 150.0 556.8 L 178.0 540.3 L 206.0 518.6 L 234.0 481.8 L 262.0 444.0 L 290.0 402.6 L 318.0 375.1 L 346.0 369.9 L 374.0 342.8 L 402.0 346.8 L 430.0 343.8 L 458.0 340.8 L 486.0 331.7 L 514.0 322.3 L 542.0 303.0 L 570.0 280.8 L 598.0 275.2 L 626.0 267.5 L 654.0 286.0 L 682.0 304.7 L 710.0 297.7 L 738.0 284.4 L 766.0 282.3 L 794.0 267.0 L 822.0 249.9 L 850.0 254.7 L 878.0 264.9 L 906.0 265.3 L 934.0 273.8 L 962.0 285.3 L 990.0 273.5 L 1018.0 262.9 L 1046.0 250.6 L 1074.0 233.9" fill="none" stroke="#f472b6" stroke-width="5" stroke-linecap="round"/><path d="M 150.0 590.2 L 178.0 576.4 L 206.0 537.9 L 234.0 502.5 L 262.0 475.3 L 290.0 458.7 L 318.0 434.1 L 346.0 427.6 L 374.0 436.3 L 402.0 435.9 L 430.0 430.2 L 458.0 409.6 L 486.0 386.2 L 514.0 360.6 L 542.0 349.1 L 570.0 337.6 L 598.0 334.1 L 626.0 347.1 L 654.0 361.2 L 682.0 360.5 L 710.0 330.0 L 738.0 317.0 L 766.0 303.7 L 794.0 294.9 L 822.0 287.5 L 850.0 297.6 L 878.0 322.5 L 906.0 330.9 L 934.0 325.5 L 962.0 318.0 L 990.0 289.5 L 1018.0 292.7 L 1046.0 265.2 L 1074.0 269.9" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="3" stroke-linecap="round"/><path d="M 150.0 624.8 L 178.0 597.4 L 206.0 560.1 L 234.0 534.8 L 262.0 503.5 L 290.0 491.0 L 318.0 505.0 L 346.0 504.4 L 374.0 482.2 L 402.0 485.8 L 430.0 455.5 L 458.0 442.7 L 486.0 420.4 L 514.0 396.7 L 542.0 408.6 L 570.0 409.4 L 598.0 402.8 L 626.0 415.7 L 654.0 398.9 L 682.0 387.9 L 710.0 379.0 L 738.0 361.0 L 766.0 356.3 L 794.0 353.5 L 822.0 354.4 L 850.0 356.9 L 878.0 370.1 L 906.0 371.7 L 934.0 354.1 L 962.0 340.1 L 990.0 311.6 L 1018.0 305.7 L 1046.0 323.5 L 1074.0 331.2" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="3" stroke-linecap="round"/><path d="M 150.0 633.6 L 178.0 602.6 L 206.0 569.9 L 234.0 556.5 L 262.0 560.3 L 290.0 563.7 L 318.0 548.4 L 346.0 539.6 L 374.0 536.0 L 402.0 509.4 L 430.0 477.8 L 458.0 455.1 L 486.0 467.6 L 514.0 453.4 L 542.0 458.5 L 570.0 473.6 L 598.0 455.0 L 626.0 458.7 L 654.0 441.9 L 682.0 406.0 L 710.0 405.1 L 738.0 400.0 L 766.0 408.6 L 794.0 416.1 L 822.0 408.2 L 850.0 417.0 L 878.0 415.2 L 906.0 397.8 L 934.0 375.5 L 962.0 367.1 L 990.0 357.7 L 1018.0 375.2 L 1046.0 379.3 L 1074.0 388.5" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="3" stroke-linecap="round"/><text x="92" y="672" fill="rgba(231,231,234,0.74)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="30">llm-posttraining-harness</text>
+</svg>

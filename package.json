@@ -14,7 +14,12 @@
     "covers:opt": "node scripts/optimize_covers.mjs",
     "fetch:papers": "node scripts/fetch_papers.mjs --all",
     "thumbs:papers": "node scripts/thumb_papers_poppler.mjs --all",
-    "art:gen": "node scripts/generate_art.mjs"
+    "art:gen": "node scripts/generate_art.mjs",
+    "art:projects": "node scripts/generate_project_thumbnails.mjs",
+    "art:repo-thumbs": "node scripts/generate_repo_audit_thumbnails.mjs",
+    "ingest:images": "npm run covers:books && npm run covers:opt",
+    "ingest:papers": "npm run fetch:papers && npm run thumbs:papers",
+    "ingest:all": "npm run ingest:images && npm run ingest:papers"
   },
   "dependencies": {
     "astro": "^6.3.3",

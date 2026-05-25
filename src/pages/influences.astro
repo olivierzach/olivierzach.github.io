@@ -3,37 +3,174 @@ import Base from '../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 
 const books = (await getCollection('books')).sort((a, b) => (b.data.year ?? 0) - (a.data.year ?? 0));
+const bookById = new Map(books.map((book) => [book.id, book]));
+
+function optimizedCover(src) {
+  if (!src?.startsWith('/covers/') || !/\.(jpe?g|png)$/i.test(src)) return null;
+  const base = src.split('/').pop().replace(/\.(jpe?g|png)$/i, '');
+  return {
+    webp: `/covers/_optimized/${base}-w360.webp`,
+    fallback: src,
+  };
+}
+
+function takeBooks(ids) {
+  const items = ids
+    .map((id) => bookById.get(id))
+    .filter(Boolean);
+  return items;
+}
+
+const rows = [
+  {
+    id: 'machine-learning-deep-learning',
+    title: 'Machine Learning / Deep Learning',
+    summary: 'Models, representation, optimization, control.',
+    items: takeBooks([
+      'bishop-prml',
+      'murphy-probabilistic-machine-learning',
+      'murphy-pml-advanced-topics',
+      'mitchell-machine-learning',
+      'goodfellow-deep-learning',
+      'bishop-deep-learning-foundations',
+      'understanding-deep-learning',
+      'sutton-barto-rl',
+      'torralba-foundations-of-computer-vision',
+      'recommender-systems-textbook',
+      'tan-introduction-to-data-mining',
+    ]),
+  },
+  {
+    id: 'probability-statistical-learning',
+    title: 'Statistical Learning, Information Theory',
+    summary: 'Inference, uncertainty, information, generalization.',
+    items: takeBooks([
+      'polyanskiy-wu-information-theory',
+      'mackay-itila',
+      'wasserman-all-of-statistics',
+      'vershynin-high-dimensional-probability',
+      'hastie-esl',
+      'james-islr',
+      'mcelreath-statistical-rethinking',
+      'gelman-regression-and-other-stories',
+      'pearl-probabilistic-reasoning',
+      'active-inference',
+      'thinking-about-statistics',
+    ]),
+  },
+  {
+    id: 'computer-science-engineering',
+    title: 'Computer Science & Engineering',
+    summary: 'Systems, languages, hardware, communications.',
+    items: takeBooks([
+      'sicp',
+      'elements-of-computing-systems',
+      'ostep',
+      'code-petzold',
+      'crafting-interpreters',
+      'programming-massively-parallel-processors',
+      'digital-communications-proakis',
+      'satellite-communications-second-edition',
+    ]),
+  },
+  {
+    id: 'applied',
+    title: 'Applied',
+    summary: 'Tools, systems, and model-building practice.',
+    items: takeBooks([
+      'designing-data-intensive-applications',
+      'database-internals',
+      'fluent-python',
+      'hands-on-machine-learning',
+      'interpretable-machine-learning',
+      'machine-learning-mastery-python',
+      'machine-learning-with-pytorch-scikit-learn',
+      'chollet-deep-learning-with-python',
+      'nlp-with-transformers',
+      'probabilistic-deep-learning',
+      'advanced-algorithms-data-structures',
+      'grokking-algorithms',
+      'grokking-data-structures',
+      'grokking-reinforcement-learning',
+      'grokking-deep-learning',
+      'cassandra-definitive-guide',
+      'approaching-almost-any-ml-problem',
+    ]),
+  },
+];
+
+const heroBooks = takeBooks([
+  'bishop-prml',
+  'mackay-itila',
+  'sicp',
+  'vershynin-high-dimensional-probability',
+  'pearl-probabilistic-reasoning',
+]).filter((book) => book.data.cover);
 ---
 
-<Base title="Influences" description="Books and papers that shaped how I think.">
-  <div class="prose">
-    <h1>Influences</h1>
-    <p class="kicker">A short list of books and papers that shaped how I think about ML, systems, and research.</p>
+<Base title="Influences" description="Books and references.">
+  <div class="browse-page">
+    <section class="browse-hero browse-hero-books" aria-labelledby="influences-title">
+      <div class="browse-hero-copy">
+        <p class="browse-eyebrow">Influences</p>
+        <h1 id="influences-title">Books</h1>
+        <p>References I return to.</p>
+      </div>
+      <div class="hero-cover-stack" aria-hidden="true">
+        {heroBooks.map((book) => {
+          const optimized = optimizedCover(book.data.cover);
+          return (
+            <div class="hero-cover">
+              {optimized ? (
+                <picture>
+                  <source srcset={optimized.webp} type="image/webp" />
+                  <img src={optimized.fallback} alt="" loading="eager" />
+                </picture>
+              ) : (
+                <img src={book.data.cover} alt="" loading="eager" />
+              )}
+            </div>
+          );
+        })}
+      </div>
+    </section>
 
-    <h2>Books</h2>
-    <div class="shelf" role="list">
-      {books.map((b) => (
-        <a class="tile" role="listitem" href={`/influences/books/${b.id}`} aria-label={b.data.title}>
-          <div class="poster">
-            {b.data.cover ? (
-              <img
-                src={b.data.cover}
-                alt={`Cover: ${b.data.title}`}
-                loading="lazy"
-              />
-            ) : (
-              <div class="cover-fallback">No cover</div>
-            )}
+    <div class="browse-stack" aria-label="Influence shelves">
+      {rows.map((row) => row.items.length ? (
+        <section class="browse-row" aria-labelledby={`${row.id}-title`}>
+          <div class="browse-row-header">
+            <h2 id={`${row.id}-title`}>{row.title}</h2>
+            {row.summary ? <p>{row.summary}</p> : null}
           </div>
-          <div class="tile-meta">
-            <div class="tile-title">{b.data.title}</div>
-            <div class="meta">{b.data.authors ? b.data.authors : ''}{b.data.year ? ` · ${b.data.year}` : ''}</div>
+          <div class="poster-row" role="list">
+            {row.items.map((b) => {
+              const optimized = optimizedCover(b.data.cover);
+              return (
+                <a class="browse-tile" role="listitem" href={`/influences/books/${b.id}`} aria-label={b.data.title}>
+                  <div class="browse-poster">
+                    {b.data.cover ? (
+                      optimized ? (
+                        <picture>
+                          <source srcset={optimized.webp} type="image/webp" />
+                          <img src={optimized.fallback} alt={`Cover: ${b.data.title}`} loading="lazy" />
+                        </picture>
+                      ) : (
+                        <img src={b.data.cover} alt={`Cover: ${b.data.title}`} loading="lazy" />
+                      )
+                    ) : (
+                      <div class="cover-fallback">No cover</div>
+                    )}
+                  </div>
+                  <div class="tile-meta">
+                    <div class="tile-title">{b.data.title}</div>
+                    <div class="meta">{b.data.authors ? b.data.authors : ''}{b.data.year ? ` · ${b.data.year}` : ''}</div>
+                  </div>
+                </a>
+              );
+            })}
           </div>
-        </a>
-      ))}
+        </section>
+      ) : null)}
     </div>
-
-    <hr />
-    <p class="meta">Papers live on the <a href="/papers">Papers</a> page (same shelf vibe, with PDFs + notes).</p>
   </div>
 </Base>

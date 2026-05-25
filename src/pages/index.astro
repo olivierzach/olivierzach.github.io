@@ -2,15 +2,9 @@
 import Base from '../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 
-const allProjects = await getCollection('projects');
-const featuredProjectSlugs = [
-  'llm-posttraining-harness',
-  'telemetry-retention-ml',
-  'computational-life-alife',
-];
-const projects = featuredProjectSlugs
-  .map((id) => allProjects.find((p) => p.id === id))
-  .filter(Boolean);
+const projects = (await getCollection('projects'))
+  .sort((a, b) => (b.data.date?.valueOf() ?? 0) - (a.data.date?.valueOf() ?? 0))
+  .slice(0, 12);
 
 const writing = (await getCollection('writing'))
   .filter((p) => !p.data.draft)
@@ -18,12 +12,12 @@ const writing = (await getCollection('writing'))
   .slice(0, 3);
 ---
 
-<Base title="Zachary S. Olivier" description="Applied ML / research engineer — projects, writing, and notes.">
+<Base title="Zachary S. Olivier" description="Machine learning engineer working across production systems, research tooling, and applied modeling.">
   <div class="prose">
     <h1>Zachary S. Olivier</h1>
-    <p class="kicker">Applied ML / research engineer. I build end-to-end ML systems (data → training → eval → deployment), with a bias toward instrumentation, reliability, and experiments you can trust.</p>
+    <p class="kicker">Machine learning engineer working across production systems, research tooling, and applied modeling.</p>
 
-    <p class="meta">Current threads: telemetry & signal preservation • eval/inference-time scaling • post-training tooling • complex systems / ALife side projects.</p>
+    <p class="meta">SpaceX / DataStax / Sony Pictures / Georgia Tech OMSCS</p>
 
     <p>
       <a href="/contact">Email</a> ·
@@ -35,18 +29,20 @@ const writing = (await getCollection('writing'))
 
     <hr />
 
-    <h2>Featured projects</h2>
-    <div class="grid">
+    <h2>Projects</h2>
+    <div class="project-strip" aria-label="Selected projects">
       {projects.map(p => (
-        <div class="card">
-          <div><a href={`/projects/${p.id}`}>{p.data.title}</a></div>
-          <div class="meta">{p.data.summary}</div>
-        </div>
+        <a class="project-strip-card" href={`/projects/${p.id}`}>
+          <span class="project-strip-thumb">
+            {p.data.thumbnail ? <img src={p.data.thumbnail} alt="" loading="lazy" /> : <span>{p.data.title}</span>}
+          </span>
+          <span class="project-strip-title">{p.data.title}</span>
+        </a>
       ))}
     </div>
-    <p class="meta"><a href="/projects">All projects →</a></p>
+    <p class="meta"><a href="/projects">All projects</a></p>
 
-    <h2>Recent writing</h2>
+    <h2>Writing</h2>
     <ul>
       {writing.map(w => (
         <li>

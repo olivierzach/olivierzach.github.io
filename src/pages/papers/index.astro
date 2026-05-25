@@ -4,32 +4,106 @@ import { getCollection } from 'astro:content';
 
 const papers = (await getCollection('papers'))
   .sort((a, b) => (b.data.year ?? 0) - (a.data.year ?? 0));
+
+function hasTag(entry, names) {
+  const tags = entry.data.tags.map((tag) => tag.toLowerCase());
+  return names.some((name) => tags.some((tag) => tag.includes(name)));
+}
+
+function thumbSources(src) {
+  if (!src?.startsWith('/papers/_thumbs/') || !src.endsWith('-w360.webp')) return null;
+  return {
+    srcset: `${src.replace('-w360.webp', '-w240.webp')} 240w, ${src} 360w`,
+    src,
+  };
+}
+
+const rows = [
+  {
+    id: 'recent',
+    title: 'Recent',
+    items: papers.slice(0, 12),
+  },
+  {
+    id: 'read-outlined',
+    title: 'Marked',
+    items: papers.filter((paper) => hasTag(paper, ['read', 'outlined'])),
+  },
+  {
+    id: 'optimization-training',
+    title: 'Learning',
+    items: papers.filter((paper) => hasTag(paper, ['optimization', 'training'])),
+  },
+  {
+    id: 'systems-eval',
+    title: 'Practice',
+    items: papers.filter((paper) => hasTag(paper, ['systems', 'evaluation', 'data'])),
+  },
+  {
+    id: 'tabular',
+    title: 'Applied Modeling',
+    items: papers.filter((paper) => hasTag(paper, ['tabular'])),
+  },
+  {
+    id: 'all-papers',
+    title: 'All',
+    items: papers,
+  },
+];
 ---
 
-<Base title="Papers" description="Papers I’ve read, with takeaways and PDFs where available.">
-  <div class="prose">
-    <h1>Papers</h1>
-    <p class="kicker">A living reading list. Each entry has short takeaways; some include local PDFs + thumbnails.</p>
+<Base title="Papers" description="Selected research and references.">
+  <div class="browse-page paper-page">
+    <section class="browse-hero browse-hero-papers" aria-labelledby="papers-title">
+      <div class="browse-hero-copy">
+        <h1 id="papers-title">Papers</h1>
+        <p>Selected research and references.</p>
+      </div>
+    </section>
 
-    <div class="shelf" role="list" aria-label="Paper shelf">
-      {papers.map((p) => (
-        <a class="tile" role="listitem" href={`/papers/${p.id}`} aria-label={p.data.title}>
-          <div class="poster">
-            {p.data.thumbnail ? (
-              <img src={p.data.thumbnail} alt={`Thumbnail: ${p.data.title}`} loading="lazy" />
-            ) : (
-              <div class="paper-fallback">
-                <div class="paper-fallback-title">{p.data.title}</div>
-                <div class="meta">{p.data.year ?? ''}</div>
-              </div>
-            )}
+    <div class="browse-stack" aria-label="Paper shelves">
+      {rows.map((row) => row.items.length ? (
+        <section class="browse-row" aria-labelledby={`${row.id}-title`}>
+          <div class="browse-row-header">
+            <h2 id={`${row.id}-title`}>{row.title}</h2>
+            {row.summary ? <p>{row.summary}</p> : null}
           </div>
-          <div class="tile-meta">
-            <div class="tile-title">{p.data.title}</div>
-            <div class="meta">{p.data.authors ? p.data.authors : ''}{p.data.year ? ` · ${p.data.year}` : ''}</div>
+          <div class="poster-row" role="list">
+            {row.items.map((p) => {
+              const thumbs = thumbSources(p.data.thumbnail);
+              const paperHref = p.data.pdf_url ?? p.data.link;
+              return (
+                <a class="browse-tile paper-tile" role="listitem" href={paperHref} aria-label={p.data.title} target="_blank" rel="noopener noreferrer">
+                  <div class="browse-poster paper-poster">
+                    {p.data.thumbnail ? (
+                      <img
+                        src={thumbs?.src ?? p.data.thumbnail}
+                        srcset={thumbs?.srcset}
+                        sizes="(min-width: 900px) 180px, 150px"
+                        alt={`Thumbnail: ${p.data.title}`}
+                        loading="lazy"
+                      />
+                    ) : (
+                      <div class="paper-fallback">
+                        <div class="paper-fallback-title">{p.data.title}</div>
+                        <div class="meta">{p.data.year ?? ''}</div>
+                      </div>
+                    )}
+                  </div>
+                  <div class="tile-meta">
+                    <div class="tile-title">{p.data.title}</div>
+                    <div class="meta">{p.data.authors ? p.data.authors : ''}{p.data.year ? ` · ${p.data.year}` : ''}</div>
+                  </div>
+                  <div class="tile-actions">
+                    <span>{p.data.pdf_url ? 'PDF' : 'Paper'}</span>
+                    {p.data.tags.slice(0, 2).map((tag) => <span>{tag}</span>)}
+                  </div>
+                </a>
+              );
+            })}
           </div>
-        </a>
-      ))}
+        </section>
+      ) : null)}
     </div>
   </div>
 </Base>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-label="paxos-explore">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#07101b"/>
+    <stop offset="0.55" stop-color="#0b1020"/>
+    <stop offset="1" stop-color="#121827"/>
+  </linearGradient>
+  <radialGradient id="glow" cx="28%" cy="16%" r="78%">
+    <stop offset="0" stop-color="#f472b6" stop-opacity="0.28"/>
+    <stop offset="0.58" stop-color="#f472b6" stop-opacity="0.055"/>
+    <stop offset="1" stop-color="#f472b6" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="12"/></filter>
+</defs>
+<rect width="1200" height="760" fill="url(#bg)"/>
+<rect width="1200" height="760" fill="url(#glow)"/>
+<rect x="58" y="58" width="1084" height="644" rx="28" fill="rgba(255,255,255,0.025)" stroke="rgba(255,255,255,0.095)"/>
+<text x="120" y="195" fill="rgba(255,255,255,0.38)" font-family="ui-monospace,monospace" font-size="28">n1</text><path d="M190 190 H1040" stroke="rgba(255,255,255,0.10)"/><text x="120" y="315" fill="rgba(255,255,255,0.38)" font-family="ui-monospace,monospace" font-size="28">n2</text><path d="M190 310 H1040" stroke="rgba(255,255,255,0.10)"/><text x="120" y="435" fill="rgba(255,255,255,0.38)" font-family="ui-monospace,monospace" font-size="28">n3</text><path d="M190 430 H1040" stroke="rgba(255,255,255,0.10)"/><text x="120" y="555" fill="rgba(255,255,255,0.38)" font-family="ui-monospace,monospace" font-size="28">n4</text><path d="M190 550 H1040" stroke="rgba(255,255,255,0.10)"/><path d="M651.4201461337507 310 L768.7591738579795 550" stroke="#f472b6" stroke-opacity="0.5654751579929143" stroke-width="3"/><path d="M936.224463172257 190 L1061.7908058525063 550" stroke="#f472b6" stroke-opacity="0.5311838385090232" stroke-width="3"/><path d="M835.2683412469923 550 L1012.2287275455892 430" stroke="#f472b6" stroke-opacity="0.3729991579707712" stroke-width="3"/><path d="M303.5634721070528 310 L414.6107136714272 430" stroke="#f472b6" stroke-opacity="0.2640442315302789" stroke-width="3"/><path d="M932.4407186917961 430 L1110.8468939783052 550" stroke="#f472b6" stroke-opacity="0.54065957644023" stroke-width="3"/><path d="M652.0686497911811 430 L790.7264755596407 310" stroke="#f472b6" stroke-opacity="0.29473345100879667" stroke-width="3"/><path d="M256.9174978323281 550 L364.17353487573564 430" stroke="#f472b6" stroke-opacity="0.5252231820952147" stroke-width="3"/><path d="M879.249029904604 430 L995.6828925735317 310" stroke="#f472b6" stroke-opacity="0.2860204581357539" stroke-width="3"/><path d="M340.4616624675691 430 L516.5476338332519 310" stroke="#f472b6" stroke-opacity="0.3509343227464706" stroke-width="3"/><path d="M267.3873010650277 430 L420.79657677793875 430" stroke="#f472b6" stroke-opacity="0.2836086032167077" stroke-width="3"/><path d="M759.606418106705 190 L911.2399185448885 310" stroke="#f472b6" stroke-opacity="0.47425194009207183" stroke-width="3"/><path d="M838.6858334392309 550 L988.2951304758899 550" stroke="#f472b6" stroke-opacity="0.4455842493288219" stroke-width="3"/><path d="M378.2981668226421 430 L550.3105916688219 310" stroke="#f472b6" stroke-opacity="0.3108528198394924" stroke-width="3"/><path d="M748.8758401200175 430 L866.0939291981049 310" stroke="#f472b6" stroke-opacity="0.30387528367340566" stroke-width="3"/><path d="M300.11101530864835 550 L453.5767113510519 550" stroke="#f472b6" stroke-opacity="0.4558043974917382" stroke-width="3"/><text x="92" y="672" fill="rgba(231,231,234,0.74)" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="30">paxos-explore</text>
+</svg>

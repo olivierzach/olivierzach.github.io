@@ -12,7 +12,7 @@ const { Content } = await render(entry);
 ---
 
 <Base title={entry.data.title} description={entry.data.summary}>
-  <div class="prose">
+  <div class="prose project-detail">
     <h1>{entry.data.title}</h1>
     <p class="kicker">{entry.data.summary}</p>
     <p class="meta">
@@ -20,6 +20,7 @@ const { Content } = await render(entry);
       {entry.data.github ? <> · <a href={entry.data.github}>GitHub</a></> : null}
       {entry.data.demo ? <> · <a href={entry.data.demo}>Demo</a></> : null}
     </p>
+    {entry.data.thumbnail ? <img class="project-hero-image" src={entry.data.thumbnail} alt="" /> : null}
     <hr />
     <Content />
   </div>

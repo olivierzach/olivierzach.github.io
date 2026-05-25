@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#5f6b7a"/></marker></defs>
+<rect width="1400" height="900" fill="#ffffff"/>
+<rect x="58" y="58" width="1284" height="720" rx="18" fill="#fbfcfe" stroke="#e7ebf2"/>
+<text x="110" y="125" fill="#172033" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700">RL compaction</text>
+<text x="110" y="162" fill="#5f6b7a" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400">A reinforcement-learning loop for LSM compaction decisions.</text>
+<path d="M110 190 H1190" stroke="#e7ebf2" stroke-width="2"/>
+
+<rect x="110" y="230" width="235" height="110" rx="10" fill="#ffffff" stroke="#d9dee7" stroke-width="2"/>
+<circle cx="144" cy="285" r="15" fill="#dc2626" opacity="0.88"/>
+<text x="174" y="292" fill="#172033" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">state</text>
+
+<path d="M345 285 C 382 285, 382 285, 420 285" fill="none" stroke="#5f6b7a" stroke-width="3" marker-end="url(#arrow)"/>
+
+<rect x="420" y="230" width="235" height="110" rx="10" fill="#f8fafc" stroke="#d9dee7" stroke-width="2"/>
+<circle cx="454" cy="285" r="15" fill="#dc2626" opacity="0.88"/>
+<text x="484" y="292" fill="#172033" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">action</text>
+
+<path d="M655 285 C 692 285, 692 285, 730 285" fill="none" stroke="#5f6b7a" stroke-width="3" marker-end="url(#arrow)"/>
+
+<rect x="730" y="230" width="235" height="110" rx="10" fill="#ffffff" stroke="#d9dee7" stroke-width="2"/>
+<circle cx="764" cy="285" r="15" fill="#dc2626" opacity="0.88"/>
+<text x="794" y="292" fill="#172033" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">reward</text>
+
+<path d="M965 285 C 1002 285, 1002 285, 1040 285" fill="none" stroke="#5f6b7a" stroke-width="3" marker-end="url(#arrow)"/>
+
+<rect x="1040" y="230" width="235" height="110" rx="10" fill="#f8fafc" stroke="#d9dee7" stroke-width="2"/>
+<circle cx="1074" cy="285" r="15" fill="#dc2626" opacity="0.88"/>
+<text x="1104" y="292" fill="#172033" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">buffer</text>
+
+<path d="M1275 285 C 692 285, 692 505, 110 505" fill="none" stroke="#5f6b7a" stroke-width="3" marker-end="url(#arrow)"/>
+
+<rect x="110" y="450" width="235" height="110" rx="10" fill="#ffffff" stroke="#d9dee7" stroke-width="2"/>
+<circle cx="144" cy="505" r="15" fill="#dc2626" opacity="0.88"/>
+<text x="174" y="512" fill="#172033" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">policy</text>
+
+<path d="M345 505 C 382 505, 382 505, 420 505" fill="none" stroke="#5f6b7a" stroke-width="3" marker-end="url(#arrow)"/>
+
+<rect x="420" y="450" width="235" height="110" rx="10" fill="#f8fafc" stroke="#d9dee7" stroke-width="2"/>
+<circle cx="454" cy="505" r="15" fill="#dc2626" opacity="0.88"/>
+<text x="484" y="512" fill="#172033" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">trace</text>
+
+</svg>

@@ -8,27 +8,26 @@ const projects = (await getCollection('projects')).sort((a,b)=> (b.data.date?.va
 <Base title="Projects">
   <div class="prose">
     <h1>Projects</h1>
-    <p class="kicker">Curated work. Each project page includes context, experiments, and links.</p>
-
-    <h2>Selected public repos (GitHub)</h2>
-    <ul>
-      <li><a href="https://github.com/olivierzach/tricentis-lead-scoring">tricentis-lead-scoring</a> — end-to-end ML lead scoring system.</li>
-      <li><a href="https://github.com/olivierzach/random-neighbors">random-neighbors</a> — Random Forest-style clustering for high-dimensional data.</li>
-      <li><a href="https://github.com/olivierzach/bayesian-marketing-attribution">bayesian-marketing-attribution</a> — Bayesian-flavored attribution / measurement tooling.</li>
-    </ul>
-
-    <h2>Local lab</h2>
-    <p class="meta">A grab-bag of small, readable experiment harnesses and system sketches (some may not be public yet).</p>
+    <p class="kicker">Research tools, production-shaped ML work, and app experiments.</p>
 
     <hr />
 
-    <div class="grid">
+    <div class="project-grid">
       {projects.map(p => (
-        <div class="card">
-          <div><a href={`/projects/${p.id}`}>{p.data.title}</a></div>
-          <div class="meta">{p.data.summary}</div>
-          <div class="meta">Status: {p.data.status}{p.data.github ? <> · <a href={p.data.github}>repo</a></> : null}</div>
-        </div>
+        <article class="project-card">
+          <a class="project-thumb" href={`/projects/${p.id}`} aria-label={p.data.title}>
+            {p.data.thumbnail ? <img src={p.data.thumbnail} alt="" loading="lazy" /> : <span>{p.data.title}</span>}
+          </a>
+          <div class="project-card-body">
+            <h2><a href={`/projects/${p.id}`}>{p.data.title}</a></h2>
+            <p>{p.data.summary}</p>
+            <div class="project-card-links">
+              <span>{p.data.status}</span>
+              {p.data.github ? <a href={p.data.github}>GitHub</a> : null}
+              {p.data.demo ? <a href={p.data.demo}>Demo</a> : null}
+            </div>
+          </div>
+        </article>
       ))}
     </div>
   </div>

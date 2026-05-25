@@ -14,10 +14,6 @@
   --serif: ui-serif, Iowan Old Style, Palatino, Garamond, "Times New Roman", Times, serif;
 }
 
-/* Optional: if you ever want light mode back, we can add a toggle.
-@media (prefers-color-scheme: light) { ... }
-*/
-
 *{box-sizing:border-box}
 html{
   color:var(--fg);

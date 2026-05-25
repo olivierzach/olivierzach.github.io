@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+<path d="M0,0 L0,6 L9,3 z" fill="#5f6b7a"/>
+</marker>
+</defs>
+<rect width="1400" height="900" fill="#ffffff"/>
+<rect x="48" y="44" width="1304" height="788" rx="18" fill="#fbfcfe" stroke="#e7ebf2"/>
+<text x="80" y="102" fill="#172033" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">second_brain knowledge pipeline</text>
+<text x="80" y="136" fill="#5f6b7a" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400">File-first promotion loop: drafts stay local until reviewed, elected, and published into the canonical graph.</text>
+<text x="80" y="388" fill="#dc2626" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">runtime boundary</text>
+<path d="M80 408 H1220" stroke="#fecaca" stroke-width="3" stroke-dasharray="11 9"/>
+<text x="1010" y="388" fill="#dc2626" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400">ignored local state</text>
+<text x="1010" y="454" fill="#059669" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400">committed public layer</text>
+
+<rect x="80" y="170" width="230" height="138" rx="10" fill="#ffffff" stroke="#d9dee7" stroke-width="2"/>
+<rect x="80" y="170" width="10" height="138" rx="5" fill="#2563eb"/>
+<text x="108" y="208" fill="#172033" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700">source intake</text>
+<text x="108" y="242" fill="#5f6b7a" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400">raw/manifest.jsonl</text>
+<text x="108" y="265" fill="#5f6b7a" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400">local PDFs and web text</text>
+<text x="108" y="288" fill="#5f6b7a" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400">ignored heavy artifacts</text>
+
+
+<rect x="370" y="170" width="230" height="138" rx="10" fill="#ffffff" stroke="#d9dee7" stroke-width="2"/>
+<rect x="370" y="170" width="10" height="138" rx="5" fill="#0891b2"/>
+<text x="398" y="208" fill="#172033" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700">job queue</text>
+<text x="398" y="242" fill="#5f6b7a" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400">runs/jobs/*</text>
+<text x="398" y="265" fill="#5f6b7a" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400">claim and process</text>
+<text x="398" y="288" fill="#5f6b7a" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400">multi-worker safe</text>
+
+
+<rect x="660" y="170" width="250" height="138" rx="10" fill="#ffffff" stroke="#d9dee7" stroke-width="2"/>
+<rect x="660" y="170" width="10" height="138" rx="5" fill="#7c3aed"/>
+<text x="688" y="208" fill="#172033" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700">candidate bundles</text>
+<text x="688" y="242" fill="#5f6b7a" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400">article draft</text>
+<text x="688" y="265" fill="#5f6b7a" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400">concept notes</text>
+<text x="688" y="288" fill="#5f6b7a" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400">source identity</text>
+
+
+<rect x="970" y="170" width="250" height="138" rx="10" fill="#ffffff" stroke="#d9dee7" stroke-width="2"/>
+<rect x="970" y="170" width="10" height="138" rx="5" fill="#d97706"/>
+<text x="998" y="208" fill="#172033" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700">review election</text>
+<text x="998" y="242" fill="#5f6b7a" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400">mixed reviewers</text>
+<text x="998" y="265" fill="#5f6b7a" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400">fact_check veto</text>
+<text x="998" y="288" fill="#5f6b7a" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400">quorum/consensus</text>
+
+
+<rect x="275" y="500" width="260" height="138" rx="10" fill="#ffffff" stroke="#d9dee7" stroke-width="2"/>
+<rect x="275" y="500" width="10" height="138" rx="5" fill="#059669"/>
+<text x="303" y="538" fill="#172033" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700">validated output</text>
+<text x="303" y="572" fill="#5f6b7a" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400">structure checks</text>
+<text x="303" y="595" fill="#5f6b7a" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400">graph integrity</text>
+<text x="303" y="618" fill="#5f6b7a" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400">source grounding</text>
+
+
+<rect x="610" y="500" width="260" height="138" rx="10" fill="#ffffff" stroke="#d9dee7" stroke-width="2"/>
+<rect x="610" y="500" width="10" height="138" rx="5" fill="#059669"/>
+<text x="638" y="538" fill="#172033" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700">canonical graph</text>
+<text x="638" y="572" fill="#5f6b7a" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400">wiki/articles</text>
+<text x="638" y="595" fill="#5f6b7a" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400">wiki/concepts</text>
+<text x="638" y="618" fill="#5f6b7a" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400">committed to Git</text>
+
+
+<rect x="945" y="500" width="260" height="138" rx="10" fill="#ffffff" stroke="#d9dee7" stroke-width="2"/>
+<rect x="945" y="500" width="10" height="138" rx="5" fill="#2563eb"/>
+<text x="973" y="538" fill="#172033" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700">reader surfaces</text>
+<text x="973" y="572" fill="#5f6b7a" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400">index/home.md</text>
+<text x="973" y="595" fill="#5f6b7a" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400">Obsidian mirror</text>
+<text x="973" y="618" fill="#5f6b7a" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400">static examples</text>
+
+<path d="M310 239 C 340 239, 340 239, 370 239" fill="none" stroke="#5f6b7a" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M600 239 C 630 239, 630 239, 660 239" fill="none" stroke="#5f6b7a" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M910 239 C 940 239, 940 239, 970 239" fill="none" stroke="#5f6b7a" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M1095 308 C 750 308, 750 500, 405 500" fill="none" stroke="#d97706" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M535 569 C 572 569, 572 569, 610 569" fill="none" stroke="#059669" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M870 569 C 907 569, 907 569, 945 569" fill="none" stroke="#059669" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M780 500 C 785 500, 785 308, 790 308" fill="none" stroke="#7c3aed" stroke-width="3" marker-end="url(#arrow)" stroke-dasharray="8 8"/>
+
+<rect x="80" y="680" width="360" height="96" rx="10" fill="#f8fbff" stroke="#d9dee7" stroke-width="2"/>
+<rect x="80" y="680" width="10" height="96" rx="5" fill="#2563eb"/>
+<text x="108" y="718" fill="#172033" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700">health layers</text>
+<text x="108" y="752" fill="#5f6b7a" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400">graph-health, review-health, project-state</text>
+<text x="108" y="775" fill="#5f6b7a" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400">sample quality, drift, queue and git state</text>
+
+
+<rect x="520" y="680" width="360" height="96" rx="10" fill="#fffaf2" stroke="#d9dee7" stroke-width="2"/>
+<rect x="520" y="680" width="10" height="96" rx="5" fill="#d97706"/>
+<text x="548" y="718" fill="#172033" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700">promotion rule</text>
+<text x="548" y="752" fill="#5f6b7a" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400">critical vetoes block election</text>
+<text x="548" y="775" fill="#5f6b7a" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400">bounded revision repairs failed candidates</text>
+
+
+<rect x="960" y="680" width="260" height="96" rx="10" fill="#f7fdf9" stroke="#d9dee7" stroke-width="2"/>
+<rect x="960" y="680" width="10" height="96" rx="5" fill="#059669"/>
+<text x="988" y="718" fill="#172033" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700">safe publication</text>
+<text x="988" y="752" fill="#5f6b7a" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400">raw sources and runs stay ignored</text>
+<text x="988" y="775" fill="#5f6b7a" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400">wiki/index/docs stay cloneable</text>
+
+<path d="M260 680 C 467 680, 467 638, 675 638" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)" stroke-dasharray="8 8"/>
+<path d="M700 680 C 742 680, 742 638, 785 638" fill="none" stroke="#d97706" stroke-width="3" marker-end="url(#arrow)" stroke-dasharray="8 8"/>
+<path d="M1090 680 C 1082 680, 1082 638, 1075 638" fill="none" stroke="#059669" stroke-width="3" marker-end="url(#arrow)" stroke-dasharray="8 8"/>
+</svg>

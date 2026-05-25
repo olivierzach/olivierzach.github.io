@@ -1,55 +1,104 @@
 ---
 import Base from '../layouts/Base.astro';
+
+const workItems = [
+  { role: 'Senior Machine Learning Engineer', org: 'SpaceX', dates: '2024 – Present', logo: '/logos/spacex.svg', href: 'https://www.spacex.com/', tone: 'spacex', detail: 'Production ML systems with high reliability requirements.' },
+  { role: 'Lead Data Scientist', org: 'DataStax', dates: '2022 – 2024', logo: '/logos/datastax.svg', href: 'https://www.datastax.com/', tone: 'datastax', detail: 'Search, retrieval, telemetry, and applied ML for developer-facing products.' },
+  { role: 'Senior Machine Learning Engineer', org: 'Sony Pictures Entertainment', dates: '2019 – 2022', logo: '/logos/sony.svg', href: 'https://www.sonypictures.com/', tone: 'sony', detail: 'Forecasting, experimentation, and media data products.' },
+  { role: 'Data Scientist, Product', org: 'Keap', dates: '2018 – 2019', logo: '/logos/keap.svg', href: 'https://keap.com/', tone: 'keap', detail: 'Product analytics, growth measurement, and customer lifecycle modeling.' },
+  { role: 'Data Scientist / Analyst', org: 'Mazda North American Operations', dates: '2013 – 2018', logo: '/logos/mazda.svg', href: 'https://www.mazdausa.com/', tone: 'mazda', detail: 'Business analytics, modeling, and operational reporting.' },
+];
+
+const educationItems = [
+  {
+    degree: 'M.S., Computer Science',
+    org: 'Georgia Institute of Technology',
+    dates: '2018 – 2020',
+    logo: '/logos/georgia-tech.svg',
+    href: 'https://www.gatech.edu/',
+    tone: 'gatech',
+    detail: 'Machine learning, deep learning, reinforcement learning, probabilistic models, distributed systems.',
+  },
+  {
+    degree: 'B.S., Statistics',
+    org: 'San Diego State University',
+    dates: '2009 – 2013',
+    logo: '/logos/sdsu.svg',
+    href: 'https://www.sdsu.edu/',
+    tone: 'sdsu',
+    detail: 'Probability, mathematical statistics, linear algebra, regression, experimental design.',
+  },
+];
 ---
 
 <Base title="About">
-  <div class="prose">
-    <h1>About</h1>
-    <p class="kicker">Short bio, interests, and links.</p>
+  <div class="about-page">
+    <section class="about-hero">
+      <div>
+        <p class="section-eyebrow">About</p>
+        <h1>Machine learning engineer.</h1>
+        <p>
+          Production ML, applied research, and the tooling around data, experiments, evaluation, and deployment.
+        </p>
+      </div>
+      <div class="about-links" aria-label="Profile links">
+        <a href="https://github.com/olivierzach">GitHub</a>
+        <a href="https://www.linkedin.com/in/olivierzach/">LinkedIn</a>
+        <a href="https://x.com/Zach0__">X</a>
+      </div>
+    </section>
 
-    <p>
-      I’m an applied ML / research engineer.
-      My default mode is: build the pipeline end-to-end, instrument it, define the eval, and iterate until the result is real.
-    </p>
+    <section class="timeline-section" aria-labelledby="work-title">
+      <div class="section-heading">
+        <h2 id="work-title">Work</h2>
+      </div>
+      <ol class="timeline-list">
+        {workItems.map((item) => (
+          <li>
+            <a class={`timeline-logo ${item.tone}`} href={item.href} aria-label={item.org}>
+              <img src={item.logo} alt="" loading="lazy" />
+            </a>
+            <div class="timeline-body">
+              <div class="timeline-topline">
+                <strong>{item.role}</strong>
+                <span>{item.dates}</span>
+              </div>
+              <a class="timeline-org" href={item.href}>{item.org}</a>
+              <p>{item.detail}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </section>
 
-    <p>
-      Interests: ML systems and measurement (telemetry, retention, observability), evaluation and inference-time scaling,
-      and post-training tooling (SFT/DPO-style workflows). I also keep a “deep play” track in complex systems / ALife (program-evolution style substrates).
-    </p>
+    <section class="timeline-section" aria-labelledby="education-title">
+      <div class="section-heading">
+        <h2 id="education-title">Education</h2>
+      </div>
+      <ol class="timeline-list">
+        {educationItems.map((item) => (
+          <li>
+            <a class={`timeline-logo ${item.tone}`} href={item.href} aria-label={item.org}>
+              <img src={item.logo} alt="" loading="lazy" />
+            </a>
+            <div class="timeline-body">
+              <div class="timeline-topline">
+                <strong>{item.degree}</strong>
+                <span>{item.dates}</span>
+              </div>
+              <a class="timeline-org" href={item.href}>{item.org}</a>
+              <p>{item.detail}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </section>
 
-    <h2>Work</h2>
-    <ul>
-      <li><strong>Senior Machine Learning Engineer</strong> — SpaceX <span class="meta">(Aug 2024 – Present)</span></li>
-      <li><strong>Lead Data Scientist</strong> — DataStax <span class="meta">(Feb 2022 – Aug 2024)</span></li>
-      <li><strong>Senior Machine Learning Engineer</strong> — Sony Pictures Entertainment <span class="meta">(Feb 2019 – Feb 2022)</span></li>
-      <li><strong>Data Scientist, Product</strong> — Keap <span class="meta">(Mar 2018 – Feb 2019)</span></li>
-      <li><strong>Data Scientist / Analyst</strong> — Mazda North American Operations <span class="meta">(Aug 2013 – Mar 2018)</span></li>
-    </ul>
-
-    <h2>Education</h2>
-    <ul>
-      <li>
-        <strong>M.S., Computer Science</strong> — Georgia Institute of Technology <span class="meta">(Aug 2018 – Aug 2020)</span>
-        <div class="meta">Relevant coursework (representative): Machine Learning, Deep Learning, Reinforcement Learning, Probabilistic Models, Systems / Distributed Systems.</div>
-      </li>
-      <li>
-        <strong>B.S., Statistics</strong> — San Diego State University <span class="meta">(Sep 2009 – Jun 2013)</span>
-        <div class="meta">Relevant coursework (representative): Probability, Mathematical Statistics, Linear Algebra, Regression / GLMs, Experimental Design.</div>
-      </li>
-    </ul>
-
-    <h2>What I’m looking for</h2>
-    <ul>
-      <li>Research engineer / applied research roles where I can own experiments end-to-end (data + training + eval + infra) and ship robust improvements.</li>
-      <li>Teams that take measurement seriously: baselines, ablations, and production feedback loops.</li>
-    </ul>
-
-    <h2>Links</h2>
-    <ul>
-      <li>GitHub: <a href="https://github.com/olivierzach">github.com/olivierzach</a></li>
-      <li>LinkedIn: <a href="https://www.linkedin.com/in/olivierzach/">linkedin.com/in/olivierzach</a></li>
-      <li>X: <a href="https://x.com/Zach0__">@Zach0__</a></li>
-      <li>CV (PDF): <a href="/cv.pdf">cv.pdf</a></li>
-    </ul>
+    <section class="about-footer-grid" aria-label="More information">
+      <div>
+        <h2>Now</h2>
+        <p>Research engineering, production ML, and applied modeling work with clear ownership.</p>
+      </div>
+    </section>
   </div>
 </Base>

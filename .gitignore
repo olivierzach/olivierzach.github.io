@@ -12,6 +12,15 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
+# local scratch / import staging
+tmp/
+paper-gap-radar/
+docs/project-promotion-*.md
+public/projects/extracted/concensus-interview.png
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+
 
 # environment variables
 .env

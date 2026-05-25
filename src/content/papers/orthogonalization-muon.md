@@ -3,7 +3,6 @@ title: 'Muon: An optimizer for hidden layers in neural networks'
 authors: Keller Jordan
 year: 2024
 link: 'https://kellerjordan.github.io/posts/muon/'
-pdf_url: 'https://arxiv.org/pdf/2406.19108.pdf'
 tags:
   - optimization
   - training
