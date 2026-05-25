@@ -1,40 +1,72 @@
 ---
 import Base from '../layouts/Base.astro';
 import { getCollection } from 'astro:content';
+import homepage from '../data/homepage.json';
 
-const projects = (await getCollection('projects'))
-  .sort((a, b) => (b.data.date?.valueOf() ?? 0) - (a.data.date?.valueOf() ?? 0))
-  .slice(0, 12);
+const projects = await getCollection('projects');
+const projectById = new Map(projects.map((project) => [project.id, project]));
+const featuredProjects = homepage.featuredProjects
+  .map((item, index) => ({ config: item, entry: projectById.get(item.slug), rank: index + 1 }))
+  .filter((item) => item.entry);
 ---
 
-<Base title="Zachary S. Olivier" description="Machine learning engineer working across production systems, research tooling, and applied modeling.">
-  <div class="prose">
-    <h1>Zachary S. Olivier</h1>
-    <p class="kicker">Machine learning engineer working across production systems, research tooling, and applied modeling.</p>
+<Base title="Zachary S. Olivier" description={homepage.headline}>
+  <div class="home-page">
+    <section class="home-hero">
+      <div class="home-hero-copy">
+        <p class="section-eyebrow">Zachary S. Olivier</p>
+        <h1>{homepage.headline}</h1>
+        <p class="home-summary">{homepage.summary}</p>
 
-    <p class="meta">SpaceX / DataStax / Sony Pictures / Georgia Tech OMSCS</p>
+        <div class="home-actions" aria-label="Primary links">
+          <a class="home-action-primary" href="/projects">Projects</a>
+          <a href="https://github.com/olivierzach" rel="me">GitHub</a>
+          <a href="https://www.linkedin.com/in/olivierzach/" rel="me">LinkedIn</a>
+          <a href="/contact">Email</a>
+        </div>
+      </div>
 
-    <p>
-      <a href="/contact">Email</a> ·
-      <a href="https://github.com/olivierzach" rel="me">GitHub</a> ·
-      <a href="https://www.linkedin.com/in/olivierzach/" rel="me">LinkedIn</a> ·
-      <a href="https://x.com/Zach0__" rel="me">X</a> ·
-      <a href="/about">About</a>
-    </p>
+      <dl class="home-signal-grid" aria-label="Profile signals">
+        {homepage.signals.map((signal) => (
+          <div>
+            <dt>{signal.label}</dt>
+            <dd>{signal.value}</dd>
+          </div>
+        ))}
+      </dl>
+    </section>
 
-    <hr />
-
-    <h2>Projects</h2>
-    <div class="project-strip" aria-label="Selected projects">
-      {projects.map(p => (
-        <a class="project-strip-card" href={`/projects/${p.id}`}>
-          <span class="project-strip-thumb">
-            {p.data.thumbnail ? <img src={p.data.thumbnail} alt="" loading="lazy" /> : <span>{p.data.title}</span>}
-          </span>
-          <span class="project-strip-title">{p.data.title}</span>
-        </a>
-      ))}
-    </div>
-    <p class="meta"><a href="/projects">All projects</a></p>
+    <section class="home-featured" aria-labelledby="featured-projects-title">
+      <div class="home-section-head">
+        <div>
+          <p class="section-eyebrow">Selected projects</p>
+          <h2 id="featured-projects-title">Top five projects</h2>
+        </div>
+        <a href="/projects">All projects</a>
+      </div>
+      <div class="featured-project-grid">
+        {featuredProjects.map(({ config, entry, rank }) => (
+          <article class:list={['featured-project-card', rank === 1 && 'featured-project-card-primary']}>
+            <a class="featured-project-image" href={`/projects/${entry.id}`} aria-label={entry.data.title}>
+              {entry.data.thumbnail ? <img src={entry.data.thumbnail} alt="" loading={rank === 1 ? 'eager' : 'lazy'} /> : <span>{entry.data.title}</span>}
+            </a>
+            <div class="featured-project-body">
+              <div class="featured-project-kicker">
+                <span>{String(rank).padStart(2, '0')}</span>
+                <span>{config.overline}</span>
+              </div>
+              <h3><a href={`/projects/${entry.id}`}>{entry.data.title}</a></h3>
+              <p>{config.evidence}</p>
+              <div class="featured-project-scope">{config.scope}</div>
+              <div class="featured-project-links">
+                {entry.data.demo ? <a href={entry.data.demo}>Demo</a> : null}
+                {entry.data.github ? <a href={entry.data.github}>GitHub</a> : null}
+                <a href={`/projects/${entry.id}`}>Details</a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
   </div>
 </Base>

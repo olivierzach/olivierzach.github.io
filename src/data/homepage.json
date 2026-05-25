@@ -1,0 +1,41 @@
+{
+  "headline": "Machine learning engineer working across production systems, research tooling, and applied modeling.",
+  "summary": "I build ML systems where data quality, evaluation, and production feedback matter as much as the model. Recent work spans fine-tuning harnesses, local research infrastructure, industrial anomaly detection, tabular foundation models, and artificial-life experiments.",
+  "signals": [
+    { "label": "Work", "value": "SpaceX / DataStax / Sony Pictures" },
+    { "label": "Graduate", "value": "Georgia Tech OMSCS" },
+    { "label": "Current", "value": "Post-training, evaluation, reliability, ALife" }
+  ],
+  "featuredProjects": [
+    {
+      "slug": "concensus-sft",
+      "overline": "Fine-tuning",
+      "evidence": "Scientific QA SFT pipeline with data preparation, training artifacts, and loss diagnostics.",
+      "scope": "NLP / supervised fine-tuning / evaluation"
+    },
+    {
+      "slug": "second-brain",
+      "overline": "Research systems",
+      "evidence": "Local-first knowledge pipeline for papers, notes, reviewed article nodes, and concept graphs.",
+      "scope": "LLM workflows / knowledge systems / agent review"
+    },
+    {
+      "slug": "total-recall-industrial-anomaly-detection",
+      "overline": "Computer vision",
+      "evidence": "PatchCore-style industrial inspection lab with memory-bank retrieval and a live static demo.",
+      "scope": "Anomaly detection / visual inspection / demo"
+    },
+    {
+      "slug": "tabular-foundation-models",
+      "overline": "Applied modeling",
+      "evidence": "TabPFN and TabICL lab against classical baselines with runtime, uncertainty, and benchmark reports.",
+      "scope": "Tabular ML / foundation models / baselines"
+    },
+    {
+      "slug": "computational-life-alife",
+      "overline": "ALife",
+      "evidence": "Program-soup reproduction and extensions around replicators, BFF tapes, and emergence dynamics.",
+      "scope": "Simulation / emergence / program search"
+    }
+  ]
+}
