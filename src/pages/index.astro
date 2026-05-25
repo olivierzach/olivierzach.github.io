@@ -19,21 +19,12 @@ const featuredProjects = homepage.featuredProjects
         <p class="home-summary">{homepage.summary}</p>
 
         <div class="home-actions" aria-label="Primary links">
-          <a class="home-action-primary" href="/projects">Projects</a>
+          <a href="/projects">Projects</a>
           <a href="https://github.com/olivierzach" rel="me">GitHub</a>
           <a href="https://www.linkedin.com/in/olivierzach/" rel="me">LinkedIn</a>
           <a href="/contact">Email</a>
         </div>
       </div>
-
-      <dl class="home-signal-grid" aria-label="Profile signals">
-        {homepage.signals.map((signal) => (
-          <div>
-            <dt>{signal.label}</dt>
-            <dd>{signal.value}</dd>
-          </div>
-        ))}
-      </dl>
     </section>
 
     <section class="home-featured" aria-labelledby="featured-projects-title">
