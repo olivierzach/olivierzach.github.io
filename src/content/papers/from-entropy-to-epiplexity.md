@@ -12,7 +12,7 @@ tags:
   - information-theory
   - intelligence
   - outlined
-thumbnail: /papers/_figures/from-entropy-to-epiplexity-w360.webp
+thumbnail: /papers/_thumbs/from-entropy-to-epiplexity-w360.webp
 ---
 
 ## Why it is here

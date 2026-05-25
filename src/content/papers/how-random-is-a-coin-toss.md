@@ -10,7 +10,7 @@ tags:
   - bayesian-inference
   - dynamical-systems
   - outlined
-thumbnail: /papers/_figures/how-random-is-a-coin-toss-w360.webp
+thumbnail: /papers/_thumbs/how-random-is-a-coin-toss-w360.webp
 ---
 
 ## Why it is here

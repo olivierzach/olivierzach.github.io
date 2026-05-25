@@ -8,7 +8,7 @@ tags:
   - deep-learning
   - computer-vision
   - optimization
-thumbnail: /papers/_figures/deep-residual-learning-w360.webp
+thumbnail: /papers/_thumbs/deep-residual-learning-w360.webp
 ---
 
 ## Why it is here

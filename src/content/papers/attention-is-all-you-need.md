@@ -10,7 +10,7 @@ tags:
   - transformers
   - sequence-modeling
   - deep-learning
-thumbnail: /papers/_figures/attention-is-all-you-need-w360.webp
+thumbnail: /papers/_thumbs/attention-is-all-you-need-w360.webp
 ---
 
 ## Why it is here

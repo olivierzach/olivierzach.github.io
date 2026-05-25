@@ -12,7 +12,7 @@ tags:
   - alife
   - simulation
   - emergence
-thumbnail: /papers/_figures/computational-life-program-soup-w360.webp
+thumbnail: /papers/_thumbs/computational-life-program-soup-w360.webp
 ---
 
 ## Why it is here

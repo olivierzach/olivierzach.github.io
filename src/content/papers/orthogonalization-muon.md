@@ -6,7 +6,7 @@ link: 'https://kellerjordan.github.io/posts/muon/'
 tags:
   - optimization
   - training
-thumbnail: /papers/_figures/orthogonalization-muon-w360.webp
+thumbnail: /papers/_thumbs/orthogonalization-muon-w360.webp
 ---
 
 ## Takeaways

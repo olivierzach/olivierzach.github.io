@@ -10,7 +10,7 @@ tags:
   - tabular
   - foundation-models
   - bayesian
-thumbnail: /papers/_figures/tabpfn-w360.webp
+thumbnail: /papers/_thumbs/tabpfn-w360.webp
 ---
 
 ## Why it is here

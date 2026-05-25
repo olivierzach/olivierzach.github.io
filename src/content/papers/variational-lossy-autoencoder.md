@@ -10,7 +10,7 @@ tags:
   - generative-models
   - representation-learning
   - outlined
-thumbnail: /papers/_figures/variational-lossy-autoencoder-w360.webp
+thumbnail: /papers/_thumbs/variational-lossy-autoencoder-w360.webp
 ---
 
 ## Why it is here

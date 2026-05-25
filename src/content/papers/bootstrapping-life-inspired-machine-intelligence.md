@@ -11,7 +11,7 @@ tags:
   - intelligence
   - read
   - outlined
-thumbnail: /papers/_figures/bootstrapping-life-inspired-machine-intelligence-w360.webp
+thumbnail: /papers/_thumbs/bootstrapping-life-inspired-machine-intelligence-w360.webp
 ---
 
 ## Why it is here

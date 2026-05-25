@@ -10,7 +10,7 @@ tags:
   - residual-networks
   - read
   - outlined
-thumbnail: /papers/_figures/identity-mappings-resnets-w360.webp
+thumbnail: /papers/_thumbs/identity-mappings-resnets-w360.webp
 ---
 
 ## Why it is here

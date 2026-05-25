@@ -19,7 +19,7 @@ tags:
   - systems
   - evaluation
   - reliability
-thumbnail: /papers/_figures/underspecification-credibility-ml-w360.webp
+thumbnail: /papers/_thumbs/underspecification-credibility-ml-w360.webp
 ---
 
 ## Why it is here

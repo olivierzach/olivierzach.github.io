@@ -8,7 +8,7 @@ tags:
   - sequence-modeling
   - neural-networks
   - outlined
-thumbnail: /papers/_figures/pointer-networks-w360.webp
+thumbnail: /papers/_thumbs/pointer-networks-w360.webp
 ---
 
 ## Why it is here

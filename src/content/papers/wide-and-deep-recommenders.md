@@ -11,7 +11,7 @@ tags:
   - recommender-systems
   - production-ml
   - systems
-thumbnail: /papers/_figures/wide-and-deep-recommenders-w360.webp
+thumbnail: /papers/_thumbs/wide-and-deep-recommenders-w360.webp
 ---
 
 ## Why it is here

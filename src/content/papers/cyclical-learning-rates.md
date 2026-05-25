@@ -8,7 +8,7 @@ tags:
   - optimization
   - training
   - deep-learning
-thumbnail: /papers/_figures/cyclical-learning-rates-w360.webp
+thumbnail: /papers/_thumbs/cyclical-learning-rates-w360.webp
 ---
 
 ## Why it is here
