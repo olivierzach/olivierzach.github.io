@@ -1,6 +1,10 @@
 ---
-title: 'Computational Life: How Well-formed, Self-replicating Programs Emerge from Simple Interaction'
-authors: 'Blaise Aguera y Arcas, Jyrki Alakuijala, James Evans, Ben Laurie, Alexander Mordvintsev, Eyvind Niklasson, Ettore Randazzo, Luca Versari'
+title: >-
+  Computational Life: How Well-formed, Self-replicating Programs Emerge from
+  Simple Interaction
+authors: >-
+  Blaise Aguera y Arcas, Jyrki Alakuijala, James Evans, Ben Laurie, Alexander
+  Mordvintsev, Eyvind Niklasson, Ettore Randazzo, Luca Versari
 year: 2024
 link: 'http://arxiv.org/abs/2406.19108'
 pdf_url: 'https://arxiv.org/pdf/2406.19108.pdf'
@@ -8,7 +12,7 @@ tags:
   - alife
   - simulation
   - emergence
-thumbnail: /papers/_thumbs/computational-life-program-soup-w360.webp
+thumbnail: /papers/_figures/computational-life-program-soup-w360.webp
 ---
 
 ## Why it is here

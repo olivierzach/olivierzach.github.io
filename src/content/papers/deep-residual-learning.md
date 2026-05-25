@@ -1,5 +1,5 @@
 ---
-title: 'Deep Residual Learning for Image Recognition'
+title: Deep Residual Learning for Image Recognition
 authors: 'Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun'
 year: 2015
 link: 'http://arxiv.org/abs/1512.03385'
@@ -8,7 +8,7 @@ tags:
   - deep-learning
   - computer-vision
   - optimization
-thumbnail: /papers/_thumbs/deep-residual-learning-w360.webp
+thumbnail: /papers/_figures/deep-residual-learning-w360.webp
 ---
 
 ## Why it is here

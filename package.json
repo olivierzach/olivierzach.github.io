@@ -14,6 +14,7 @@
     "covers:opt": "node scripts/optimize_covers.mjs",
     "fetch:papers": "node scripts/fetch_papers.mjs --all",
     "thumbs:papers": "node scripts/thumb_papers_poppler.mjs --all",
+    "figures:papers": "node scripts/extract_paper_figures.mjs --all",
     "art:gen": "node scripts/generate_art.mjs",
     "art:projects": "node scripts/generate_project_thumbnails.mjs",
     "art:repo-thumbs": "node scripts/generate_repo_audit_thumbnails.mjs",

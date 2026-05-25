@@ -8,7 +8,7 @@ tags:
   - tabular
   - foundation-models
   - in-context-learning
-thumbnail: /papers/_thumbs/tabicl-w360.webp
+thumbnail: /papers/_figures/tabicl-w360.webp
 ---
 
 ## Why it is here

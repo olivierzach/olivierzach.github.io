@@ -1,5 +1,7 @@
 ---
-title: 'How Random Is a Coin Toss? Bayesian Inference and the Symbolic Dynamics of Deterministic Chaos'
+title: >-
+  How Random Is a Coin Toss? Bayesian Inference and the Symbolic Dynamics of
+  Deterministic Chaos
 authors: 'Christopher C. Strelioff, James P. Crutchfield'
 year: 2006
 link: 'https://arxiv.org/abs/cs/0611054'
@@ -8,7 +10,7 @@ tags:
   - bayesian-inference
   - dynamical-systems
   - outlined
-thumbnail: /papers/_thumbs/how-random-is-a-coin-toss-w360.webp
+thumbnail: /papers/_figures/how-random-is-a-coin-toss-w360.webp
 ---
 
 ## Why it is here

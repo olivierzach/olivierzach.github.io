@@ -8,7 +8,7 @@ tags:
   - tabular
   - foundation-models
   - evaluation
-thumbnail: /papers/_thumbs/tabiclv2-w360.webp
+thumbnail: /papers/_figures/tabiclv2-w360.webp
 ---
 
 ## Why it is here

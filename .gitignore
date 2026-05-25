@@ -17,6 +17,7 @@ tmp/
 paper-gap-radar/
 docs/project-promotion-*.md
 public/projects/extracted/concensus-interview.png
+public/papers/*.pdf
 *.sqlite
 *.sqlite-shm
 *.sqlite-wal

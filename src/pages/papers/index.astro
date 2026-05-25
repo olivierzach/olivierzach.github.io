@@ -11,7 +11,7 @@ function hasTag(entry, names) {
 }
 
 function thumbSources(src) {
-  if (!src?.startsWith('/papers/_thumbs/') || !src.endsWith('-w360.webp')) return null;
+  if (!src?.startsWith('/papers/') || !src.endsWith('-w360.webp')) return null;
   return {
     srcset: `${src.replace('-w360.webp', '-w240.webp')} 240w, ${src} 360w`,
     src,

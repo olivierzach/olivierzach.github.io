@@ -1,5 +1,5 @@
 ---
-title: 'Pointer Networks'
+title: Pointer Networks
 authors: 'Oriol Vinyals, Meire Fortunato, Navdeep Jaitly'
 year: 2017
 link: 'http://arxiv.org/abs/1506.03134'
@@ -8,7 +8,7 @@ tags:
   - sequence-modeling
   - neural-networks
   - outlined
-thumbnail: /papers/_thumbs/pointer-networks-w360.webp
+thumbnail: /papers/_figures/pointer-networks-w360.webp
 ---
 
 ## Why it is here

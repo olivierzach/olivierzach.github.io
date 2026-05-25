@@ -1,6 +1,6 @@
 ---
-title: 'Cyclical Learning Rates for Training Neural Networks'
-authors: 'Leslie N. Smith'
+title: Cyclical Learning Rates for Training Neural Networks
+authors: Leslie N. Smith
 year: 2017
 link: 'http://arxiv.org/abs/1506.01186'
 pdf_url: 'https://arxiv.org/pdf/1506.01186.pdf'
@@ -8,7 +8,7 @@ tags:
   - optimization
   - training
   - deep-learning
-thumbnail: /papers/_thumbs/cyclical-learning-rates-w360.webp
+thumbnail: /papers/_figures/cyclical-learning-rates-w360.webp
 ---
 
 ## Why it is here

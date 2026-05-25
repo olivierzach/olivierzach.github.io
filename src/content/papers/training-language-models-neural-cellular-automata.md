@@ -1,5 +1,5 @@
 ---
-title: 'Training Language Models via Neural Cellular Automata'
+title: Training Language Models via Neural Cellular Automata
 authors: 'Dan Lee, Seungwook Han, Akarsh Kumar, Pulkit Agrawal'
 year: 2026
 link: 'http://arxiv.org/abs/2603.10055'
@@ -8,7 +8,7 @@ tags:
   - language-models
   - cellular-automata
   - alife
-thumbnail: /papers/_thumbs/training-language-models-neural-cellular-automata-w360.webp
+thumbnail: /papers/_figures/training-language-models-neural-cellular-automata-w360.webp
 ---
 
 ## Why it is here

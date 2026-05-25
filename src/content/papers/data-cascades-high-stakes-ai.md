@@ -1,6 +1,8 @@
 ---
-title: 'Data Cascades in High-Stakes AI'
-authors: 'Nithya Sambasivan, Shivani Kapania, Hannah Highfill, Diana Akrong, Praveen Paritosh, Lora M. Aroyo'
+title: Data Cascades in High-Stakes AI
+authors: >-
+  Nithya Sambasivan, Shivani Kapania, Hannah Highfill, Diana Akrong, Praveen
+  Paritosh, Lora M. Aroyo
 year: 2021
 link: 'https://dl.acm.org/doi/10.1145/3411764.3445518'
 tags:

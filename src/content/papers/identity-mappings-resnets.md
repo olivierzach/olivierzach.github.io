@@ -1,5 +1,5 @@
 ---
-title: 'Identity Mappings in Deep Residual Networks'
+title: Identity Mappings in Deep Residual Networks
 authors: 'Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun'
 year: 2016
 link: 'http://arxiv.org/abs/1603.05027'
@@ -10,7 +10,7 @@ tags:
   - residual-networks
   - read
   - outlined
-thumbnail: /papers/_thumbs/identity-mappings-resnets-w360.webp
+thumbnail: /papers/_figures/identity-mappings-resnets-w360.webp
 ---
 
 ## Why it is here

@@ -1,6 +1,8 @@
 ---
-title: 'Variational Lossy Autoencoder'
-authors: 'Ilya Sutskever, Xi Chen, Diederik P. Kingma, Tim Salimans, Yan Duan, Prafulla Dhariwal, John Schulman, Pieter Abbeel'
+title: Variational Lossy Autoencoder
+authors: >-
+  Ilya Sutskever, Xi Chen, Diederik P. Kingma, Tim Salimans, Yan Duan, Prafulla
+  Dhariwal, John Schulman, Pieter Abbeel
 year: 2017
 link: 'http://arxiv.org/abs/1611.02731'
 pdf_url: 'https://arxiv.org/pdf/1611.02731.pdf'
@@ -8,7 +10,7 @@ tags:
   - generative-models
   - representation-learning
   - outlined
-thumbnail: /papers/_thumbs/variational-lossy-autoencoder-w360.webp
+thumbnail: /papers/_figures/variational-lossy-autoencoder-w360.webp
 ---
 
 ## Why it is here
