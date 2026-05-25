@@ -5,11 +5,6 @@ import { getCollection } from 'astro:content';
 const projects = (await getCollection('projects'))
   .sort((a, b) => (b.data.date?.valueOf() ?? 0) - (a.data.date?.valueOf() ?? 0))
   .slice(0, 12);
-
-const writing = (await getCollection('writing'))
-  .filter((p) => !p.data.draft)
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0, 3);
 ---
 
 <Base title="Zachary S. Olivier" description="Machine learning engineer working across production systems, research tooling, and applied modeling.">
@@ -41,16 +36,5 @@ const writing = (await getCollection('writing'))
       ))}
     </div>
     <p class="meta"><a href="/projects">All projects</a></p>
-
-    <h2>Writing</h2>
-    <ul>
-      {writing.map(w => (
-        <li>
-          <a href={`/writing/${w.id}`}>{w.data.title}</a>
-          <span class="meta"> — {w.data.date.toISOString().slice(0,10)}</span>
-        </li>
-      ))}
-    </ul>
-    <p class="meta"><a href="/writing">All writing →</a></p>
   </div>
 </Base>

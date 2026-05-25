@@ -7,7 +7,7 @@ const posts = (await getCollection('writing'))
   .sort((a,b)=> b.data.date.valueOf()-a.data.date.valueOf());
 ---
 
-<Base title="Writing">
+<Base title="Writing" noindex={true}>
   <div class="prose">
     <h1>Writing</h1>
     <p class="kicker">Notes and project writeups.</p>
