@@ -63,16 +63,16 @@ hr{border:none; border-top:1px solid var(--border); margin:2.25rem 0;}
   max-width:34ch;
   margin:0;
   font-family:var(--sans);
-  font-size:1.45rem;
-  line-height:1.22;
-  font-weight:620;
+  font-size:1.12rem;
+  line-height:1.35;
+  font-weight:580;
 }
 .home-summary{
-  max-width:68ch;
-  margin:0.85rem 0 0;
-  color:#c7cedb;
-  font-size:0.98rem;
-  line-height:1.58;
+  max-width:62ch;
+  margin:0.6rem 0 0;
+  color:var(--muted);
+  font-size:0.94rem;
+  line-height:1.55;
 }
 .home-actions{
   display:flex;
@@ -296,7 +296,7 @@ hr{border:none; border-top:1px solid var(--border); margin:2.25rem 0;}
 }
 
 @media(max-width:520px){
-  .home-hero h1{font-size:1.35rem;}
+  .home-hero h1{font-size:1.08rem;}
   .home-summary{font-size:0.95rem;}
   .featured-project-list li{display:grid; gap:0.25rem;}
   .featured-project-actions{justify-content:flex-start;}

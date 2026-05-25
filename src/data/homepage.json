@@ -1,6 +1,6 @@
 {
-  "headline": "Machine learning engineer working across production systems, research tooling, and applied modeling.",
-  "summary": "I build ML systems where data quality, evaluation, and production feedback matter as much as the model. Recent work spans fine-tuning harnesses, local research infrastructure, industrial anomaly detection, tabular foundation models, and artificial-life experiments.",
+  "headline": "Machine learning engineer.",
+  "summary": "Production ML, research tooling, and applied modeling. Recent work includes fine-tuning harnesses, local knowledge systems, anomaly detection, tabular models, and artificial-life experiments.",
   "signals": [
     { "label": "Work", "value": "SpaceX / DataStax / Sony Pictures" },
     { "label": "Graduate", "value": "Georgia Tech OMSCS" },
