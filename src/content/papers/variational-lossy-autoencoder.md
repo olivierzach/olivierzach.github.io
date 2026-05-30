@@ -10,6 +10,7 @@ tags:
   - generative-models
   - representation-learning
   - outlined
+  - carmack-list
 thumbnail: /papers/_thumbs/variational-lossy-autoencoder-w360.webp
 ---
 

@@ -10,6 +10,7 @@ tags:
   - transformers
   - sequence-modeling
   - deep-learning
+  - carmack-list
 thumbnail: /papers/_thumbs/attention-is-all-you-need-w360.webp
 ---
 

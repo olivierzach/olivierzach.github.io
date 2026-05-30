@@ -25,6 +25,11 @@ const rows = [
     items: papers.slice(0, 12),
   },
   {
+    id: 'carmack-list',
+    title: 'Sutskever / Carmack',
+    items: papers.filter((paper) => hasTag(paper, ['carmack-list'])),
+  },
+  {
     id: 'core-ai',
     title: 'Core AI',
     items: papers.filter((paper) => hasTag(paper, ['transformers', 'residual', 'architecture', 'foundation-models', 'representation', 'scaling', 'sequence'])),

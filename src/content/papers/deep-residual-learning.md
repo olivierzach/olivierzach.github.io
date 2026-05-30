@@ -8,6 +8,7 @@ tags:
   - deep-learning
   - computer-vision
   - optimization
+  - carmack-list
 thumbnail: /papers/_thumbs/deep-residual-learning-w360.webp
 ---
 

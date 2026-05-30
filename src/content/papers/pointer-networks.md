@@ -8,6 +8,7 @@ tags:
   - sequence-modeling
   - neural-networks
   - outlined
+  - carmack-list
 thumbnail: /papers/_thumbs/pointer-networks-w360.webp
 ---
 

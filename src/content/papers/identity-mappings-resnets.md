@@ -10,6 +10,7 @@ tags:
   - residual-networks
   - read
   - outlined
+  - carmack-list
 thumbnail: /papers/_thumbs/identity-mappings-resnets-w360.webp
 ---
 
