@@ -25,9 +25,9 @@ const rows = [
     items: papers.slice(0, 12),
   },
   {
-    id: 'read-outlined',
-    title: 'Marked',
-    items: papers.filter((paper) => hasTag(paper, ['read', 'outlined'])),
+    id: 'core-ai',
+    title: 'Core AI',
+    items: papers.filter((paper) => hasTag(paper, ['transformers', 'residual', 'architecture', 'foundation-models', 'representation', 'scaling', 'sequence'])),
   },
   {
     id: 'uncertainty-evidence',
@@ -50,19 +50,24 @@ const rows = [
     items: papers.filter((paper) => hasTag(paper, ['optimization', 'training'])),
   },
   {
-    id: 'anomaly-reliability',
-    title: 'Anomaly & Reliability',
-    items: papers.filter((paper) => hasTag(paper, ['anomaly', 'reliability', 'survival'])),
+    id: 'applied-modeling',
+    title: 'Applied Modeling',
+    items: papers.filter((paper) => hasTag(paper, ['tabular', 'survival', 'wtte', 'time-to-event', 'reliability', 'competing-risks', 'medical-modeling'])),
+  },
+  {
+    id: 'vision-anomaly',
+    title: 'Vision & Anomaly',
+    items: papers.filter((paper) => hasTag(paper, ['vision', 'anomaly', 'industrial-vision', 'segmentation', 'cascaded-roi'])),
+  },
+  {
+    id: 'suggested-next',
+    title: 'Suggested Next',
+    items: papers.filter((paper) => hasTag(paper, ['suggested-next'])),
   },
   {
     id: 'systems-eval',
     title: 'Practice',
-    items: papers.filter((paper) => hasTag(paper, ['systems', 'evaluation', 'data'])),
-  },
-  {
-    id: 'tabular',
-    title: 'Applied Modeling',
-    items: papers.filter((paper) => hasTag(paper, ['tabular'])),
+    items: papers.filter((paper) => hasTag(paper, ['systems', 'evaluation', 'data', 'ml-practice'])),
   },
   {
     id: 'all-papers',
