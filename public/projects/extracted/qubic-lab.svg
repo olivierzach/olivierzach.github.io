@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Qubic lab</title>
+  <desc id="desc">Isometric 4x4x4 tic-tac-toe grid with search paths.</desc>
+  <rect width="1200" height="720" fill="#111417"/>
+  <rect x="96" y="88" width="1008" height="544" rx="28" fill="#181f24" stroke="#34434a" stroke-width="3"/>
+  <g transform="translate(330 125)">
+    <g fill="none" stroke="#53646c" stroke-width="4">
+      <path d="M0 420 300 520 600 420 300 320Z"/>
+      <path d="M0 300 300 400 600 300 300 200Z"/>
+      <path d="M0 180 300 280 600 180 300 80Z"/>
+      <path d="M0 60 300 160 600 60 300-40Z"/>
+      <path d="M0 60v360M300-40v360M600 60v360"/>
+      <path d="M100 93v360M200 126v360M400 126v360M500 93v360"/>
+      <path d="M0 60 0 420M100 93 100 453M200 126 200 486M300 160 300 520"/>
+      <path d="M600 60 600 420M500 93 500 453M400 126 400 486"/>
+    </g>
+    <g fill="#ffbf59">
+      <circle cx="300" cy="160" r="22"/>
+      <circle cx="300" cy="280" r="22"/>
+      <circle cx="300" cy="400" r="22"/>
+      <circle cx="300" cy="520" r="22"/>
+    </g>
+    <g stroke="#71d7b0" stroke-width="16" stroke-linecap="round">
+      <path d="M92 454 196 366"/>
+      <path d="M196 454 92 366"/>
+      <path d="M405 367 510 279"/>
+      <path d="M510 367 405 279"/>
+    </g>
+    <path d="M118 126 C210 55 375 36 496 95" fill="none" stroke="#7aa7ff" stroke-width="10" stroke-linecap="round"/>
+    <path d="M496 95l-42-2 24 35" fill="none" stroke="#7aa7ff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g fill="#dce7e9" font-family="Inter, Arial, sans-serif">
+    <text x="150" y="170" font-size="54" font-weight="800">Qubic lab</text>
+    <text x="150" y="222" font-size="28">4x4x4 search and self-play sandbox</text>
+  </g>
+</svg>

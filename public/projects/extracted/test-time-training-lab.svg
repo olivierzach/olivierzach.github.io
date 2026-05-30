@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Test-time training lab</title>
+  <desc id="desc">Abstract fast-weight update diagram with sequence tokens and an online gradient step.</desc>
+  <rect width="1200" height="720" fill="#101418"/>
+  <rect x="96" y="96" width="1008" height="528" rx="28" fill="#172026" stroke="#31434a" stroke-width="3"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M210 260h190c54 0 82 38 82 82s28 82 82 82h122" stroke="#67d2a7" stroke-width="14"/>
+    <path d="M210 424h162c58 0 82-42 82-84s26-80 86-80h146" stroke="#f5c15d" stroke-width="14"/>
+    <path d="M728 260h126c64 0 102 42 102 100s-38 100-102 100H728" stroke="#7aa7ff" stroke-width="14"/>
+  </g>
+  <g>
+    <rect x="172" y="220" width="100" height="80" rx="16" fill="#24323a" stroke="#4b6570" stroke-width="3"/>
+    <rect x="172" y="384" width="100" height="80" rx="16" fill="#24323a" stroke="#4b6570" stroke-width="3"/>
+    <rect x="650" y="220" width="112" height="80" rx="16" fill="#26382f" stroke="#67d2a7" stroke-width="3"/>
+    <rect x="650" y="384" width="112" height="80" rx="16" fill="#3b3323" stroke="#f5c15d" stroke-width="3"/>
+    <rect x="924" y="310" width="112" height="100" rx="18" fill="#253247" stroke="#7aa7ff" stroke-width="3"/>
+  </g>
+  <g fill="#d9e5e7" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">
+    <text x="207" y="273">x<tspan baseline-shift="sub" font-size="20">t</tspan></text>
+    <text x="205" y="437">x<tspan baseline-shift="sub" font-size="20">t+1</tspan></text>
+    <text x="681" y="273">W</text>
+    <text x="681" y="437">ΔW</text>
+    <text x="957" y="369">TTT</text>
+  </g>
+  <g fill="#9fb2b8" font-family="Inter, Arial, sans-serif" font-size="28">
+    <text x="143" y="572">online loss</text>
+    <text x="496" y="572">fast weights</text>
+    <text x="824" y="572">test-time update</text>
+  </g>
+</svg>
