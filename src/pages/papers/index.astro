@@ -30,9 +30,29 @@ const rows = [
     items: papers.filter((paper) => hasTag(paper, ['read', 'outlined'])),
   },
   {
+    id: 'uncertainty-evidence',
+    title: 'Uncertainty & Evidence',
+    items: papers.filter((paper) => hasTag(paper, ['uncertainty', 'e-values', 'bayesian', 'conformal'])),
+  },
+  {
+    id: 'agency-rl',
+    title: 'Agency & RL',
+    items: papers.filter((paper) => hasTag(paper, ['reinforcement', 'control', 'active-inference', 'agents'])),
+  },
+  {
+    id: 'ai-consciousness',
+    title: 'AI Consciousness',
+    items: papers.filter((paper) => hasTag(paper, ['consciousness'])),
+  },
+  {
     id: 'optimization-training',
     title: 'Learning',
     items: papers.filter((paper) => hasTag(paper, ['optimization', 'training'])),
+  },
+  {
+    id: 'anomaly-reliability',
+    title: 'Anomaly & Reliability',
+    items: papers.filter((paper) => hasTag(paper, ['anomaly', 'reliability', 'survival'])),
   },
   {
     id: 'systems-eval',
