@@ -5,6 +5,7 @@ status: active
 tags: ["reinforcement-learning", "game-ai", "mcts", "self-play", "alphazero"]
 repo: "olivierzach/qubic-lab"
 github: "https://github.com/olivierzach/qubic-lab"
+demo: "https://olivierzach.github.io/qubic-lab/"
 thumbnail: "/projects/extracted/qubic-lab.svg"
 date: 2026-05-25
 ---
@@ -17,4 +18,4 @@ A game-AI lab around Qubic, a 3D tic-tac-toe family that is small enough to insp
 
 Qubic is large enough to force real search, credit-assignment, and evaluation choices, but small enough to keep the full state/action encoding and self-play dynamics understandable. The project is designed to make RL claims falsifiable: training curves are paired with fixed evaluation, probe suites for immediate wins/blocks, hard-state replay artifacts, and model report cards.
 
-[GitHub](https://github.com/olivierzach/qubic-lab)
+[Demo](https://olivierzach.github.io/qubic-lab/) · [GitHub](https://github.com/olivierzach/qubic-lab)
