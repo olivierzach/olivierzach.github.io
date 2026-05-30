@@ -1,11 +1,18 @@
 ---
-title: "VIME: Variational Information Maximizing Exploration"
-authors: "Rein Houthooft, Xi Chen, Yan Duan, John Schulman, Filip De Turck, Pieter Abbeel"
+title: 'VIME: Variational Information Maximizing Exploration'
+authors: >-
+  Rein Houthooft, Xi Chen, Yan Duan, John Schulman, Filip De Turck, Pieter
+  Abbeel
 year: 2016
-link: "https://arxiv.org/abs/1605.09674"
-pdf_url: "https://arxiv.org/pdf/1605.09674.pdf"
-tags: ["reinforcement-learning", "exploration", "variational-inference", "to-read"]
-date: 2026-05-25
+link: 'https://arxiv.org/abs/1605.09674'
+pdf_url: 'https://arxiv.org/pdf/1605.09674.pdf'
+tags:
+  - reinforcement-learning
+  - exploration
+  - variational-inference
+  - to-read
+date: 2026-05-25T00:00:00.000Z
+thumbnail: /papers/_thumbs/vime-w360.webp
 ---
 
 ## Why it is here

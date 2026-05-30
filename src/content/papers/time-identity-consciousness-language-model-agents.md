@@ -1,11 +1,16 @@
 ---
-title: "Time, Identity and Consciousness in Language Model Agents"
-authors: "Michael Timothy Bennett, Elija Perrier"
+title: 'Time, Identity and Consciousness in Language Model Agents'
+authors: 'Michael Timothy Bennett, Elija Perrier'
 year: 2026
-link: "http://arxiv.org/abs/2603.09043"
-pdf_url: "https://arxiv.org/pdf/2603.09043.pdf"
-tags: ["consciousness", "language-models", "agents", "to-read"]
-date: 2026-05-25
+link: 'http://arxiv.org/abs/2603.09043'
+pdf_url: 'https://arxiv.org/pdf/2603.09043.pdf'
+tags:
+  - consciousness
+  - language-models
+  - agents
+  - to-read
+date: 2026-05-25T00:00:00.000Z
+thumbnail: /papers/_thumbs/time-identity-consciousness-language-model-agents-w360.webp
 ---
 
 ## Why it is here

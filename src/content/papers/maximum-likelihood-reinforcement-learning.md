@@ -1,11 +1,18 @@
 ---
-title: "Maximum Likelihood Reinforcement Learning"
-authors: "Yiding Jiang, Fahim Tajwar, Guanning Zeng, Yueer Zhou, Yuda Song, Daman Arora, Jeff Schneider, Ruslan Salakhutdinov, Haiwen Feng, Andrea Zanette"
+title: Maximum Likelihood Reinforcement Learning
+authors: >-
+  Yiding Jiang, Fahim Tajwar, Guanning Zeng, Yueer Zhou, Yuda Song, Daman Arora,
+  Jeff Schneider, Ruslan Salakhutdinov, Haiwen Feng, Andrea Zanette
 year: 2026
-link: "https://arxiv.org/abs/2602.02710v1"
-pdf_url: "https://arxiv.org/pdf/2602.02710v1.pdf"
-tags: ["reinforcement-learning", "maximum-likelihood", "sampling", "to-read"]
-date: 2026-05-25
+link: 'https://arxiv.org/abs/2602.02710v1'
+pdf_url: 'https://arxiv.org/pdf/2602.02710v1.pdf'
+tags:
+  - reinforcement-learning
+  - maximum-likelihood
+  - sampling
+  - to-read
+date: 2026-05-25T00:00:00.000Z
+thumbnail: /papers/_thumbs/maximum-likelihood-reinforcement-learning-w360.webp
 ---
 
 ## Why it is here

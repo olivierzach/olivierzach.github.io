@@ -1,11 +1,19 @@
 ---
-title: "Anomaly Transformer: Time Series Anomaly Detection with Association Discrepancy"
-authors: "Jiehui Xu, Haixu Wu, Jianmin Wang, Mingsheng Long"
+title: >-
+  Anomaly Transformer: Time Series Anomaly Detection with Association
+  Discrepancy
+authors: 'Jiehui Xu, Haixu Wu, Jianmin Wang, Mingsheng Long'
 year: 2022
-link: "https://arxiv.org/abs/2110.02642"
-pdf_url: "https://arxiv.org/pdf/2110.02642.pdf"
-tags: ["time-series", "anomaly-detection", "transformers", "annotated", "read"]
-date: 2026-05-29
+link: 'https://arxiv.org/abs/2110.02642'
+pdf_url: 'https://arxiv.org/pdf/2110.02642.pdf'
+tags:
+  - time-series
+  - anomaly-detection
+  - transformers
+  - annotated
+  - read
+date: 2026-05-29T00:00:00.000Z
+thumbnail: /papers/_thumbs/anomaly-transformer-w360.webp
 ---
 
 ## Why it is here

@@ -1,11 +1,18 @@
 ---
-title: "Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor"
-authors: "Tuomas Haarnoja, Aurick Zhou, Pieter Abbeel, Sergey Levine"
+title: >-
+  Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning with
+  a Stochastic Actor
+authors: 'Tuomas Haarnoja, Aurick Zhou, Pieter Abbeel, Sergey Levine'
 year: 2018
-link: "https://arxiv.org/abs/1801.01290"
-pdf_url: "https://arxiv.org/pdf/1801.01290.pdf"
-tags: ["reinforcement-learning", "maximum-entropy", "actor-critic", "to-read"]
-date: 2026-05-25
+link: 'https://arxiv.org/abs/1801.01290'
+pdf_url: 'https://arxiv.org/pdf/1801.01290.pdf'
+tags:
+  - reinforcement-learning
+  - maximum-entropy
+  - actor-critic
+  - to-read
+date: 2026-05-25T00:00:00.000Z
+thumbnail: /papers/_thumbs/soft-actor-critic-w360.webp
 ---
 
 ## Why it is here

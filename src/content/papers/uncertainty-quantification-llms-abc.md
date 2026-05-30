@@ -1,11 +1,20 @@
 ---
-title: "Uncertainty Quantification of Large Language Models using Approximate Bayesian Computation"
-authors: "Mridul Sharma, Adeetya Patel, Zaneta D' Souza, Samira Abbasgholizadeh Rahimi, Siva Reddy, Sreenath Madathil"
+title: >-
+  Uncertainty Quantification of Large Language Models using Approximate Bayesian
+  Computation
+authors: >-
+  Mridul Sharma, Adeetya Patel, Zaneta D' Souza, Samira Abbasgholizadeh Rahimi,
+  Siva Reddy, Sreenath Madathil
 year: 2025
-link: "http://arxiv.org/abs/2509.19375"
-pdf_url: "https://arxiv.org/pdf/2509.19375.pdf"
-tags: ["uncertainty", "language-models", "bayesian", "to-read"]
-date: 2026-05-25
+link: 'http://arxiv.org/abs/2509.19375'
+pdf_url: 'https://arxiv.org/pdf/2509.19375.pdf'
+tags:
+  - uncertainty
+  - language-models
+  - bayesian
+  - to-read
+date: 2026-05-25T00:00:00.000Z
+thumbnail: /papers/_thumbs/uncertainty-quantification-llms-abc-w360.webp
 ---
 
 ## Why it is here

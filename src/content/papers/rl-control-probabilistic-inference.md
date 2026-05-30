@@ -1,11 +1,18 @@
 ---
-title: "Reinforcement Learning and Control as Probabilistic Inference: Tutorial and Review"
-authors: "Sergey Levine"
+title: >-
+  Reinforcement Learning and Control as Probabilistic Inference: Tutorial and
+  Review
+authors: Sergey Levine
 year: 2018
-link: "http://arxiv.org/abs/1805.00909"
-pdf_url: "https://arxiv.org/pdf/1805.00909.pdf"
-tags: ["reinforcement-learning", "probabilistic-inference", "control", "to-read"]
-date: 2026-05-25
+link: 'http://arxiv.org/abs/1805.00909'
+pdf_url: 'https://arxiv.org/pdf/1805.00909.pdf'
+tags:
+  - reinforcement-learning
+  - probabilistic-inference
+  - control
+  - to-read
+date: 2026-05-25T00:00:00.000Z
+thumbnail: /papers/_thumbs/rl-control-probabilistic-inference-w360.webp
 ---
 
 ## Why it is here

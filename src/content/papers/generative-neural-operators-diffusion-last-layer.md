@@ -1,11 +1,16 @@
 ---
-title: "Generative Neural Operators through Diffusion Last Layer"
-authors: "Sungwon Park, Anthony Zhou, Hongjoong Kim, Amir Barati Farimani"
+title: Generative Neural Operators through Diffusion Last Layer
+authors: 'Sungwon Park, Anthony Zhou, Hongjoong Kim, Amir Barati Farimani'
 year: 2026
-link: "http://arxiv.org/abs/2602.04139"
-pdf_url: "https://arxiv.org/pdf/2602.04139.pdf"
-tags: ["neural-operators", "diffusion", "uncertainty", "scientific-ml"]
-date: 2026-05-25
+link: 'http://arxiv.org/abs/2602.04139'
+pdf_url: 'https://arxiv.org/pdf/2602.04139.pdf'
+tags:
+  - neural-operators
+  - diffusion
+  - uncertainty
+  - scientific-ml
+date: 2026-05-25T00:00:00.000Z
+thumbnail: /papers/_thumbs/generative-neural-operators-diffusion-last-layer-w360.webp
 ---
 
 ## Why it is here

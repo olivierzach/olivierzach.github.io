@@ -1,11 +1,16 @@
 ---
-title: "Variational Inference: A Review for Statisticians"
-authors: "David M. Blei, Alp Kucukelbir, Jon D. McAuliffe"
+title: 'Variational Inference: A Review for Statisticians'
+authors: 'David M. Blei, Alp Kucukelbir, Jon D. McAuliffe'
 year: 2017
-link: "https://www.tandfonline.com/doi/full/10.1080/01621459.2017.1285773"
-pdf_url: "https://www.tandfonline.com/doi/pdf/10.1080/01621459.2017.1285773"
-tags: ["variational-inference", "bayesian", "statistics", "to-read"]
-date: 2026-05-25
+link: 'https://www.tandfonline.com/doi/full/10.1080/01621459.2017.1285773'
+pdf_url: 'https://www.tandfonline.com/doi/pdf/10.1080/01621459.2017.1285773'
+tags:
+  - variational-inference
+  - bayesian
+  - statistics
+  - to-read
+date: 2026-05-25T00:00:00.000Z
+thumbnail: /papers/_thumbs/variational-inference-review-statisticians-w360.webp
 ---
 
 ## Why it is here

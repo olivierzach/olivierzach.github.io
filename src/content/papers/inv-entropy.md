@@ -1,11 +1,19 @@
 ---
-title: "Inv-Entropy: A Fully Probabilistic Framework for Uncertainty Quantification in Language Models"
-authors: "Haoyi Song, Ruihan Ji, Naichen Shi, Fan Lai, Raed Al Kontar"
+title: >-
+  Inv-Entropy: A Fully Probabilistic Framework for Uncertainty Quantification in
+  Language Models
+authors: 'Haoyi Song, Ruihan Ji, Naichen Shi, Fan Lai, Raed Al Kontar'
 year: 2025
-link: "http://arxiv.org/abs/2506.09684"
-pdf_url: "https://arxiv.org/pdf/2506.09684.pdf"
-tags: ["uncertainty", "probabilistic-deep-learning", "language-models", "annotated", "read"]
-date: 2026-05-28
+link: 'http://arxiv.org/abs/2506.09684'
+pdf_url: 'https://arxiv.org/pdf/2506.09684.pdf'
+tags:
+  - uncertainty
+  - probabilistic-deep-learning
+  - language-models
+  - annotated
+  - read
+date: 2026-05-28T00:00:00.000Z
+thumbnail: /papers/_thumbs/inv-entropy-w360.webp
 ---
 
 ## Why it is here
