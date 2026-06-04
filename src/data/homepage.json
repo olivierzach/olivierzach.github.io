@@ -8,6 +8,12 @@
   ],
   "featuredProjects": [
     {
+      "slug": "mnist-playground",
+      "overline": "Interpretability lab",
+      "evidence": "Browser MNIST playground with ONNX inference, free-draw robust CNNs, convolution heatmaps, and linked embedding/logit spaces.",
+      "scope": "Computer vision / interpretability / static ML demo"
+    },
+    {
       "slug": "concensus-sft",
       "overline": "Fine-tuning",
       "evidence": "Scientific QA SFT pipeline with data preparation, training artifacts, and loss diagnostics.",

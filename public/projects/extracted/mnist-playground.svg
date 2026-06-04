@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">MNIST Playground</title>
+  <desc id="desc">A stylized machine learning interface with digit canvas, probability curves, embeddings, and convolution heatmaps.</desc>
+  <rect width="1200" height="720" fill="#f8fafc"/>
+  <rect x="70" y="70" width="1060" height="580" rx="18" fill="#ffffff" stroke="#d8dee8"/>
+  <rect x="110" y="110" width="250" height="250" rx="12" fill="#111827"/>
+  <path d="M195 300 C255 315 303 270 280 222 C265 191 223 189 204 211 C182 236 201 264 246 262" fill="none" stroke="#f8fafc" stroke-width="26" stroke-linecap="round"/>
+  <text x="110" y="410" fill="#0f172a" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="800">MNIST Playground</text>
+  <text x="110" y="452" fill="#64748b" font-family="Arial, Helvetica, sans-serif" font-size="22">Draw, predict, inspect, retrain.</text>
+
+  <g transform="translate(420 122)">
+    <text x="0" y="0" fill="#334155" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">probability density</text>
+    <path d="M0 190 H300" stroke="#d8dee8"/>
+    <path d="M0 150 C46 148 66 90 104 92 C145 94 142 170 184 170 C228 170 232 48 294 52" fill="none" stroke="#0891b2" stroke-width="8" stroke-linecap="round"/>
+    <path d="M0 174 C50 174 71 158 101 160 C140 163 156 140 191 138 C233 136 247 119 296 122" fill="none" stroke="#f97316" stroke-width="6" stroke-linecap="round" opacity=".78"/>
+    <circle cx="294" cy="52" r="11" fill="#0891b2"/>
+    <circle cx="296" cy="122" r="8" fill="#f97316"/>
+  </g>
+
+  <g transform="translate(780 110)">
+    <text x="0" y="0" fill="#334155" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">embedding/logit space</text>
+    <rect x="0" y="24" width="260" height="220" rx="12" fill="#f1f5f9" stroke="#d8dee8"/>
+    <g opacity=".88">
+      <circle cx="52" cy="78" r="8" fill="#2563eb"/><circle cx="78" cy="58" r="6" fill="#2563eb"/><circle cx="94" cy="92" r="7" fill="#2563eb"/>
+      <circle cx="188" cy="70" r="8" fill="#db2777"/><circle cx="210" cy="92" r="6" fill="#db2777"/><circle cx="170" cy="108" r="7" fill="#db2777"/>
+      <circle cx="88" cy="176" r="7" fill="#16a34a"/><circle cx="120" cy="154" r="6" fill="#16a34a"/><circle cx="142" cy="190" r="8" fill="#16a34a"/>
+      <circle cx="205" cy="170" r="7" fill="#ca8a04"/><circle cx="226" cy="196" r="6" fill="#ca8a04"/>
+    </g>
+    <path d="M134 126 L188 70 M134 126 L120 154 M134 126 L170 108" stroke="#0f172a" stroke-width="2.5" opacity=".45"/>
+    <circle cx="134" cy="126" r="12" fill="#0f172a"/>
+  </g>
+
+  <g transform="translate(420 420)">
+    <text x="0" y="0" fill="#334155" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">conv feature maps</text>
+    <g transform="translate(0 28)">
+      <rect width="54" height="54" rx="7" fill="#0f172a"/><rect x="70" width="54" height="54" rx="7" fill="#0f172a"/><rect x="140" width="54" height="54" rx="7" fill="#0f172a"/><rect x="210" width="54" height="54" rx="7" fill="#0f172a"/>
+      <circle cx="27" cy="27" r="18" fill="#22d3ee" opacity=".9"/><path d="M80 45 C96 10 110 10 118 44" stroke="#f97316" stroke-width="10" fill="none" stroke-linecap="round"/>
+      <path d="M160 12 L176 42 L188 18" stroke="#a78bfa" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M224 44 C250 44 250 12 226 12" stroke="#84cc16" stroke-width="10" fill="none" stroke-linecap="round"/>
+    </g>
+  </g>
+</svg>
