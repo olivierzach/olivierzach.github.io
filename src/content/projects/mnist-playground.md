@@ -3,9 +3,9 @@ title: "MNIST Playground"
 summary: "An interactive in-browser MNIST lab with ONNX Runtime inference, drawing, preprocessing traces, feature heatmaps, and linked embedding/logit spaces."
 status: active
 tags: ["computer-vision", "deep-learning", "interpretability", "svelte"]
-repo: "olivierzach/mnist-playground"
-github: "https://github.com/olivierzach/mnist-playground"
-demo: "https://olivierzach.github.io/mnist-playground/"
+repo: "olivierzach/cv-playground"
+github: "https://github.com/olivierzach/cv-playground"
+demo: "https://olivierzach.github.io/cv-playground/"
 thumbnail: "/projects/extracted/mnist-playground.svg"
 date: 2026-06-04
 ---
@@ -18,4 +18,4 @@ A static SvelteKit lab for exploring MNIST classifiers directly in the browser. 
 
 The app turns a small CNN into a visible system: model variants, training perturbations, UMAP-style embeddings, logit space, confusion analysis, and validation proof are all shipped as static artifacts. The free-draw robust model is trained against hard cases like mirrored `3`s and `7`s, rotated digits, and upside-down-ish `1`s while preserving normal MNIST accuracy.
 
-[Demo](https://olivierzach.github.io/mnist-playground/) · [GitHub](https://github.com/olivierzach/mnist-playground)
+[Demo](https://olivierzach.github.io/cv-playground/) · [GitHub](https://github.com/olivierzach/cv-playground)
