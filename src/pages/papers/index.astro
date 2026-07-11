@@ -18,11 +18,24 @@ function thumbSources(src) {
   };
 }
 
+function visibleTags(entry) {
+  if (hasTag(entry, ['zotero-import'])) return [];
+  return entry.data.tags
+    .filter((tag) => !['zotero-paper', 'journal-article', 'conference-paper', 'preprint'].includes(tag.toLowerCase()))
+    .slice(0, 2);
+}
+
 const rows = [
   {
     id: 'recent',
     title: 'Recent',
     items: papers.slice(0, 12),
+  },
+  {
+    id: 'zotero-library',
+    title: 'Recent Reading',
+    summary: 'A tighter selection from my paper library, with links out to the source paper when available.',
+    items: papers.filter((paper) => hasTag(paper, ['zotero-import'])),
   },
   {
     id: 'carmack-list',
@@ -82,12 +95,12 @@ const rows = [
 ];
 ---
 
-<Base title="Papers" description="Selected research and references.">
+<Base title="Papers" description="Zach Olivier's research library across ML systems, evaluation, reliability, artificial life, uncertainty, and applied modeling.">
   <div class="browse-page paper-page">
     <section class="browse-hero browse-hero-papers" aria-labelledby="papers-title">
       <div class="browse-hero-copy">
         <h1 id="papers-title">Papers</h1>
-        <p>Selected research and references.</p>
+        <p>References and working notes around ML systems, evaluation, reliability, artificial life, uncertainty, and applied modeling.</p>
       </div>
     </section>
 
@@ -126,7 +139,7 @@ const rows = [
                   </div>
                   <div class="tile-actions">
                     <span>{p.data.pdf_url ? 'PDF' : 'Paper'}</span>
-                    {p.data.tags.slice(0, 2).map((tag) => <span>{tag}</span>)}
+                    {visibleTags(p).map((tag) => <span>{tag}</span>)}
                   </div>
                 </a>
               );

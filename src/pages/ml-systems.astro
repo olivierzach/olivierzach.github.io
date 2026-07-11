@@ -1,0 +1,67 @@
+---
+import Base from '../layouts/Base.astro';
+
+const description = 'Zach Olivier works on machine learning systems for evaluation, post-training, retrieval, telemetry, reliability, and applied research workflows.';
+---
+
+<Base title="ML Systems" description={description}>
+  <div class="prose">
+    <h1>ML Systems</h1>
+    <p class="kicker">Research engineering across data, evaluation, reliability, and production feedback loops.</p>
+
+    <p>
+      Zach Olivier works on machine learning systems where modeling quality depends on the surrounding infrastructure:
+      data preparation, experiment tracking, evaluation design, observability, retrieval, and deployment feedback.
+      The work is closest to research engineering and applied ML engineering, with an emphasis on systems that make
+      model behavior measurable.
+    </p>
+
+    <h2>What I Build</h2>
+    <ul>
+      <li><strong>Evaluation systems</strong> for benchmark design, verifier scoring, regression checks, and distribution-shift analysis.</li>
+      <li><strong>Post-training workflows</strong> for supervised fine-tuning, preference data, best-of-N selection, and experiment reporting.</li>
+      <li><strong>Retrieval and knowledge systems</strong> for local-first paper ingestion, notes, concept graphs, and research agents.</li>
+      <li><strong>Reliability modeling tools</strong> for survival analysis, field-to-test translation, telemetry retention, and failure analysis.</li>
+      <li><strong>Applied modeling labs</strong> for tabular foundation models, industrial anomaly detection, and uncertainty-aware baselines.</li>
+    </ul>
+
+    <h2>Representative Projects</h2>
+    <ul>
+      <li>
+        <a href="/projects/concensus-sft">Concensus SFT</a>:
+        a scientific QA supervised fine-tuning pipeline with data preparation, training artifacts, and loss diagnostics.
+      </li>
+      <li>
+        <a href="/projects/second-brain">Second brain knowledge pipeline</a>:
+        a local-first research system for papers, reviewed article nodes, and concept graphs.
+      </li>
+      <li>
+        <a href="/projects/total-recall-industrial-anomaly-detection">Industrial anomaly detection</a>:
+        a PatchCore-style visual inspection lab with retrieval over memory-bank features.
+      </li>
+      <li>
+        <a href="/projects/tabular-foundation-models">Tabular foundation model lab</a>:
+        TabPFN and TabICL experiments against classical baselines with runtime and uncertainty notes.
+      </li>
+      <li>
+        <a href="/projects/reliability-modeling-templates">Reliability modeling templates</a>:
+        practical analysis patterns for survival, failure, and field reliability data.
+      </li>
+    </ul>
+
+    <h2>Research Areas</h2>
+    <p>
+      Current interests include post-training evaluation, ML telemetry, retrieval-augmented research tools,
+      tabular foundation models, industrial computer vision, reliability and survival modeling, and artificial-life
+      experiments that stress test search, emergence, and measurement.
+    </p>
+
+    <h2>Related Links</h2>
+    <ul>
+      <li><a href="/projects">All projects</a></li>
+      <li><a href="/papers">Paper library</a></li>
+      <li><a href="/cv">CV</a></li>
+      <li><a href="/contact">Contact Zach Olivier</a></li>
+    </ul>
+  </div>
+</Base>

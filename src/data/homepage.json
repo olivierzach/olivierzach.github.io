@@ -1,10 +1,24 @@
 {
-  "headline": "Machine learning engineer.",
-  "summary": "Production ML, research tooling, and applied modeling. Recent work includes fine-tuning harnesses, local knowledge systems, anomaly detection, tabular models, and artificial-life experiments.",
+  "headline": "Machine learning systems, evaluation, and applied research.",
+  "summary": "I am a machine learning engineer working on production ML systems and research tooling: post-training, retrieval, anomaly detection, tabular modeling, reliability, and artificial life.",
   "signals": [
-    { "label": "Work", "value": "SpaceX / DataStax / Sony Pictures" },
-    { "label": "Graduate", "value": "Georgia Tech OMSCS" },
-    { "label": "Current", "value": "Post-training, evaluation, reliability, ALife" }
+    { "label": "Operator", "value": "Production ML at SpaceX, DataStax, Sony Pictures" },
+    { "label": "Training", "value": "M.S. Computer Science, Georgia Tech" },
+    { "label": "Current Edge", "value": "Post-training, evaluation, reliability, ALife" }
+  ],
+  "focusAreas": [
+    {
+      "label": "Model Systems",
+      "value": "Post-training harnesses, retrieval pipelines, telemetry budgets, and evaluation loops."
+    },
+    {
+      "label": "Applied Science",
+      "value": "Reliability, survival analysis, anomaly detection, tabular foundation models, and uncertainty."
+    },
+    {
+      "label": "Research Tooling",
+      "value": "Local-first paper ingestion, concept graphs, reproducible experiments, and benchmark reports."
+    }
   ],
   "featuredProjects": [
     {

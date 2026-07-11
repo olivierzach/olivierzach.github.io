@@ -5,10 +5,10 @@ import { getCollection } from 'astro:content';
 const projects = (await getCollection('projects')).sort((a,b)=> (b.data.date?.valueOf() ?? 0) - (a.data.date?.valueOf() ?? 0));
 ---
 
-<Base title="Projects">
+<Base title="Projects" description="Selected ML engineering and applied research projects by Zach Olivier, including post-training, anomaly detection, tabular modeling, reliability, and research tooling.">
   <div class="prose">
     <h1>Projects</h1>
-    <p class="kicker">Research tools, production-shaped ML work, and app experiments.</p>
+    <p class="kicker">Production-shaped ML work, applied research tooling, and experiments with enough surface area to inspect.</p>
 
     <hr />
 

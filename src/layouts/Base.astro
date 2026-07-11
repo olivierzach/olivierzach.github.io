@@ -1,27 +1,73 @@
 ---
-const { title = 'Zachary S. Olivier', description = 'Applied ML engineer working on ML systems, evaluation, telemetry, and research tooling.', noindex = false } = Astro.props;
+const { title = 'Zach Olivier', description = 'Zach Olivier is a machine learning engineer building production ML systems, evaluation tooling, and applied research infrastructure.', noindex = false, structuredData = [] } = Astro.props;
 const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).toString() : undefined;
+const pageTitle = title.includes('Zach Olivier') ? title : `${title} | Zach Olivier`;
+const siteUrl = Astro.site?.toString() ?? 'https://olivierzach.github.io/';
+const sameAs = [
+  'https://github.com/olivierzach',
+  'https://www.linkedin.com/in/olivierzach/',
+  'https://x.com/Zach0__',
+];
+const personJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': `${siteUrl}#zach-olivier`,
+  name: 'Zach Olivier',
+  alternateName: 'Zachary S. Olivier',
+  url: siteUrl,
+  jobTitle: 'Machine Learning Engineer',
+  sameAs,
+  knowsAbout: [
+    'Machine learning engineering',
+    'ML systems',
+    'Model evaluation',
+    'Post-training',
+    'Reliability modeling',
+    'Applied research tooling',
+  ],
+};
+const websiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${siteUrl}#website`,
+  name: 'Zach Olivier',
+  url: siteUrl,
+  author: { '@id': `${siteUrl}#zach-olivier` },
+  description,
+};
+const jsonLdBlocks = [personJsonLd, websiteJsonLd, ...structuredData];
 ---
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title}</title>
+    <title>{pageTitle}</title>
     <meta name="description" content={description} />
+    <meta name="author" content="Zach Olivier" />
     {canonical && <link rel="canonical" href={canonical} />}
     {noindex && <meta name="robots" content="noindex" />}
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    {canonical && <meta property="og:url" content={canonical} />}
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/styles/global.css" />
+    {jsonLdBlocks.map((block) => <script type="application/ld+json" set:html={JSON.stringify(block)} />)}
   </head>
   <body>
     <header class="site">
       <nav>
-        <a class="brand" href="/">Zachary S. Olivier</a>
+        <a class="brand" href="/">Zach Olivier</a>
         <a href="/projects">Projects</a>
+        <a href="/ml-systems">ML Systems</a>
         <a href="/influences">Influences</a>
         <a href="/papers">Papers</a>
         <a href="/now">Now</a>
+        <a href="/cv">CV</a>
         <a href="/about">About</a>
         <a href="/contact">Contact</a>
       </nav>
@@ -33,7 +79,7 @@ const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).toString(
 
     <footer>
       <div class="inner">
-        <span>© {new Date().getFullYear()} Zachary S. Olivier.</span>
+        <span>© {new Date().getFullYear()} Zach Olivier.</span>
       </div>
     </footer>
   </body>

@@ -8,41 +8,89 @@ const projectById = new Map(projects.map((project) => [project.id, project]));
 const featuredProjects = homepage.featuredProjects
   .map((item) => projectById.get(item.slug))
   .filter(Boolean);
+const featuredProjectMeta = new Map(homepage.featuredProjects.map((item) => [item.slug, item]));
+const siteUrl = Astro.site?.toString() ?? 'https://olivierzach.github.io/';
+const profilePageJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfilePage',
+  '@id': `${siteUrl}#profile-page`,
+  url: siteUrl,
+  name: 'Zach Olivier',
+  mainEntity: {
+    '@type': 'Person',
+    '@id': `${siteUrl}#zach-olivier`,
+    name: 'Zach Olivier',
+    alternateName: 'Zachary S. Olivier',
+    jobTitle: 'Machine Learning Engineer',
+    description: homepage.summary,
+    sameAs: [
+      'https://github.com/olivierzach',
+      'https://www.linkedin.com/in/olivierzach/',
+      'https://x.com/Zach0__',
+    ],
+  },
+};
 ---
 
-<Base title="Zachary S. Olivier" description={homepage.headline}>
+<Base title="Zach Olivier | Machine Learning Engineer" description={homepage.summary} structuredData={[profilePageJsonLd]}>
   <div class="home-page">
-    <section class="home-hero">
+    <section class="home-hero" aria-labelledby="home-title">
       <div class="home-hero-copy">
-        <p class="section-eyebrow">Zachary S. Olivier</p>
-        <h1>{homepage.headline}</h1>
+        <h1 id="home-title">Zach Olivier</h1>
+        <p class="home-role">{homepage.headline}</p>
         <p class="home-summary">{homepage.summary}</p>
 
         <div class="home-actions" aria-label="Primary links">
           <a href="/projects">Projects</a>
+          <a href="/ml-systems">ML Systems</a>
+          <a href="/cv">CV</a>
           <a href="https://github.com/olivierzach" rel="me">GitHub</a>
           <a href="https://www.linkedin.com/in/olivierzach/" rel="me">LinkedIn</a>
           <a href="/contact">Email</a>
         </div>
       </div>
+
+    </section>
+
+    <section class="home-focus" aria-label="Focus areas">
+      <div class="focus-grid">
+        {homepage.focusAreas.map((area) => (
+          <article class="focus-item">
+            <h3>{area.label}</h3>
+            <p>{area.value}</p>
+            {area.label === 'Model Systems' ? <a href="/ml-systems">ML systems overview</a> : null}
+          </article>
+        ))}
+      </div>
     </section>
 
     <section class="home-featured" aria-labelledby="featured-projects-title">
       <div class="home-section-head">
-        <h2 id="featured-projects-title">Selected projects</h2>
+        <h2 id="featured-projects-title">Selected ML work</h2>
         <a href="/projects">All projects</a>
       </div>
-      <ul class="featured-project-list">
-        {featuredProjects.map((entry) => (
-          <li>
-            <a class="featured-project-main" href={`/projects/${entry.id}`}>{entry.data.title}</a>
-            <span class="featured-project-actions">
-              {entry.data.demo ? <a href={entry.data.demo}>Demo</a> : null}
-              {entry.data.github ? <a href={entry.data.github}>GitHub</a> : null}
-            </span>
-          </li>
-        ))}
-      </ul>
+      <div class="featured-project-grid">
+        {featuredProjects.map((entry) => {
+          const meta = featuredProjectMeta.get(entry.id);
+          return (
+            <article class="featured-project-card">
+              <a class="featured-project-image" href={`/projects/${entry.id}`} aria-label={entry.data.title}>
+                {entry.data.thumbnail ? <img src={entry.data.thumbnail} alt="" loading="lazy" /> : <span>{entry.data.title}</span>}
+              </a>
+              <div class="featured-project-body">
+                <p>{meta?.overline}</p>
+                <h3><a href={`/projects/${entry.id}`}>{entry.data.title}</a></h3>
+                <strong>{meta?.scope}</strong>
+                <span>{meta?.evidence}</span>
+                <div class="featured-project-actions">
+                  {entry.data.demo ? <a href={entry.data.demo}>Demo</a> : null}
+                  {entry.data.github ? <a href={entry.data.github}>GitHub</a> : null}
+                </div>
+              </div>
+            </article>
+          );
+        })}
+      </div>
     </section>
   </div>
 </Base>
