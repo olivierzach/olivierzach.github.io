@@ -1,5 +1,5 @@
 ---
-title: 'Multimodal Industrial Anomaly Detection via Hybrid Fusion'
+title: Multimodal Industrial Anomaly Detection via Hybrid Fusion
 authors: 'Yue Wang, Jinlong Peng, Jiangning Zhang, Ran Yi, Yabiao Wang, Chengjie Wang'
 year: 2023
 link: 'https://ieeexplore.ieee.org/document/10203503/'
@@ -8,8 +8,10 @@ tags:
   - anomaly-detection
   - vision
   - multimodal
-date: 2026-05-30
-thumbnail: /papers/_thumbs/multimodal-industrial-anomaly-detection-hybrid-fusion-w360.webp
+date: 2026-05-30T00:00:00.000Z
+thumbnail: >-
+  /papers/_thumbs/multimodal-industrial-anomaly-detection-hybrid-fusion-w360.webp
+pdf: /papers/multimodal-industrial-anomaly-detection-hybrid-fusion.pdf
 ---
 
 ## Why it is here

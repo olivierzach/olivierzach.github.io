@@ -10,6 +10,7 @@ tags:
   - outlined
   - carmack-list
 thumbnail: /papers/_thumbs/pointer-networks-w360.webp
+pdf: /papers/pointer-networks.pdf
 ---
 
 ## Why it is here

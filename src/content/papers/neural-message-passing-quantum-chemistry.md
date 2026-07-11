@@ -1,6 +1,8 @@
 ---
-title: 'Neural Message Passing for Quantum Chemistry'
-authors: 'Justin Gilmer, Samuel S. Schoenholz, Patrick F. Riley, Oriol Vinyals, George E. Dahl'
+title: Neural Message Passing for Quantum Chemistry
+authors: >-
+  Justin Gilmer, Samuel S. Schoenholz, Patrick F. Riley, Oriol Vinyals, George
+  E. Dahl
 year: 2017
 link: 'https://arxiv.org/abs/1704.01212'
 pdf_url: 'https://arxiv.org/pdf/1704.01212.pdf'
@@ -9,8 +11,9 @@ tags:
   - message-passing
   - quantum-chemistry
   - carmack-list
-date: 2026-05-30
+date: 2026-05-30T00:00:00.000Z
 thumbnail: /papers/_thumbs/neural-message-passing-quantum-chemistry-w360.webp
+pdf: /papers/neural-message-passing-quantum-chemistry.pdf
 ---
 
 ## Why it is here

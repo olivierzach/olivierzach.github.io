@@ -1,6 +1,6 @@
 ---
-title: 'Understanding LSTM Networks'
-authors: 'Christopher Olah'
+title: Understanding LSTM Networks
+authors: Christopher Olah
 year: 2015
 link: 'https://colah.github.io/posts/2015-08-Understanding-LSTMs/'
 tags:
@@ -8,7 +8,8 @@ tags:
   - rnn
   - lstm
   - carmack-list
-date: 2026-05-30
+date: 2026-05-30T00:00:00.000Z
+thumbnail: /papers/_thumbs/understanding-lstm-networks-w360.webp
 ---
 
 ## Why it is here

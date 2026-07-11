@@ -1,6 +1,6 @@
 ---
-title: 'The Unreasonable Effectiveness of Recurrent Neural Networks'
-authors: 'Andrej Karpathy'
+title: The Unreasonable Effectiveness of Recurrent Neural Networks
+authors: Andrej Karpathy
 year: 2015
 link: 'https://karpathy.github.io/2015/05/21/rnn-effectiveness/'
 tags:
@@ -8,7 +8,8 @@ tags:
   - rnn
   - language-modeling
   - carmack-list
-date: 2026-05-30
+date: 2026-05-30T00:00:00.000Z
+thumbnail: /papers/_thumbs/unreasonable-effectiveness-rnns-w360.webp
 ---
 
 ## Why it is here

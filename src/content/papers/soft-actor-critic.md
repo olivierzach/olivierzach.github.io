@@ -13,6 +13,7 @@ tags:
   - to-read
 date: 2026-05-25T00:00:00.000Z
 thumbnail: /papers/_thumbs/soft-actor-critic-w360.webp
+pdf: /papers/soft-actor-critic.pdf
 ---
 
 ## Why it is here

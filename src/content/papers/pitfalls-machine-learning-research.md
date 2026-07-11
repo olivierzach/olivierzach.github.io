@@ -9,6 +9,7 @@ tags:
   - research-practice
   - systems
 thumbnail: /papers/_thumbs/pitfalls-machine-learning-research-w360.webp
+pdf: /papers/pitfalls-machine-learning-research.pdf
 ---
 
 ## Why it is here

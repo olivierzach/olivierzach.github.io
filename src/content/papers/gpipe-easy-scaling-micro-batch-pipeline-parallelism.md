@@ -1,6 +1,8 @@
 ---
 title: 'GPipe: Easy Scaling with Micro-Batch Pipeline Parallelism'
-authors: 'Yanping Huang, Youlong Cheng, Ankur Bapna, Orhan Firat, Mia Xu Chen, Dehao Chen, HyoukJoong Lee, Jiquan Ngiam, Quoc V. Le, Yonghui Wu, Zhifeng Chen'
+authors: >-
+  Yanping Huang, Youlong Cheng, Ankur Bapna, Orhan Firat, Mia Xu Chen, Dehao
+  Chen, HyoukJoong Lee, Jiquan Ngiam, Quoc V. Le, Yonghui Wu, Zhifeng Chen
 year: 2019
 link: 'https://arxiv.org/abs/1811.06965'
 pdf_url: 'https://arxiv.org/pdf/1811.06965.pdf'
@@ -9,8 +11,9 @@ tags:
   - scaling
   - distributed-training
   - carmack-list
-date: 2026-05-30
+date: 2026-05-30T00:00:00.000Z
 thumbnail: /papers/_thumbs/gpipe-easy-scaling-micro-batch-pipeline-parallelism-w360.webp
+pdf: /papers/gpipe-easy-scaling-micro-batch-pipeline-parallelism.pdf
 ---
 
 ## Why it is here

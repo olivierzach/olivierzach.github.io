@@ -13,6 +13,7 @@ tags:
   - intelligence
   - outlined
 thumbnail: /papers/_thumbs/from-entropy-to-epiplexity-w360.webp
+pdf: /papers/from-entropy-to-epiplexity.pdf
 ---
 
 ## Why it is here

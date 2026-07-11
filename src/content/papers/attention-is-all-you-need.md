@@ -12,6 +12,7 @@ tags:
   - deep-learning
   - carmack-list
 thumbnail: /papers/_thumbs/attention-is-all-you-need-w360.webp
+pdf: /papers/attention-is-all-you-need.pdf
 ---
 
 ## Why it is here

@@ -8,7 +8,8 @@ tags:
   - cnn
   - course
   - carmack-list
-date: 2026-05-30
+date: 2026-05-30T00:00:00.000Z
+thumbnail: /papers/_thumbs/cs231n-convolutional-neural-networks-w360.webp
 ---
 
 ## Why it is here

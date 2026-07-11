@@ -1,5 +1,5 @@
 ---
-title: 'Anomaly Detection Using One-Class Neural Networks'
+title: Anomaly Detection Using One-Class Neural Networks
 authors: 'Raghavendra Chalapathy, Aditya Krishna Menon, Sanjay Chawla'
 year: 2019
 link: 'http://arxiv.org/abs/1802.06360'
@@ -9,8 +9,9 @@ tags:
   - vision
   - one-class
   - reliability
-date: 2026-05-30
+date: 2026-05-30T00:00:00.000Z
 thumbnail: /papers/_thumbs/anomaly-detection-one-class-neural-networks-w360.webp
+pdf: /papers/anomaly-detection-one-class-neural-networks.pdf
 ---
 
 ## Why it is here

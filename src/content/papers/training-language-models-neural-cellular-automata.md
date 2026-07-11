@@ -9,6 +9,7 @@ tags:
   - cellular-automata
   - alife
 thumbnail: /papers/_thumbs/training-language-models-neural-cellular-automata-w360.webp
+pdf: /papers/training-language-models-neural-cellular-automata.pdf
 ---
 
 ## Why it is here

@@ -11,6 +11,7 @@ tags:
   - dynamical-systems
   - outlined
 thumbnail: /papers/_thumbs/how-random-is-a-coin-toss-w360.webp
+pdf: /papers/how-random-is-a-coin-toss.pdf
 ---
 
 ## Why it is here

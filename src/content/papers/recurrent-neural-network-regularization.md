@@ -1,5 +1,5 @@
 ---
-title: 'Recurrent Neural Network Regularization'
+title: Recurrent Neural Network Regularization
 authors: 'Wojciech Zaremba, Ilya Sutskever, Oriol Vinyals'
 year: 2014
 link: 'https://arxiv.org/abs/1409.2329'
@@ -9,8 +9,9 @@ tags:
   - rnn
   - regularization
   - carmack-list
-date: 2026-05-30
+date: 2026-05-30T00:00:00.000Z
 thumbnail: /papers/_thumbs/recurrent-neural-network-regularization-w360.webp
+pdf: /papers/recurrent-neural-network-regularization.pdf
 ---
 
 ## Why it is here

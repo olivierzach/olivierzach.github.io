@@ -1,5 +1,7 @@
 ---
-title: 'PaDiM: A Patch Distribution Modeling Framework for Anomaly Detection and Localization'
+title: >-
+  PaDiM: A Patch Distribution Modeling Framework for Anomaly Detection and
+  Localization
 authors: 'Thomas Defard, Aleksandr Setkov, Angelique Loesch, Romaric Audigier'
 year: 2021
 link: 'http://link.springer.com/10.1007/978-3-030-68799-1_35'
@@ -8,8 +10,9 @@ tags:
   - anomaly-detection
   - vision
   - localization
-date: 2026-05-30
+date: 2026-05-30T00:00:00.000Z
 thumbnail: /papers/_thumbs/padim-patch-distribution-modeling-w360.webp
+pdf: /papers/padim-patch-distribution-modeling.pdf
 ---
 
 ## Why it is here

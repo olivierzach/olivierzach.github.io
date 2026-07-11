@@ -9,8 +9,9 @@ tags:
   - attention
   - residual
   - architecture
-date: 2026-05-30
+date: 2026-05-30T00:00:00.000Z
 thumbnail: /papers/_thumbs/realformer-transformer-likes-residual-attention-w360.webp
+pdf: /papers/realformer-transformer-likes-residual-attention.pdf
 ---
 
 ## Why it is here

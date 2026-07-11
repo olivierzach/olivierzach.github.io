@@ -12,6 +12,7 @@ tags:
   - systems
   - outlined
 thumbnail: /papers/_thumbs/markov-blanket-trick-w360.webp
+pdf: /papers/markov-blanket-trick.pdf
 ---
 
 ## Why it is here

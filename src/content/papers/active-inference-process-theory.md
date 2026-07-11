@@ -13,6 +13,7 @@ tags:
   - to-read
 date: 2026-05-25T00:00:00.000Z
 thumbnail: /papers/_thumbs/active-inference-process-theory-w360.webp
+pdf: /papers/active-inference-process-theory.pdf
 ---
 
 ## Why it is here

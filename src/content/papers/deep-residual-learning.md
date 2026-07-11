@@ -10,6 +10,7 @@ tags:
   - optimization
   - carmack-list
 thumbnail: /papers/_thumbs/deep-residual-learning-w360.webp
+pdf: /papers/deep-residual-learning.pdf
 ---
 
 ## Why it is here

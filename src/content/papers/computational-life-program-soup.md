@@ -13,6 +13,7 @@ tags:
   - simulation
   - emergence
 thumbnail: /papers/_thumbs/computational-life-program-soup-w360.webp
+pdf: /papers/computational-life-program-soup.pdf
 ---
 
 ## Why it is here

@@ -1,5 +1,7 @@
 ---
-title: 'Estimation of Conditional Mixture Weibull Distribution with Right-Censored Data Using Neural Network for Time-to-Event Analysis'
+title: >-
+  Estimation of Conditional Mixture Weibull Distribution with Right-Censored
+  Data Using Neural Network for Time-to-Event Analysis
 authors: 'Achraf Bennis, Sandrine Mouysset, Mathieu Serrurier'
 year: 2020
 link: 'http://arxiv.org/abs/2002.09358'
@@ -9,8 +11,9 @@ tags:
   - wtte
   - time-to-event
   - applied-modeling
-date: 2026-05-30
+date: 2026-05-30T00:00:00.000Z
 thumbnail: /papers/_thumbs/conditional-mixture-weibull-right-censored-w360.webp
+pdf: /papers/conditional-mixture-weibull-right-censored.pdf
 ---
 
 ## Why it is here

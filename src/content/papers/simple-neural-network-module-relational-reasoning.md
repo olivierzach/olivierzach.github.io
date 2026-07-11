@@ -1,6 +1,8 @@
 ---
-title: 'A Simple Neural Network Module for Relational Reasoning'
-authors: 'Adam Santoro, David Raposo, David G. T. Barrett, Mateusz Malinowski, Razvan Pascanu, Peter Battaglia, Timothy Lillicrap'
+title: A Simple Neural Network Module for Relational Reasoning
+authors: >-
+  Adam Santoro, David Raposo, David G. T. Barrett, Mateusz Malinowski, Razvan
+  Pascanu, Peter Battaglia, Timothy Lillicrap
 year: 2017
 link: 'https://arxiv.org/abs/1706.01427'
 pdf_url: 'https://arxiv.org/pdf/1706.01427.pdf'
@@ -9,8 +11,9 @@ tags:
   - representation
   - architecture
   - carmack-list
-date: 2026-05-30
+date: 2026-05-30T00:00:00.000Z
 thumbnail: /papers/_thumbs/simple-neural-network-module-relational-reasoning-w360.webp
+pdf: /papers/simple-neural-network-module-relational-reasoning.pdf
 ---
 
 ## Why it is here

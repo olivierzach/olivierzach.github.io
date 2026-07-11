@@ -1,15 +1,17 @@
 ---
-title: 'Random Survival Forests'
+title: Random Survival Forests
 authors: 'Hemant Ishwaran, Udaya B. Kogalur, Eugene H. Blackstone, Michael S. Lauer'
 year: 2008
-link: 'https://projecteuclid.org/journals/annals-of-applied-statistics/volume-2/issue-3/Random-survival-forests/10.1214/08-AOAS169.full'
+link: >-
+  https://projecteuclid.org/journals/annals-of-applied-statistics/volume-2/issue-3/Random-survival-forests/10.1214/08-AOAS169.full
 tags:
   - survival
   - reliability
   - time-to-event
   - applied-modeling
-date: 2026-05-30
+date: 2026-05-30T00:00:00.000Z
 thumbnail: /papers/_thumbs/random-survival-forests-w360.webp
+pdf: /papers/random-survival-forests.pdf
 ---
 
 ## Why it is here

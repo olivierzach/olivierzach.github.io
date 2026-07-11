@@ -11,6 +11,7 @@ tags:
   - foundation-models
   - bayesian
 thumbnail: /papers/_thumbs/tabpfn-w360.webp
+pdf: /papers/tabpfn.pdf
 ---
 
 ## Why it is here

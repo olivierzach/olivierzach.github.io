@@ -11,6 +11,7 @@ tags:
   - to-read
 date: 2026-05-25T00:00:00.000Z
 thumbnail: /papers/_thumbs/mind-cannot-be-smeared-across-time-w360.webp
+pdf: /papers/mind-cannot-be-smeared-across-time.pdf
 ---
 
 ## Why it is here

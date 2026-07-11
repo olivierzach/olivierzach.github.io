@@ -1,5 +1,7 @@
 ---
-title: 'Robust Anomaly Detection for Multivariate Time Series through Stochastic Recurrent Neural Network'
+title: >-
+  Robust Anomaly Detection for Multivariate Time Series through Stochastic
+  Recurrent Neural Network
 authors: 'Ya Su, Youjian Zhao, Chenhao Niu, Rong Liu, Wei Sun, Dan Pei'
 year: 2019
 link: 'https://dl.acm.org/doi/10.1145/3292500.3330672'
@@ -8,8 +10,9 @@ tags:
   - anomaly-detection
   - reliability
   - applied-modeling
-date: 2026-05-30
+date: 2026-05-30T00:00:00.000Z
 thumbnail: /papers/_thumbs/robust-srnn-anomaly-detection-w360.webp
+pdf: /papers/robust-srnn-anomaly-detection.pdf
 ---
 
 ## Why it is here

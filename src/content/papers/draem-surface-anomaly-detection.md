@@ -1,5 +1,7 @@
 ---
-title: 'DRAEM: A Discriminatively Trained Reconstruction Embedding for Surface Anomaly Detection'
+title: >-
+  DRAEM: A Discriminatively Trained Reconstruction Embedding for Surface Anomaly
+  Detection
 authors: 'Vitjan Zavrtanik, Matej Kristan, Danijel Skočaj'
 year: 2021
 link: 'https://arxiv.org/abs/2108.07610'
@@ -9,8 +11,9 @@ tags:
   - anomaly-detection
   - vision
   - suggested-next
-date: 2026-05-30
+date: 2026-05-30T00:00:00.000Z
 thumbnail: /papers/_thumbs/draem-surface-anomaly-detection-w360.webp
+pdf: /papers/draem-surface-anomaly-detection.pdf
 ---
 
 ## Why it is here

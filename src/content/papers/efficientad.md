@@ -9,8 +9,9 @@ tags:
   - anomaly-detection
   - vision
   - suggested-next
-date: 2026-05-30
+date: 2026-05-30T00:00:00.000Z
 thumbnail: /papers/_thumbs/efficientad-w360.webp
+pdf: /papers/efficientad.pdf
 ---
 
 ## Why it is here

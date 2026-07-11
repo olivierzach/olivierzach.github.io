@@ -9,6 +9,7 @@ tags:
   - foundation-models
   - in-context-learning
 thumbnail: /papers/_thumbs/tabicl-w360.webp
+pdf: /papers/tabicl.pdf
 ---
 
 ## Why it is here

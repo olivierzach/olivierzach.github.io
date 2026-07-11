@@ -12,6 +12,7 @@ tags:
   - production-ml
   - systems
 thumbnail: /papers/_thumbs/wide-and-deep-recommenders-w360.webp
+pdf: /papers/wide-and-deep-recommenders.pdf
 ---
 
 ## Why it is here

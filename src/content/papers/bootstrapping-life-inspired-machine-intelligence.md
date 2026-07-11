@@ -12,6 +12,7 @@ tags:
   - read
   - outlined
 thumbnail: /papers/_thumbs/bootstrapping-life-inspired-machine-intelligence-w360.webp
+pdf: /papers/bootstrapping-life-inspired-machine-intelligence.pdf
 ---
 
 ## Why it is here

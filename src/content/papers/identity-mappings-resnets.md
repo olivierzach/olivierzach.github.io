@@ -12,6 +12,7 @@ tags:
   - outlined
   - carmack-list
 thumbnail: /papers/_thumbs/identity-mappings-resnets-w360.webp
+pdf: /papers/identity-mappings-resnets.pdf
 ---
 
 ## Why it is here

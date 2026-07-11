@@ -9,6 +9,7 @@ tags:
   - transformers
   - embeddings
 thumbnail: /papers/_thumbs/audio-spectrogram-transformer-w360.webp
+pdf: /papers/audio-spectrogram-transformer.pdf
 ---
 
 ## Why it is here

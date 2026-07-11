@@ -9,8 +9,9 @@ tags:
   - sets
   - representation
   - carmack-list
-date: 2026-05-30
+date: 2026-05-30T00:00:00.000Z
 thumbnail: /papers/_thumbs/order-matters-sequence-to-sequence-for-sets-w360.webp
+pdf: /papers/order-matters-sequence-to-sequence-for-sets.pdf
 ---
 
 ## Why it is here

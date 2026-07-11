@@ -1,5 +1,7 @@
 ---
-title: 'Deep Survival Machines: Fully Parametric Survival Regression and Representation Learning for Censored Data With Competing Risks'
+title: >-
+  Deep Survival Machines: Fully Parametric Survival Regression and
+  Representation Learning for Censored Data With Competing Risks
 authors: 'Chirag Nagpal, Xinyu Li, Artur Dubrawski'
 year: 2021
 link: 'https://ieeexplore.ieee.org/document/9326348/'
@@ -9,8 +11,9 @@ tags:
   - time-to-event
   - medical-modeling
   - applied-modeling
-date: 2026-05-30
+date: 2026-05-30T00:00:00.000Z
 thumbnail: /papers/_thumbs/deep-survival-machines-w360.webp
+pdf: /papers/deep-survival-machines.pdf
 ---
 
 ## Why it is here

@@ -14,6 +14,7 @@ tags:
   - read
 date: 2026-05-29T00:00:00.000Z
 thumbnail: /papers/_thumbs/anomaly-transformer-w360.webp
+pdf: /papers/anomaly-transformer.pdf
 ---
 
 ## Why it is here

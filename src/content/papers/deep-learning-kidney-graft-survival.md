@@ -1,5 +1,5 @@
 ---
-title: 'Deep Learning for Patient-Specific Kidney Graft Survival Analysis'
+title: Deep Learning for Patient-Specific Kidney Graft Survival Analysis
 authors: 'Margaux Luck, Tristan Sylvain, Heloise Cardinal, Andrea Lodi, Yoshua Bengio'
 year: 2017
 link: 'http://arxiv.org/abs/1705.10245'
@@ -9,8 +9,9 @@ tags:
   - medical-modeling
   - time-to-event
   - applied-modeling
-date: 2026-05-30
+date: 2026-05-30T00:00:00.000Z
 thumbnail: /papers/_thumbs/deep-learning-kidney-graft-survival-w360.webp
+pdf: /papers/deep-learning-kidney-graft-survival.pdf
 ---
 
 ## Why it is here

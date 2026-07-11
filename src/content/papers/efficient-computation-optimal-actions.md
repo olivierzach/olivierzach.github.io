@@ -11,6 +11,7 @@ tags:
   - to-read
 date: 2026-05-25T00:00:00.000Z
 thumbnail: /papers/_thumbs/efficient-computation-optimal-actions-w360.webp
+pdf: /papers/efficient-computation-optimal-actions.pdf
 ---
 
 ## Why it is here

@@ -9,6 +9,7 @@ tags:
   - training
   - deep-learning
 thumbnail: /papers/_thumbs/cyclical-learning-rates-w360.webp
+pdf: /papers/cyclical-learning-rates.pdf
 ---
 
 ## Why it is here

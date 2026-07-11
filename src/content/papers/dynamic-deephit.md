@@ -1,5 +1,7 @@
 ---
-title: 'Dynamic-DeepHit: A Deep Learning Approach for Dynamic Survival Analysis With Competing Risks Based on Longitudinal Data'
+title: >-
+  Dynamic-DeepHit: A Deep Learning Approach for Dynamic Survival Analysis With
+  Competing Risks Based on Longitudinal Data
 authors: 'Changhee Lee, Jinsung Yoon, Mihaela van der Schaar'
 year: 2020
 link: 'https://ieeexplore.ieee.org/document/8681104'
@@ -9,7 +11,8 @@ tags:
   - longitudinal
   - time-to-event
   - suggested-next
-date: 2026-05-30
+date: 2026-05-30T00:00:00.000Z
+thumbnail: /papers/_thumbs/dynamic-deephit-w360.webp
 ---
 
 ## Why it is here

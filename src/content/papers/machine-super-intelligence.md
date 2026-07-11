@@ -1,6 +1,6 @@
 ---
-title: 'Machine Super Intelligence'
-authors: 'Shane Legg'
+title: Machine Super Intelligence
+authors: Shane Legg
 year: 2008
 link: 'http://www.vetta.org/documents/Machine_Super_Intelligence.pdf'
 pdf_url: 'http://www.vetta.org/documents/Machine_Super_Intelligence.pdf'
@@ -9,8 +9,9 @@ tags:
   - theory
   - intelligence
   - carmack-list
-date: 2026-05-30
+date: 2026-05-30T00:00:00.000Z
 thumbnail: /papers/_thumbs/machine-super-intelligence-w360.webp
+pdf: /papers/machine-super-intelligence.pdf
 ---
 
 ## Why it is here

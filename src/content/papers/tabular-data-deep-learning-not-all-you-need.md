@@ -9,6 +9,7 @@ tags:
   - baselines
   - evaluation
 thumbnail: /papers/_thumbs/tabular-data-deep-learning-not-all-you-need-w360.webp
+pdf: /papers/tabular-data-deep-learning-not-all-you-need.pdf
 ---
 
 ## Why it is here

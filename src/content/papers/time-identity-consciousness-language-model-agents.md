@@ -11,6 +11,7 @@ tags:
   - to-read
 date: 2026-05-25T00:00:00.000Z
 thumbnail: /papers/_thumbs/time-identity-consciousness-language-model-agents-w360.webp
+pdf: /papers/time-identity-consciousness-language-model-agents.pdf
 ---
 
 ## Why it is here

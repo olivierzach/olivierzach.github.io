@@ -11,6 +11,7 @@ tags:
   - to-read
 date: 2026-05-25T00:00:00.000Z
 thumbnail: /papers/_thumbs/hypothesis-testing-with-e-values-w360.webp
+pdf: /papers/hypothesis-testing-with-e-values.pdf
 ---
 
 ## Why it is here

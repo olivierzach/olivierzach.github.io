@@ -20,6 +20,7 @@ tags:
   - evaluation
   - reliability
 thumbnail: /papers/_thumbs/underspecification-credibility-ml-w360.webp
+pdf: /papers/underspecification-credibility-ml.pdf
 ---
 
 ## Why it is here

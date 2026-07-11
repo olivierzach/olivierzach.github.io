@@ -1,6 +1,8 @@
 ---
-title: 'Reliability-Equivalent Field Reference Usage Level When Both Field Usage and Usage to Failure Are Random'
-authors: 'Fengbin Sun'
+title: >-
+  Reliability-Equivalent Field Reference Usage Level When Both Field Usage and
+  Usage to Failure Are Random
+authors: Fengbin Sun
 year: 2019
 link: 'https://doi.org/10.1142/S0218539319500177'
 tags:
@@ -8,8 +10,9 @@ tags:
   - usage-modeling
   - stress-strength
   - applied-modeling
-date: 2026-05-30
+date: 2026-05-30T00:00:00.000Z
 thumbnail: /papers/_thumbs/reliability-equivalent-field-reference-usage-level-w360.webp
+pdf: /papers/reliability-equivalent-field-reference-usage-level.pdf
 ---
 
 ## Why it is here

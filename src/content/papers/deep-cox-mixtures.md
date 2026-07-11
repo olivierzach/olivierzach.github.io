@@ -1,5 +1,5 @@
 ---
-title: 'Deep Cox Mixtures for Survival Regression'
+title: Deep Cox Mixtures for Survival Regression
 authors: 'Chirag Nagpal, Steve Yadlowsky, Negar Rostamzadeh, Katherine Heller'
 year: 2021
 link: 'https://proceedings.mlr.press/v149/nagpal21a.html'
@@ -9,8 +9,9 @@ tags:
   - time-to-event
   - medical-modeling
   - suggested-next
-date: 2026-05-30
+date: 2026-05-30T00:00:00.000Z
 thumbnail: /papers/_thumbs/deep-cox-mixtures-w360.webp
+pdf: /papers/deep-cox-mixtures.pdf
 ---
 
 ## Why it is here

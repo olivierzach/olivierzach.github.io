@@ -1,5 +1,5 @@
 ---
-title: 'Kolmogorov Complexity and Algorithmic Randomness'
+title: Kolmogorov Complexity and Algorithmic Randomness
 authors: 'A. Shen, V. A. Uspensky, N. Vereshchagin'
 year: 2017
 link: 'https://www.lirmm.fr/~ashen/kolmbook-eng.html'
@@ -9,8 +9,9 @@ tags:
   - algorithmic-randomness
   - compression
   - carmack-list
-date: 2026-05-30
+date: 2026-05-30T00:00:00.000Z
 thumbnail: /papers/_thumbs/kolmogorov-complexity-algorithmic-randomness-w360.webp
+pdf: /papers/kolmogorov-complexity-algorithmic-randomness.pdf
 ---
 
 ## Why it is here

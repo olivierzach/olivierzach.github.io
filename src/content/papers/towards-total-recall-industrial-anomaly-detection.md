@@ -1,6 +1,8 @@
 ---
-title: 'Towards Total Recall in Industrial Anomaly Detection'
-authors: 'Karsten Roth, Latha Pemula, Joaquin Zepeda, Bernhard Scholkopf, Thomas Brox, Peter Gehler'
+title: Towards Total Recall in Industrial Anomaly Detection
+authors: >-
+  Karsten Roth, Latha Pemula, Joaquin Zepeda, Bernhard Scholkopf, Thomas Brox,
+  Peter Gehler
 year: 2022
 link: 'https://ieeexplore.ieee.org/document/9879738/'
 tags:
@@ -8,8 +10,9 @@ tags:
   - anomaly-detection
   - vision
   - reliability
-date: 2026-05-30
+date: 2026-05-30T00:00:00.000Z
 thumbnail: /papers/_thumbs/towards-total-recall-industrial-anomaly-detection-w360.webp
+pdf: /papers/towards-total-recall-industrial-anomaly-detection.pdf
 ---
 
 ## Why it is here

@@ -1,6 +1,8 @@
 ---
 title: 'WinCLIP: Zero-/Few-Shot Anomaly Classification and Segmentation'
-authors: 'Jongheon Jeong, Yang Zou, Taewan Kim, Dongqing Zhang, Avinash Ravichandran, Onkar Dabeer'
+authors: >-
+  Jongheon Jeong, Yang Zou, Taewan Kim, Dongqing Zhang, Avinash Ravichandran,
+  Onkar Dabeer
 year: 2023
 link: 'https://arxiv.org/abs/2303.14814'
 pdf_url: 'https://arxiv.org/pdf/2303.14814.pdf'
@@ -9,8 +11,9 @@ tags:
   - anomaly-detection
   - vision-language
   - suggested-next
-date: 2026-05-30
+date: 2026-05-30T00:00:00.000Z
 thumbnail: /papers/_thumbs/winclip-anomaly-classification-segmentation-w360.webp
+pdf: /papers/winclip-anomaly-classification-segmentation.pdf
 ---
 
 ## Why it is here

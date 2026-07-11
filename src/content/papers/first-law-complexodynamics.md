@@ -1,6 +1,6 @@
 ---
-title: 'The First Law of Complexodynamics'
-authors: 'Scott Aaronson'
+title: The First Law of Complexodynamics
+authors: Scott Aaronson
 year: 2011
 link: 'https://scottaaronson.blog/?p=762'
 tags:
@@ -8,7 +8,8 @@ tags:
   - thermodynamics
   - theory
   - carmack-list
-date: 2026-05-30
+date: 2026-05-30T00:00:00.000Z
+thumbnail: /papers/_thumbs/first-law-complexodynamics-w360.webp
 ---
 
 ## Why it is here

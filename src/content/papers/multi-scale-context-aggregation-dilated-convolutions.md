@@ -1,5 +1,5 @@
 ---
-title: 'Multi-Scale Context Aggregation by Dilated Convolutions'
+title: Multi-Scale Context Aggregation by Dilated Convolutions
 authors: 'Fisher Yu, Vladlen Koltun'
 year: 2016
 link: 'https://arxiv.org/abs/1511.07122'
@@ -10,8 +10,9 @@ tags:
   - segmentation
   - architecture
   - carmack-list
-date: 2026-05-30
+date: 2026-05-30T00:00:00.000Z
 thumbnail: /papers/_thumbs/multi-scale-context-aggregation-dilated-convolutions-w360.webp
+pdf: /papers/multi-scale-context-aggregation-dilated-convolutions.pdf
 ---
 
 ## Why it is here

@@ -13,6 +13,7 @@ tags:
   - to-read
 date: 2026-05-25T00:00:00.000Z
 thumbnail: /papers/_thumbs/rl-control-probabilistic-inference-w360.webp
+pdf: /papers/rl-control-probabilistic-inference.pdf
 ---
 
 ## Why it is here

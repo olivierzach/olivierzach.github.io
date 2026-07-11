@@ -1,6 +1,6 @@
 ---
-title: 'The Annotated Transformer'
-authors: 'Alexander Rush'
+title: The Annotated Transformer
+authors: Alexander Rush
 year: 2018
 link: 'https://nlp.seas.harvard.edu/annotated-transformer/'
 tags:
@@ -8,7 +8,8 @@ tags:
   - attention
   - implementation
   - carmack-list
-date: 2026-05-30
+date: 2026-05-30T00:00:00.000Z
+thumbnail: /papers/_thumbs/annotated-transformer-w360.webp
 ---
 
 ## Why it is here

@@ -9,6 +9,7 @@ tags:
   - foundation-models
   - evaluation
 thumbnail: /papers/_thumbs/tabiclv2-w360.webp
+pdf: /papers/tabiclv2.pdf
 ---
 
 ## Why it is here

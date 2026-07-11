@@ -1,5 +1,7 @@
 ---
-title: 'Quantifying the Rise and Fall of Complexity in Closed Systems: The Coffee Automaton'
+title: >-
+  Quantifying the Rise and Fall of Complexity in Closed Systems: The Coffee
+  Automaton
 authors: 'Scott Aaronson, Sean M. Carroll, Lauren Ouellette'
 year: 2014
 link: 'https://arxiv.org/abs/1405.6903'
@@ -9,8 +11,9 @@ tags:
   - kolmogorov-complexity
   - theory
   - carmack-list
-date: 2026-05-30
+date: 2026-05-30T00:00:00.000Z
 thumbnail: /papers/_thumbs/coffee-automaton-complexity-w360.webp
+pdf: /papers/coffee-automaton-complexity.pdf
 ---
 
 ## Why it is here

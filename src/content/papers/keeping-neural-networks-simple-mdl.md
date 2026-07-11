@@ -1,5 +1,7 @@
 ---
-title: 'Keeping Neural Networks Simple by Minimizing the Description Length of the Weights'
+title: >-
+  Keeping Neural Networks Simple by Minimizing the Description Length of the
+  Weights
 authors: 'Geoffrey E. Hinton, Drew van Camp'
 year: 1993
 link: 'https://www.cs.toronto.edu/~hinton/absps/colt93.html'
@@ -9,8 +11,9 @@ tags:
   - compression
   - neural-networks
   - carmack-list
-date: 2026-05-30
+date: 2026-05-30T00:00:00.000Z
 thumbnail: /papers/_thumbs/keeping-neural-networks-simple-mdl-w360.webp
+pdf: /papers/keeping-neural-networks-simple-mdl.pdf
 ---
 
 ## Why it is here

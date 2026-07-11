@@ -10,8 +10,9 @@ tags:
   - time-to-event
   - medical-modeling
   - applied-modeling
-date: 2026-05-30
+date: 2026-05-30T00:00:00.000Z
 thumbnail: /papers/_thumbs/deephit-w360.webp
+pdf: /papers/deephit.pdf
 ---
 
 ## Why it is here
