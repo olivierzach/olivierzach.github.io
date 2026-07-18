@@ -5,7 +5,6 @@ status: active
 tags: ["media", "retrieval", "ml-pipelines"]
 repo: "olivierzach/media-ingest-pipeline"
 github: "https://github.com/olivierzach/media-ingest-pipeline"
-thumbnail: "/projects/extracted/media-ingest-pipeline.svg"
 date: 2026-04-16
 ---
 

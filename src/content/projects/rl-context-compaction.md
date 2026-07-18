@@ -5,7 +5,6 @@ status: active
 tags: ["reinforcement-learning", "context", "agents"]
 repo: "olivierzach/rl-context-compaction"
 github: "https://github.com/olivierzach/rl-context-compaction"
-thumbnail: "/projects/extracted/rl-context-compaction.svg"
 date: 2026-04-02
 ---
 

@@ -5,7 +5,6 @@ status: active
 tags: ["interactive", "inference", "ui"]
 repo: "olivierzach/vienna-ep-ui"
 github: "https://github.com/olivierzach/vienna-ep-ui"
-thumbnail: "/projects/extracted/vienna-ep-ui.svg"
 date: 2026-03-20
 ---
 

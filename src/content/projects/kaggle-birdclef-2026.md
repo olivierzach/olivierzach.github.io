@@ -5,7 +5,6 @@ status: active
 tags: ["audio", "classification", "kaggle"]
 repo: "olivierzach/kaggle-birdclef-2026"
 github: "https://github.com/olivierzach/kaggle-birdclef-2026"
-thumbnail: "/projects/extracted/kaggle-birdclef-2026.svg"
 date: 2026-04-12
 ---
 

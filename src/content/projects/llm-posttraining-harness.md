@@ -5,7 +5,6 @@ status: active
 tags: ["llm", "post-training", "rlhf", "evaluation"]
 repo: "olivierzach/llm-posttraining-harness"
 github: "https://github.com/olivierzach/llm-posttraining-harness"
-thumbnail: "/projects/extracted/llm-posttraining-harness.svg"
 date: 2026-03-21
 ---
 

@@ -5,7 +5,6 @@ status: active
 tags: ["streaming", "training", "ml-systems"]
 repo: "olivierzach/streaming-train-demo"
 github: "https://github.com/olivierzach/streaming-train-demo"
-thumbnail: "/projects/extracted/streaming-train-demo.svg"
 date: 2026-03-30
 ---
 

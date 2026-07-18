@@ -5,7 +5,6 @@ status: active
 tags: ["distributed-systems", "consensus", "interactive"]
 repo: "olivierzach/paxos-explore"
 github: "https://github.com/olivierzach/paxos-explore"
-thumbnail: "/projects/extracted/paxos-explore.png"
 date: 2026-03-24
 ---
 

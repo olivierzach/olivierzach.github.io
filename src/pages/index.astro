@@ -74,9 +74,6 @@ const profilePageJsonLd = {
           const meta = featuredProjectMeta.get(entry.id);
           return (
             <article class="featured-project-card">
-              <a class="featured-project-image" href={`/projects/${entry.id}`} aria-label={entry.data.title}>
-                {entry.data.thumbnail ? <img src={entry.data.thumbnail} alt="" loading="lazy" /> : <span>{entry.data.title}</span>}
-              </a>
               <div class="featured-project-body">
                 <p>{meta?.overline}</p>
                 <h3><a href={`/projects/${entry.id}`}>{entry.data.title}</a></h3>

@@ -5,7 +5,6 @@ status: active
 tags: ["deep-learning", "moe", "systems"]
 repo: "olivierzach/moe-deep-dive"
 github: "https://github.com/olivierzach/moe-deep-dive"
-thumbnail: "/projects/extracted/moe-deep-dive.svg"
 date: 2026-04-04
 ---
 

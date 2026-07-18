@@ -5,7 +5,6 @@ status: active
 tags: ["reliability", "field-data", "testing"]
 repo: "olivierzach/hardware-reliability-field-to-test"
 github: "https://github.com/olivierzach/hardware-reliability-field-to-test"
-thumbnail: "/projects/extracted/hardware-reliability-field-to-test.svg"
 date: 2026-04-18
 ---
 

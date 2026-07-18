@@ -5,7 +5,6 @@ status: active
 tags: ["embeddings", "audio", "retrieval"]
 repo: "olivierzach/youtube-embed-pipeline"
 github: "https://github.com/olivierzach/youtube-embed-pipeline"
-thumbnail: "/projects/extracted/youtube-embed-pipeline.svg"
 date: 2026-03-28
 ---
 

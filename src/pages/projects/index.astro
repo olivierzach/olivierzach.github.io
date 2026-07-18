@@ -15,9 +15,6 @@ const projects = (await getCollection('projects')).sort((a,b)=> (b.data.date?.va
     <div class="project-grid">
       {projects.map(p => (
         <article class="project-card">
-          <a class="project-thumb" href={`/projects/${p.id}`} aria-label={p.data.title}>
-            {p.data.thumbnail ? <img src={p.data.thumbnail} alt="" loading="lazy" /> : <span>{p.data.title}</span>}
-          </a>
           <div class="project-card-body">
             <h2><a href={`/projects/${p.id}`}>{p.data.title}</a></h2>
             <p>{p.data.summary}</p>

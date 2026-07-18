@@ -5,7 +5,6 @@ status: active
 tags: ["alife", "simulation", "emergence"]
 repo: "olivierzach/computational-life-alife"
 github: "https://github.com/olivierzach/computational-life-alife"
-thumbnail: "/projects/extracted/computational-life-alife.png"
 date: 2026-03-05
 ---
 

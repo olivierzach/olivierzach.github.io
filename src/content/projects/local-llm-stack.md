@@ -5,7 +5,6 @@ status: active
 tags: ["llm", "local-first", "inference", "observability", "fine-tuning"]
 repo: "olivierzach/local-llm-stack"
 github: "https://github.com/olivierzach/local-llm-stack"
-thumbnail: "/projects/extracted/local-llm-stack.svg"
 date: 2026-07-11
 ---
 

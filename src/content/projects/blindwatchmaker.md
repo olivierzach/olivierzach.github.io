@@ -6,7 +6,6 @@ tags: ["evolution", "interactive", "creative-coding"]
 repo: "olivierzach/blindwatchmaker"
 github: "https://github.com/olivierzach/blindwatchmaker"
 demo: "https://olivierzach.github.io/blindwatchmaker/"
-thumbnail: "/projects/extracted/blindwatchmaker.png"
 date: 2026-03-22
 ---
 

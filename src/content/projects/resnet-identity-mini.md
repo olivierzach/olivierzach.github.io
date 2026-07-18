@@ -5,7 +5,6 @@ status: active
 tags: ["deep-learning", "resnets", "optimization"]
 repo: "olivierzach/resnet-identity-mini"
 github: "https://github.com/olivierzach/resnet-identity-mini"
-thumbnail: "/projects/extracted/resnet-identity-mini.svg"
 date: 2026-04-03
 ---
 

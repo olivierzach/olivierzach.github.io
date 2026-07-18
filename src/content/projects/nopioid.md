@@ -5,7 +5,6 @@ status: archived
 tags: ["healthcare", "residual-analysis", "applied-ml"]
 repo: "olivierzach/nopioid"
 github: "https://github.com/olivierzach/nopioid"
-thumbnail: "/projects/extracted/nopioid.png"
 date: 2020-07-10
 ---
 

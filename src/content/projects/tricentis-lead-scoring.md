@@ -5,7 +5,6 @@ status: archived
 tags: ["classification", "marketing", "production-ml"]
 repo: "olivierzach/tricentis-lead-scoring"
 github: "https://github.com/olivierzach/tricentis-lead-scoring"
-thumbnail: "/projects/extracted/tricentis-lead-scoring.png"
 date: 2018-08-01
 ---
 

@@ -5,7 +5,6 @@ status: active
 tags: ["tabular", "foundation-models", "evaluation"]
 repo: "olivierzach/tabular-foundation-models"
 github: "https://github.com/olivierzach/tabular-foundation-models"
-thumbnail: "/projects/extracted/tabular-foundation-models.svg"
 date: 2026-04-10
 ---
 

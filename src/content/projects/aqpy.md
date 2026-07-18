@@ -5,7 +5,6 @@ status: archived
 tags: ["sensors", "raspberry-pi", "data-logging"]
 repo: "olivierzach/AQPy"
 github: "https://github.com/olivierzach/AQPy"
-thumbnail: "/projects/extracted/AQPy.svg"
 date: 2020-05-26
 ---
 

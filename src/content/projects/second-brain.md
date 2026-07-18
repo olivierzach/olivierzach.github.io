@@ -5,7 +5,6 @@ status: active
 tags: ["knowledge-systems", "llm-workflows", "research-tooling"]
 repo: "olivierzach/second_brain"
 github: "https://github.com/olivierzach/second_brain"
-thumbnail: "/projects/extracted/second-brain.svg"
 date: 2026-05-17
 ---
 

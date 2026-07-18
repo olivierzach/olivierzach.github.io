@@ -5,7 +5,6 @@ status: active
 tags: ["embeddings", "retrieval", "local-first"]
 repo: "olivierzach/local-embeddings"
 github: "https://github.com/olivierzach/local-embeddings"
-thumbnail: "/projects/extracted/local-embeddings.svg"
 date: 2026-04-06
 ---
 

@@ -5,7 +5,6 @@ status: active
 tags: ["reinforcement-learning", "compression", "evaluation"]
 repo: "olivierzach/rl-compaction"
 github: "https://github.com/olivierzach/rl-compaction"
-thumbnail: "/projects/extracted/rl-compaction.svg"
 date: 2026-04-01
 ---
 

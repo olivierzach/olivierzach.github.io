@@ -5,7 +5,6 @@ status: active
 tags: ["audio", "embeddings", "representation-learning"]
 repo: "olivierzach/audio-embeddings"
 github: "https://github.com/olivierzach/audio-embeddings"
-thumbnail: "/projects/extracted/audio-embeddings.svg"
 date: 2026-04-05
 ---
 

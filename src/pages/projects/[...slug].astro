@@ -20,7 +20,6 @@ const { Content } = await render(entry);
       {entry.data.github ? <> · <a href={entry.data.github}>GitHub</a></> : null}
       {entry.data.demo ? <> · <a href={entry.data.demo}>Demo</a></> : null}
     </p>
-    {entry.data.thumbnail ? <img class="project-hero-image" src={entry.data.thumbnail} alt="" /> : null}
     <hr />
     <Content />
   </div>

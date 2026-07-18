@@ -6,7 +6,6 @@ tags: ["reinforcement-learning", "game-ai", "mcts", "self-play", "alphazero"]
 repo: "olivierzach/qubic-lab"
 github: "https://github.com/olivierzach/qubic-lab"
 demo: "https://olivierzach.github.io/qubic-lab/"
-thumbnail: "/projects/extracted/qubic-lab-result.png"
 date: 2026-05-25
 ---
 

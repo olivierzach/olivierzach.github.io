@@ -5,7 +5,6 @@ status: paused
 tags: ["nlp", "summarization", "fine-tuning"]
 repo: "olivierzach/concensus-sft"
 github: "https://github.com/olivierzach/concensus-sft"
-thumbnail: "/projects/extracted/concensus-sft.svg"
 date: 2026-05-17
 ---
 

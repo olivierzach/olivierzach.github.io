@@ -5,7 +5,6 @@ status: active
 tags: ["reliability", "ml-systems", "survival-analysis"]
 repo: "olivierzach/reliability-modeling-templates"
 github: "https://github.com/olivierzach/reliability-modeling-templates"
-thumbnail: "/projects/extracted/reliability-modeling-templates.svg"
 date: 2026-04-20
 ---
 

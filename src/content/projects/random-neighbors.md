@@ -5,7 +5,6 @@ status: active
 tags: ["clustering", "unsupervised-learning", "high-dimensional-data"]
 repo: "olivierzach/random-neighbors"
 github: "https://github.com/olivierzach/random-neighbors"
-thumbnail: "/projects/extracted/random-neighbors.png"
 date: 2026-05-16
 ---
 

@@ -6,7 +6,6 @@ tags: ["reinforcement-learning", "gym", "education"]
 repo: "olivierzach/rl-gym-sutton"
 github: "https://github.com/olivierzach/rl-gym-sutton"
 demo: "https://olivierzach.github.io/rl-gym-sutton/"
-thumbnail: "/projects/extracted/rl-gym-sutton.png"
 date: 2026-03-31
 ---
 

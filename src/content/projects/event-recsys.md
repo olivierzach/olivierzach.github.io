@@ -5,7 +5,6 @@ status: paused
 tags: ["recommender-systems", "events", "applied-ml"]
 repo: "olivierzach/event-recsys"
 github: "https://github.com/olivierzach/event-recsys"
-thumbnail: "/projects/extracted/event-recsys.png"
 date: 2022-11-29
 ---
 

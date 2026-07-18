@@ -6,7 +6,6 @@ tags: ["computer-vision", "deep-learning", "interpretability", "svelte"]
 repo: "olivierzach/cv-playground"
 github: "https://github.com/olivierzach/cv-playground"
 demo: "https://olivierzach.github.io/cv-playground/"
-thumbnail: "/projects/extracted/mnist-playground.svg"
 date: 2026-06-04
 ---
 

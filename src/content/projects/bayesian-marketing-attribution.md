@@ -5,7 +5,6 @@ status: archived
 tags: ["bayesian-modeling", "marketing", "measurement"]
 repo: "olivierzach/bayesian-marketing-attribution"
 github: "https://github.com/olivierzach/bayesian-marketing-attribution"
-thumbnail: "/projects/extracted/bayesian-marketing-attribution.svg"
 date: 2018-12-01
 ---
 

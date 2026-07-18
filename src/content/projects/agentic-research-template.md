@@ -5,7 +5,6 @@ status: active
 tags: ["agents", "research-tooling", "templates"]
 repo: "olivierzach/agentic-research-template"
 github: "https://github.com/olivierzach/agentic-research-template"
-thumbnail: "/projects/extracted/agentic-research-template.svg"
 date: 2026-04-08
 ---
 

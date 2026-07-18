@@ -6,7 +6,6 @@ tags: ["artificial-life", "interactive", "evolution"]
 repo: "olivierzach/tierra-web"
 github: "https://github.com/olivierzach/tierra-web"
 demo: "https://olivierzach.github.io/tierra-web/"
-thumbnail: "/projects/extracted/tierra-web.png"
 date: 2026-03-23
 ---
 

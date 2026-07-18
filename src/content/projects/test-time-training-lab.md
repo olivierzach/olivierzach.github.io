@@ -5,7 +5,6 @@ status: active
 tags: ["deep-learning", "test-time-training", "fast-weights", "language-modeling"]
 repo: "olivierzach/test-time-training-lab"
 github: "https://github.com/olivierzach/test-time-training-lab"
-thumbnail: "/projects/extracted/test-time-training-lab.svg"
 date: 2026-05-25
 ---
 

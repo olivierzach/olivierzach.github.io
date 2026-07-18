@@ -6,7 +6,6 @@ tags: ["computer-vision", "anomaly-detection", "industrial-ml"]
 repo: "olivierzach/total-recall-industrial-anomaly-detection"
 github: "https://github.com/olivierzach/total-recall-industrial-anomaly-detection"
 demo: "https://olivierzach.github.io/total-recall-industrial-anomaly-detection/"
-thumbnail: "/projects/extracted/total-recall-industrial-anomaly-detection.png"
 date: 2026-04-14
 ---
 

@@ -5,7 +5,6 @@ status: active
 tags: ["program-synthesis", "evolution", "complexity"]
 repo: "olivierzach/complexity-aware-program-evolution"
 github: "https://github.com/olivierzach/complexity-aware-program-evolution"
-thumbnail: "/projects/extracted/complexity-aware-program-evolution.svg"
 date: 2026-03-27
 ---
 

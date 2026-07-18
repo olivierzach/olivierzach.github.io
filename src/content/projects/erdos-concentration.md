@@ -6,7 +6,6 @@ tags: ["probability", "interactive", "visualization"]
 repo: "olivierzach/erdos-concentration"
 github: "https://github.com/olivierzach/erdos-concentration"
 demo: "https://olivierzach.github.io/erdos-concentration/"
-thumbnail: "/projects/extracted/erdos-concentration.png"
 date: 2026-03-26
 ---
 
