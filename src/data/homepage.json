@@ -22,6 +22,18 @@
   ],
   "featuredProjects": [
     {
+      "slug": "vector-bucket",
+      "overline": "Audio retrieval",
+      "evidence": "Local music discovery with MERT similarity, CLAP semantic search, and interactive embedding maps.",
+      "scope": "Audio ML / retrieval / visualization"
+    },
+    {
+      "slug": "conformal-lab",
+      "overline": "Uncertainty",
+      "evidence": "Conformal prediction experiments with coverage, calibration, and saved-run diagnostics.",
+      "scope": "Applied statistics / evaluation / visualization"
+    },
+    {
       "slug": "concensus-sft",
       "overline": "Fine-tuning",
       "evidence": "Scientific QA SFT pipeline with data preparation, training artifacts, and loss diagnostics.",
