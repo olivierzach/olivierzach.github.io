@@ -5,6 +5,12 @@ import { getCollection } from 'astro:content';
 const papers = (await getCollection('papers'))
   .sort((a, b) => (b.data.year ?? 0) - (a.data.year ?? 0));
 
+const recentPapers = [...papers].sort((a, b) =>
+  (b.data.date?.valueOf() ?? Date.UTC(b.data.year ?? 1970, 0, 1)) -
+  (a.data.date?.valueOf() ?? Date.UTC(a.data.year ?? 1970, 0, 1)) ||
+  a.data.title.localeCompare(b.data.title)
+);
+
 function hasTag(entry, names) {
   const tags = entry.data.tags.map((tag) => tag.toLowerCase());
   return names.some((name) => tags.some((tag) => tag.includes(name)));
@@ -21,7 +27,7 @@ function thumbSources(src) {
 function visibleTags(entry) {
   if (hasTag(entry, ['zotero-import'])) return [];
   return entry.data.tags
-    .filter((tag) => !['zotero-paper', 'journal-article', 'conference-paper', 'preprint'].includes(tag.toLowerCase()))
+    .filter((tag) => !['zotero-paper', 'zotero-reading', 'to-read', 'journal-article', 'conference-paper', 'preprint'].includes(tag.toLowerCase()))
     .slice(0, 2);
 }
 
@@ -29,13 +35,14 @@ const rows = [
   {
     id: 'recent',
     title: 'Recent',
-    items: papers.slice(0, 12),
+    summary: 'Recently saved references, with publication years shown on each card.',
+    items: recentPapers.slice(0, 12),
   },
   {
     id: 'zotero-library',
-    title: 'Recent Reading',
-    summary: 'A tighter selection from my paper library, with links out to the source paper when available.',
-    items: papers.filter((paper) => hasTag(paper, ['zotero-import'])),
+    title: 'Reading Library',
+    summary: 'Saved references and reading plans. Items marked “To read” are in the queue.',
+    items: recentPapers.filter((paper) => hasTag(paper, ['zotero-import', 'zotero-reading'])),
   },
   {
     id: 'carmack-list',
@@ -86,6 +93,16 @@ const rows = [
     id: 'systems-eval',
     title: 'Practice',
     items: papers.filter((paper) => hasTag(paper, ['systems', 'evaluation', 'data', 'ml-practice'])),
+  },
+  {
+    id: 'audio-retrieval',
+    title: 'Audio & Retrieval',
+    items: papers.filter((paper) => hasTag(paper, ['audio', 'retrieval'])),
+  },
+  {
+    id: 'theory-alife',
+    title: 'Theory & Artificial Life',
+    items: papers.filter((paper) => hasTag(paper, ['artificial-life', 'alife', 'complexity', 'theory'])),
   },
   {
     id: 'all-papers',
@@ -139,7 +156,8 @@ const rows = [
                   </div>
                   <div class="tile-actions">
                     <span>{p.data.pdf_url ? 'PDF' : 'Paper'}</span>
-                    {visibleTags(p).map((tag) => <span>{tag}</span>)}
+                    {hasTag(p, ['to-read']) ? <span>To read</span> : null}
+                    {!hasTag(p, ['to-read']) ? visibleTags(p).map((tag) => <span>{tag}</span>) : null}
                   </div>
                 </a>
               );
